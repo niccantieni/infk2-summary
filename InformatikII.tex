@@ -1,0 +1,1637 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% LaTeX4EI Example for Cheat Sheets
+%
+% @encode: 	UTF-8, tabwidth = 4, newline = LF
+% @author:	LaTeX4EI
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+
+% This summary was taken from Sebastian Schweizer, and adapted to C++ and more. 
+
+% ======================================================================
+% Document Settings
+% ======================================================================
+
+% possible options: color/nocolor, english/german, threecolumn
+% default: color, english
+\documentclass[german]{latex4ei/latex4ei_sheet}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{pbox}
+\usepackage{nicefrac}
+\usepackage{listings}
+\usepackage{wrapfig}
+
+
+
+%\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand\tab[1][.3cm]{\hspace*{#1}}
+
+
+
+% set document information
+\title{Zusammenfassung Informatik II}
+
+
+%\author{Sebastian Schweizer}					% optional, delete if unchanged
+%\myemail{sschweizer@student.ethz.ch}			% optional, delete if unchanged
+\author{Nic Cantieni}					% optional, delete if unchanged
+\myemail{ncantieni@student.ethz.ch}			% optional, delete if unchanged
+
+
+% DOCUMENT_BEGIN ===============================================================
+\begin{document}
+
+\maketitle
+
+% SECTION ====================================================================================
+\section{Python}
+% ============================================================================================
+
+\begin{sectionbox}
+
+\textbf{Interessante Operatoren}
+\begin{itemize}
+    \item Basisoperationen wie in Java (ausser / wird immer float, // für Ganzzahldivison, ** für Potenzierung, a**b = $a^{b}$)
+    \item Vergleichsoperatoren: $==$, $>=$, $<=$, $>$, $<$, !$=$
+    \item Logische Operatoren: and, or, not
+    \item Membership Operator: “ \textbf{in} ” Gibt an, ob ein Wert in einer Liste, einem Set oder einer Zeichenkette ist.
+    \item Identitäts Operator: “ \textbf{is} ” Prüft, ob zwei Variablen auf das gleiche Objekt zeigen (in Java wäre das == ).
+\end{itemize}\medskip
+
+\textbf{Listen, Dicts, Tuples und Sets}\par
+Es gibt keine Arrays in Python\par\vspace{-4px}
+\begin{lstlisting}[language=C++]
+List = [ 17, True, "abc"]       # Mutierbare, geord. Sequenz
+Dict = { "a": 42, False: "Ah!"} # Mutierbarer Key-Wert Store
+Tuple = ( 17, True, "abc")      # Nicht-aenderbare,
+                                # geordnete Sequenz
+Set = {17, True, "abc"}         # Menge (mutierbare ungeordn.
+                                # Sequenz ohne Duplikate)
+\end{lstlisting}
+
+\textbf{List Slicing}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+a = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("a[2:4] =", a[2:4])       # a[2:4] = [3, 4]
+print("a[3:-3] =", a[3:-3])     # a[3:-3] = [4, 5, 6]
+print("a[-3:-1] =", a[-3:-1])   # a[-3:-1] = [7, 8]
+print("a[5:] =", a[5:])         # a[5:] = [6, 7, 8, 9]
+print("a[:3] =", a[:3])         # a[:3] = [1, 2, 3]
+\end{lstlisting}
+
+\textbf{Variablen dynamisch typisiert}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+a = "Eine Variable eines beliebigen Typs";
+print("Wert:", a, "\nTyp:", type(a), end="\n\n")
+\end{lstlisting}
+
+
+\textbf{Klassen}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+class Node:
+    def __init__(self, k, l = None, r = None):  # Constructor
+        self.key, self.left, self.right = k, l, r
+    def __str__(self):                          # toString
+        return str(self.k)
+\end{lstlisting}
+
+\textbf{Bedingte Ausdrücke}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+a = a // 2 if a % 2 == 0 else a * 3 + 1
+\end{lstlisting}
+
+\textbf{List, Dict and Set Comprehension}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+n_list = [ int(x) for x in s_list if int(x) > 0 ]
+d_list = [ int(x)**2 for x in s_list ]
+cleaned = [ item.strip() for item in line ]
+
+prices = {key:value['Price'] for key, value in data.items()}
+total_prices = { key : value['Amount'] * value['Price'] 
+    for key, value in data.items() if 'Amount' in value }
+\end{lstlisting}
+
+\textbf{Ausnahmebehandlung}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+try:
+    prices={key:value['Price'] for key,value in data.items()}
+    printDict(prices)
+except KeyError as e:
+    print('Whoops! Key not found:', e.args[0])
+\end{lstlisting}\vspace{-6px}
+
+\begin{lstlisting}[language=Python]
+def readNumber(input):
+    x = 0
+    try:
+        x = int(input)
+    except ValueError:
+        print('Oh boy, that was no number...')
+    return x
+\end{lstlisting}\vspace{-6px}
+
+\end{sectionbox}
+
+% SECTION ====================================================================================
+\section{Algorithmen und Datenstukturen}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Terminologie}\par\smallskip
+\textbf{Algorithmus}: Wohldefinierte Berechnungsvorschrift, welche aus Eingabedaten (input/Probleminstanz) Ausgabedaten (output) berechnet.\par\smallskip
+\textbf{Datenstrukturen}: Eine Datenstruktur organisiert Daten so in einem Computer, dass man sie (in den
+darauf operierenden Algorithmen) effizient nutzen kann.\par\smallskip
+\textbf{Effizienz}: Die Effizienz eines Algorithmus ist seine Sparsamkeit bezüglich der Ressourcen, Zeit und Speicherplatz, die er zur Lösung eines festgelegten Problems beansprucht.
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Effizienz von Algorithmen}\smallskip
+%\begin{center}
+%    \includegraphics[width = 0.9\columnwidth]{../img/AbstraktionProgramm.png}
+%\end{center}\par\smallskip
+
+\textbf{Asymptotische Laufzeiten}\par
+\begin{itemize}
+    \item \textbf{Obere Schranke}: $\mathcal{O}(g)=\{f:\mathbb{N} \rightarrow \mathbb{R}\ |\ \exists c>0, \exists n_{0} \in \mathbb{N}:$\par $\forall n \geq n_{0}: 0 \leq f(n) \leq c \cdot g(n)\}$
+    \item \textbf{Untere Schranke}: $\Omega(g)=\{f: \mathbb{N} \rightarrow \mathbb{R}\ |\ \exists c>0, \exists n_{0} \in \mathbb{N}:$ \par $\forall n \geq n_{0}: 0 \leq c \cdot g(n) \leq f(n)\}$
+    \item \textbf{Scharfe Schranke}: $\Theta(g):=\Omega(g) \cap \mathcal{O}(g)$\par
+    $\Theta(f) = \{  g: \N \rightarrow \R\ |\ \exists c>0,\ \exists n_0 \in \N:$\par $\forall n \geq n_0: 0 \leq \frac1c \cdot f(n)\leq g(n) \leq c \cdot f(n)\}$
+\end{itemize}\par\smallskip
+
+\begin{greenbox}
+\textbf{Theorem}\par
+Seien $f, g: \mathbb{N} \rightarrow \mathbb{R}^{+}$ zwei Funktionen. Dann gilt.
+\begin{enumerate}
+    \item $\lim _{n \rightarrow \infty} \frac{f(n)}{g(n)}=0 \Rightarrow f \in \mathcal{O}(g), \mathcal{O}(f) \subsetneq \mathcal{O}(g)$
+    \item $\lim _{n \rightarrow \infty} \frac{f(n)}{g(n)}=C>0\ (C \text { konstant}) \Rightarrow f \in \Theta(g)$
+    \item $\frac{f(n)}{g(n)} \underset{n \rightarrow \infty}{\longrightarrow} \infty \Rightarrow g \in \mathcal{O}(f), \mathcal{O}(g) \subsetneq \mathcal{O}(f)$
+\end{enumerate}
+\end{greenbox}\smallskip
+\textit{Beispiel aufsteigende Laufzeiten:}\par
+$ 2^{16},\ \log(n^4),\ \log^8(n),\ \sqrt{n},\ n\log n,\ \binom{n}{3},\ n^5+n,\ \frac{2^n}{n^2},\ n!,\ n^n$\par\smallskip
+
+\textbf{Analyse mit Rekurenz und Teleskopie}\par\vspace{-4px}
+\begin{lstlisting}[language=Java]
+void g(int n) {
+    if (n>1) {
+        g(n/2);
+        g(n/2);
+    }
+    else {
+        f();
+    }
+}
+\end{lstlisting}\vspace{-4px}
+\textit{Rekurrenz} ($n=2^{i}$)\par
+$T(n)=\left\{\begin{array}{ll}2 T(n / 2) & n>1 \\ 1 & n=1\end{array}\right.$\par\smallskip
+\textit{Teleskopieren}\par
+$T(n)=2 \cdot T(n / 2) = 2 \cdot (2 \cdot T(n / 4)) $ \par
+$= 2^{i} \cdot T(n/2^{i}) = n \cdot T(n/n) \in \Theta(n)$\par\smallskip
+
+\end{sectionbox}
+
+% SECTION ====================================================================================
+\section{Suchen}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Divide and Conquer}\smallskip
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+Gegeben: & Sortiertes Array $A$ mit $n$ Elementen und einen Schlüssel b \\
+Gesucht: & Index k mit $A[k]=b$ \\
+Lösung: & Zeiger und Halbierung des Arrays\\
+\end{tabular*}
+
+\begin{center}
+    \includegraphics[width = 0.6\columnwidth]{../img/DaQ.png}
+\end{center}\par\smallskip
+\end{sectionbox}
+\begin{sectionbox}
+\subsection{Binärer Suchalgorithmus: BSearch(A,l,r,b)}\smallskip
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/BSearch.png}
+\end{center}\par\smallskip
+\end{sectionbox}
+
+% SECTION ====================================================================================
+\section{Sortieren}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Laufzeiten von Sortier-Algorithmen}\smallskip
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/LaufzeitenSort.png}
+\end{center}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Bubble-Sort}
+\begin{lstlisting}[language=Python]
+def bubbleSort(arr): 
+    n = len(arr) 
+    for i in range(n):
+        for j in range(n-i-1): 
+            if arr[j] > arr[j+1] : 
+                arr[j], arr[j+1] = arr[j+1], arr[j] 
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Sortieren durch Auswahl}\smallskip
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+\multirow{9}{*}{\includegraphics[width = 0.5\columnwidth]{../img/selectSort.png}}
+& Auswahl des kleinsten Elementes \\
+& durch Suche im unsortierten Teil \\
+& A[i:n] des Arrays.\smallskip \\
+& Tausche kleinstes Element \\
+& an das erste Element des \\
+& unsortierten Teiles.\smallskip\\
+& Unsortierter Teil wird ein\\
+& Element kleiner $(i \rightarrow i+1)$.\\
+& Wiederhole bis alles sortiert.\\
+\end{tabular*}\smallskip
+
+\textbf{Selection Sort}\par
+\includegraphics[width = 0.7\columnwidth]{../img/selectSortCode.png}\par\smallskip
+
+\textbf{Analyse}\par
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+Anzahl Vergleiche im schlechtesten Fall: & $\Theta(n^{2})$ \\
+Anzahl Vertauschungen im schlechtesten Fall: & $n-1=\Theta(n)$\\
+\end{tabular*}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Sortieren durch Einfügen}\smallskip
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+\multirow{7}{*}{\includegraphics[width = 0.55\columnwidth]{../img/InsSort.png}}
+& Iteratives Vorgehen: \\
+& $i=1\rightarrow n$ \smallskip \\
+& Einfügeposition für \\
+& Element $i$ bestimmen. \smallskip\\
+& Element $i$ einfügen, ggfs.\\
+& Verschiebung nötig. \smallskip\\
+& \\
+& \\
+\end{tabular*}\smallskip
+
+\textbf{Selection Sort}\par
+\includegraphics[width = \columnwidth]{../img/InsSortCode.png}\par\smallskip
+
+\textbf{Analyse}\par
+Nachteil: Im schlechtesten Fall viele Elementverschiebungen. / Vorteil:  Der Suchbereich (Einfügebereich) ist bereits sortiert $\rightarrow$ binäre Suche möglich.
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Mergesort}\smallskip
+\subsubsection{Merge}\smallskip
+Minimum von A kann mit 2 Vergleichen ermittelt werden.\par
+\begin{center}
+    \includegraphics[width = 0.5\columnwidth]{../img/Merge.png}
+\end{center}\smallskip
+\textbf{Merge(A,l,m,r)}\par
+\includegraphics[width = 0.75\columnwidth]{../img/MergeCode.png}
+\smallskip
+
+\subsubsection{Mergesort}
+\begin{center}
+    \includegraphics[width = 0.5\columnwidth]{../img/Mergesort.png}
+\end{center}\smallskip
+\textbf{Mergesort(A,l,r) $\rightarrow$ rekursive Variante}\par
+\includegraphics[width = 0.75\columnwidth]{../img/MergesortCode.png}
+\par\smallskip
+\textbf{Analyse}: Laufzeit  $\Theta(n \operatorname{log}(n))$
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Quicksort}\smallskip
+\textbf{Pivotieren}\par
+\begin{enumerate}
+    \item Wähle ein beliebiges ELement als Pivot\par
+    \includegraphics[width = 0.4\columnwidth]{../img/pivot1.png}
+    \item Teile A in zwei Teile\par
+    \includegraphics[width = 0.4\columnwidth]{../img/pivot2.png}
+    \item Quicksort: Rekursion auf L und R\par
+    \includegraphics[width = 0.4\columnwidth]{../img/pivot3.png}
+    \includegraphics[width = 0.4\columnwidth]{../img/pivot4.png}
+\end{enumerate}\smallskip
+\textbf{Wahl des Pivot}\par
+Maximum/Minimum (worst case) in $\mathcal{O}(n^{2})$.\par
+Best case (Pivot in der Mitte) $\omega(n)$.\par\smallskip
+\textbf{Partition(A,l,r,p)}\par
+\includegraphics[width = \columnwidth]{../img/PartCode.png}
+\par\smallskip
+
+\textbf{Quicksort(A,l,r)}\par
+\includegraphics[width = 0.8\columnwidth]{../img/QuicksortCode.png}
+\par\smallskip
+\begin{greenbox}
+Im Mittel benötigt randomisiertes Quicksort $\mathcal{O}(n \cdot \operatorname{log}(n))$ Vergleiche.
+\end{greenbox}
+\end{sectionbox}
+
+\vspace{36px}
+
+% SECTION ====================================================================================
+\section{Natürliche Suchbäume}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Nomenklatur}
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/BaumNomen.png}
+\end{center}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Binäre Suchbäume}\smallskip
+Binärer Baum (nur zwei Nachfolgerknoten) mit Eigenschaten:\par
+\begin{itemize}
+    \item Jeder Knoten v speichert einen Schlüssel
+    \item Schlüssel im linken Teilbaum v.left kleiner als v.key
+    \item Schlüssel im rechten Teilbaum v.right grösser als v.key
+\end{itemize}\vspace{7px}
+
+\subsubsection{Höhe eines Baumes}\smallskip
+$h(r)=\left\{\begin{array}{ll}0 & \text { falls } r=\text { null } \\ 1+\max \{h(r \cdot \operatorname{left}), h(r \cdot \text { right })\} & \text { sonst. }\end{array}\right.$\par\smallskip
+Die Laufzeit der Suche ist somit im schlechtesten Fall $\mathcal{O}(h(T))$.\par\smallskip
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsubsection{Operationen}\smallskip
+\textbf{Knoten suchen}\par\vspace{-4px}
+\begin{lstlisting}[language=Python]
+def search(k):
+  global tree # access & modify the global variable tree
+  v = tree
+  while v != None:
+    if k == v.key:
+      return v
+    elif k < v.key:
+      v = v.left
+    else:
+      v = v.right
+\end{lstlisting}
+
+\textbf{Knoten einfügen}\par\vspace{-4px}
+\begin{lstlisting}[language=Python]
+def add(k):
+  global tree # access & modify the global variable tree
+  if tree is None:
+    tree = Node(k)
+    return True
+  t = tree
+  while k != t.key:
+    if k < t.key:
+      if t.left is None:
+        t.left = Node(k)
+        return True
+      else:
+        t = t.left
+    else:
+      if t.right is None:
+        t.right = Node(k)
+        return True
+      else:
+        t = t.right
+  return False
+\end{lstlisting}
+
+\textbf{Knoten entfernen}\par
+Mögliche Situationen: Knoten hat keine Kinder, Knoten hat ein Kind oder Knoten $v$ hat zwei Kinder.
+Im letzten Fall: Der kleinste Schlüssel im rechten Teilbaum $v.right$ ist der symmetrische Nachfolger von $v$ $\rightarrow$ ersetze $v$ durch seinen symmetrischen Nachfolger.
+\par Auch möglich: ersetze $v$ durch seinen symmetrischen Vorgänger
+\par Implementation: der Teufel steckt im Detail!
+\vspace{-4px}
+
+\begin{lstlisting}[language=Python]
+def remove(k):
+  global tree # access & modify the global variable tree
+  n = tree
+  if n is not None and n.key == k:
+    tree = symmetricDesc(tree)
+    return True
+  while n is not None:
+    if n.left is not None and k == n.left.key:
+      n.left = symmetricDesc(n.left)
+      return True
+    elif n.right is not None and k == n.right.key:
+      n.right = symmetricDesc(n.right)
+      return True
+    elif k < n.key:
+      n = n.left
+    else:
+      n = n.right
+  return False
+\end{lstlisting}
+
+\textbf{Symmetrischen Nachfolger finden}\par\vspace{-4px}
+\begin{lstlisting}[language=Python]
+def symmetricDesc(node):
+  if node.left is None:
+    return node.right
+  if node.right is None:
+    return node.left
+  n = node.right
+  parent = None
+  while n.left is not None:
+    parent = n
+    n = n.left
+  if parent is not None:
+    parent.left = n.right
+    n.right = node.right
+  n.left = node.left
+  return n
+\end{lstlisting}\vspace{-6px}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\textit{Grafik zu dem symmetrischen Vorgänger (links) oder Nachfolger (rechts)}\par
+\begin{center}
+\includegraphics[width = 0.4\columnwidth]{../img/symVorg.png}
+\tab \includegraphics[width = 0.4\columnwidth]{../img/symNachf.png}    
+\end{center}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Traversierungsarten}\smallskip
+\begin{greenbox}
+\begin{itemize}
+    \item \textbf{Hauptreihenfolge} (preorder):
+    \par $v$, dann $T_{left}(v)$, dann $T_{right}(v)$.
+    \item \textbf{Nebenreihenfolge} (postorder):
+    \par $T_{left}(v)$, dann $T_{right}(v)$, dann $v$.
+    \item \textbf{Symmetrische Reihenfolge} (inorder):
+    \par $T_{left}(v)$, dann $v$, dann $T_{right}(v)$.
+\end{itemize}
+\end{greenbox}\smallskip
+
+\textit{Beispiel}\par
+\includegraphics[width = 0.4\columnwidth]{../img/BspBST.png}
+\smallskip
+\begin{itemize}
+    \item \textbf{Hauptreihenfolge} (preorder):
+    \par 8, 3, 5, 4, 13, 10, 9, 19
+    \item \textbf{Nebenreihenfolge} (postorder):
+    \par 4, 5, 3, 9, 10, 19, 13, 8
+    \item \textbf{Symmetrische Reihenfolge} (inorder):
+    \par 3, 4, 5, 8, 9, 10, 13, 19
+\end{itemize}
+
+\end{sectionbox}
+
+\vspace{22px}
+
+% SECTION ====================================================================================
+\section{AVL Bäume}
+% ============================================================================================
+
+\begin{sectionbox}
+\textbf{Ziel}: Verhinderung der Degenerierung $\rightarrow$ garantiere, dass ein Baum mit $n$ Knoten stets eine Höhe von $\mathcal{O}(\operatorname{log}(n))$.\par\smallskip
+\subsection{AVL Bedingung}\smallskip
+\subsubsection{Balance eines Knotens}\smallskip
+Die Balance eines Knotens $v$ ist definiert als die Höhendifferenz seiner beiden Teilbäume $T_{l}(v)$ und $T_{r}(v)$:\par\smallskip
+\begin{center}
+    $\operatorname{bal}(v):=h\left(T_{r}(v)\right)-h\left(T_{l}(v)\right)$
+\end{center}\par\smallskip
+\begin{itemize}
+    \item \textbf{Augmentieren}: $v.size$ Feld mit \textbf{Balance}
+    \item \textbf{Baumhöhe}: Ein AVL Baum ist asymptotisch nicht mehr als 44\% höher als ein perfekt balancierter Baum ($\left\lceil\log _{2} n+1\right\rceil$).
+\end{itemize}\par\smallskip
+
+\subsubsection{AVL Bedingung}\smallskip
+AVL Bedingung: für \textit{jeden} Knoten $v$ eines Baumes gilt:\par\smallskip
+\begin{center}
+    $\operatorname{bal}(v) \in\{-1,0,1\}$
+\end{center}\par\smallskip
+
+\textit{Beispiele}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/BspAVLHoehen.png}
+\end{center}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Einfügen}\smallskip
+\begin{itemize}
+    \item Zuerst einfügen wie bei Suchbaum.
+    \item Prüfe die Balance-Bedingung für alle Knoten aufsteigend von n zur Wurzel.
+    \par \textbf{$\operatorname{upin}(p)$}: Aufsteigend von $p$ die Balance (Augmentation) anpassen, wobei gilt $\operatorname{bal}(p) \in \{-1,0,+1\}$.
+    \item Problematischer Fall (rebalancieren!): $p$ ist linker Sohn von $pp$, wobei $\operatorname{bal}(pp)$ bereits vor dem Einfügen $-1$ ist (danach $-2$).
+\end{itemize}\par\smallskip
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Rebalancieren: Rotationen}\smallskip
+\textit{Fall 1: Rotation nach rechts}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/rotR.png}
+\end{center}\smallskip
+\textit{Fall 2: Doppelrotation nach links-rechts}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/rotLR.png} \par\smallskip
+    \includegraphics[width = \columnwidth]{../img/Doppelrotationen.jpg}
+\end{center}\smallskip
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Analyse}\smallskip
+AVL-Bäume haben asymptotische Laufzeit von $\mathcal{O}(\operatorname{log}(n))$ (schlechtester Fall) für das Suchen, Einfügen und Löschen von Schlüsseln. Einfügen und Löschen ist verhältnismässig aufwändig und für kleine Probleme relativ langsam.
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Augmentierter SearchNode}\smallskip
+\begin{lstlisting}[language=Python]
+class SearchNode(object):
+  def __init__(self, k):
+    self.key = k
+    self.left = self.right = None
+    self.size = 1       # Augmentiere Hoehe mit 1
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+
+\newpage
+% SECTION ====================================================================================
+\section{Heaps}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{[Max-]Heap}\smallskip
+Datenstruktur optimiert zum schnellen Extrahieren von Minimum oder Maximum und Sortieren.\par\smallskip
+
+Binärer Baum mit folgenden Eigenschaften\par
+\begin{enumerate}
+    \item Vollständig, bis auf die letzte Ebene
+    \item Lücken des Baumes in der letzten Ebene höchstens rechts.
+    \item \textbf{Heap-Bedingung}:
+    \par Max-(Min-)Heap: Schlüssel eines Kindes kleiner (grösser) als der des Elternknotens
+\end{enumerate}\smallskip
+
+Baum $\rightarrow$ Array:
+\begin{enumerate}
+    \item Kinder $(i)=\{2 i, 2 i+1\}$
+    \item Elter $(i)=\lfloor i / 2\rfloor$
+\end{enumerate}\smallskip
+
+\includegraphics[width = \columnwidth]{../img/heaps.png}\smallskip
+
+\textbf{Höhe eines Heaps}: $H(n)=\left\lceil\log _{2}(n+1)\right\rceil$\par\smallskip
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Einfügen}\smallskip
+\begin{itemize}
+    \item Füge neues Element an erste freie Stelle ein.
+    \item Stelle Heap Eigenschaft wieder her: \textbf{Sukzessives Aufsteigen}
+    \item Anzahl Operationen im worst case: $\mathcal{O}(\operatorname{log}(n))$
+\end{itemize}\smallskip
+\textbf{Aufsteigen(A,m)}\par
+\includegraphics[width = \columnwidth]{../img/Aufsteigen.png}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Maximum entfernen}\smallskip
+\begin{itemize}
+    \item Ersetze das Maximum durch das unterste rechte Element.
+    \item Stelle Heap Eigenschaft wieder her: \textbf{Sukzessives Absinken} (in Richtung des grösseren Kindes / "Max. aufsteigen lassen")
+    \item Anzahl Operationen im worst case: $\mathcal{O}(\operatorname{log}(n))$
+\end{itemize}\smallskip
+\textbf{Versickern(A,i,m)}\par
+\includegraphics[width = \columnwidth]{../img/Versickern.png}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Heap sortieren}\smallskip
+\begin{itemize}
+    \item Extrahiere Maximum, stelle es hinten hin
+    \item Stelle Heap Eigenschaft wieder her
+    \item Wiederhole
+    \item Worst case: $\mathcal{O}(n \cdot \operatorname{log}(n))$
+\end{itemize}
+
+\begin{lstlisting}[language=Python]
+class HeapSort(object):
+
+    def swap(self, list_a, i, j):
+      list_a[i], list_a[j] = list_a[j], list_a[i]
+
+    def siftDown(self, list_a, index, size):
+      while(2 * index + 1 < size):
+          j = 2 * index + 1
+          if j + 1 < size and list_a[j] < list_a[j+1]:
+              j += 1
+          if list_a[index] < list_a[j]:
+              self.swap(list_a,index,j)
+              index = j
+          else:
+              return
+
+    def heapify(self, list_a):
+      n = len(list_a)
+      for i in range(n//2 - 1,-1,-1):
+        self.siftDown(list_a, i, n)
+
+    def sort(self, list_a):
+      n = len(list_a)
+      self.heapify(list_a)
+      for i in range(n-1,0,-1):
+        self.swap(list_a, 0, i)
+        self.siftDown(list_a, 0, i)
+\end{lstlisting}\vspace{-4px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Heap bauen}\smallskip
+\begin{itemize}
+    \item Jedes Blatt eines Heaps ist für sich schon ein korrekter Heap. $\rightarrow$ Induktion von unten!
+    \item Aufrufe an Versickern: $n/2$. Also Anzahl Vergleiche und Bewegungen $v(n) \in \mathcal{O}(n \cdot \operatorname{log}(n))$.
+    \item Versickerpfade sind aber im Mittel viel kürzer: $\mathcal{O}(n)$
+\end{itemize}
+\end{sectionbox}
+
+\vspace{105px}
+% SECTION ====================================================================================
+\section{Hashing}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Motivation und Idee}\smallskip
+Key/Value-Paare effizient abspeichern und finden z.B. für Implementation eines Dicts oder einer Datenbank.\par\smallskip
+
+\begin{center}
+    \includegraphics[width = 0.8\columnwidth]{../img/BspPreHashing.png}
+\end{center}\smallskip
+
+\textbf{Idee}\par
+Direkter Zugriff (Array)\par\smallskip
+\begin{greenbox}
+\textbf{Probleme}\par
+\begin{enumerate}
+    \item \textbf{Schlüssel müssen nichtnegative ganze Zahlen sein}
+    \item \textbf{Grosser Schlüsselbereich $\rightarrow$ grosses Array}
+\end{enumerate}
+\end{greenbox}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Pre-Hashing: Lösung des ersten Problems}\smallskip
+Prehashing: Bilde Schlüssel ab auf positive Ganzzahlen mit einer Funktion $ph: \mathcal{K} \rightarrow \mathbb{N}$\par\smallskip
+\textbf{Pre-Hashing: Beispiel String}\par
+Zuordnung Name $s=s_{1} s_{2} \ldots s_{l_{s}}$ zu Schlüssel\par\smallskip
+\begin{center}
+    $\operatorname{ph}(s)=\left(\sum_{i=0}^{l_{s}-1} s_{l_{s}-i} \cdot b^{i}\right) \bmod 2^{w}$
+\end{center}\par\smallskip
+$b$ so, dass verschiedene Namen möglichst verschiedene Schlüssel erhalten.
+$w$ Wortgrösse des Systems (z.B. 32 oder 64).\par\smallskip
+\textit{Implementation in Java}\par
+\begin{lstlisting}[language=Python]
+int prehash(String s){
+    int h = 0;
+    
+    for (int k = 0; k < s.length(); ++k){
+        h = h * b + s.charAt(k);
+    }
+    return h;
+}
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Hashing: Lösung des zweiten Problems}\smallskip
+Reduziere des Schlüsseluniversum: Abbildung (Hash-Funktion) $h: \mathcal{K} \rightarrow\{0, \ldots, m-1\}(m \approx n=\text { Anzahl Einträge in der Tabelle })$\par\vspace{7px}
+
+\subsubsection{Nomenklatur}\par\smallskip
+\textbf{Hashfunktion} $h$: Abbildung aus der Menge der Schlüssel $\mathcal{K}$ auf die Indexmenge $\{0,1, \ldots, m-1\}$ eines Arrays (\textbf{Hashtabelle})\par
+Meist $|\mathcal{K}| \gg m$, Es gibt also $k_{1}, k_{2} \in \mathcal{K}$ mit $h\left(k_{1}\right)=h\left(k_{2}\right)$ (\textbf{Kollision}). Eine Hashfunktion sollte die Menge der Schlüssel möglichst gleichmässig auf die Positionen der Hashtabelle verteilen.\par\vspace{7px}
+
+\subsubsection{Gebräuchliche Hashfunktion: Divisionsmethode}\par\smallskip
+\begin{center}
+    $h(k)=k \bmod m$
+\end{center}
+Ideal: $m$ Primzahl, nicht zu nahe bei Potenzen von 2 oder 10\par
+Aber oft: $m=2^{k}-1(k \in \mathbb{N})$
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Konzept 1: Hashing mit Verkettung}\par\smallskip
+Direkte Verkettung der Überläufer.\par
+$\rightarrow$ Resultuiert im worst case in $\Theta(n^{2})$ pro Operation\par\smallskip
+
+\textit{Beispiel}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/hashVerkettung.png}
+\end{center}\smallskip
+
+\textbf{Einfaches gleichmässiges Hashing}\par
+Starke Annahmen: Jeder beliebige Schlüssel wird mit gleicher Wahrscheinlichkeit (\textbf{Uniformität}) und unabhängig von den anderen Schlüsseln (\textbf{Unabhängigkeit}) auf einen der $m$ verfügbaren Slots abgebildet.\par\smallskip
+Unter dieser Annahme ergibt sich die \textbf{erwartete Länge}:\par $\mathbb{E}(\text { Länge Kette } j)=\frac{n}{m}=\alpha$, $\alpha$ heisst der \textbf{Belegungsfaktor} oder \textbf{Füllgrad}.\par\smallskip
+Daraus ergibt sich (bei einfachem gleichmässigem Hashing) eine \textbf{erwartete Laufzeit (amortisiert)} von $\mathcal{O}(1)$ für Suchen, Einfügen, Löschen.\par\smallskip
+\textbf{Vor- und Nachteile der Verkettung}\par
+\begin{itemize}
+    \item Belegungsfaktoren $\alpha > 1$ möglich; Entfernen von Schlüsseln einfach
+    \item Speicherverbrauch der Verkettung
+\end{itemize}\smallskip
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Konzept 2: Hashing mit offener Addressierung}\par\smallskip
+\begin{itemize}
+    \item Speichere die Überläufer direkt in der Hashtabelle mit einer \textbf{Sondierungsfunktion $s(k,j)$}
+    \item Tabellenposition des Schlüssels entlang der \textbf{Sondierungsfolge $S(k)$}
+\end{itemize}\par\smallskip
+Technisches Detail zu \textbf{delete(k)}: Suche $k$ in der Tabelle gemäss $S(k)$. Ersetze $k$ durch den \textbf{speziellen Schlüssel removed}.\par\vspace{7px}
+
+\subsubsection{Lineares Sondieren}\par\smallskip
+\begin{center}
+    $s(k, j)=h(k)+j \Rightarrow$ \par $S(k)=(h(k), h(k)+1, \ldots, h(k)+m-1) \bmod m$
+\end{center}\par\smallskip
+\textbf{Problem $\rightarrow$ Primäre Häufung}:\par Ähnliche Hashaddressen haben ähnliche Sondierungsfolgen $\rightarrow$ lange zusammenhängende belegte Bereiche.\par\smallskip
+\textit{Beispiel}\par
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/BspLinSond.png}
+\end{center}\vspace{7px}
+
+\subsubsection{Quadratisches Sondieren}\par\smallskip
+\begin{center}
+    $s(k, j)=h(k)+\lceil j / 2\rceil^{2}(-1)^{j+1}$
+    $S(k)=(h(k), h(k)+1, h(k)-1, h(k)+4, h(k)-4, \ldots) \bmod m$
+\end{center}\par\smallskip
+\textbf{Problem $\rightarrow$ Sekundäre Häufung}:\par Synonyme $k$ und $k^{\prime}\left(\operatorname{mit} h(k)=h\left(k^{\prime}\right)\right)$ durchlaufen dieselbe Sondierungsfolge.\par\smallskip
+\textit{Beispiel}\par
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/BspQuadSond.png}
+\end{center}\vspace{7px}
+
+\subsubsection{Double Hashing}\par\smallskip
+Verwendung von zwei Hashfunktionen $h(k)$ und $h^{\prime}(k) \rightarrow$ Vermeidung primärer und sekundären Häufungen.
+\begin{center}
+    $s(k, j)=h(k)+j \cdot h^{\prime}(k)$\par
+    $S(k)=(h(k), h(k)+h^{\prime}(k), h(k)+2 h^{\prime}(k), \ldots$ \par
+    $, h(k)+(m-1) h^{\prime}(k)) \quad \bmod m$
+\end{center}\par\smallskip
+
+\textbf{Gleichmässiges Hashing}\par
+Starke Annahme: Die Sondierungssequenz $S(k)$ eines Schlüssels $k$ ist mit gleicher Wahrscheinlichkeit eine der $m !$ vielen Permutationssequenzen von $\{0,1, \ldots, m-1\}$.
+$\rightarrow$ Füllgrad $\alpha=$ $\frac{n}{m}<1$, so hat die nächste Operation erwartete Laufzeitkosten von $\leq \frac{1}{1-\alpha}$\par\smallskip
+\textit{Beispiel}\par
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/BespDoubHash.png}
+\end{center}\vspace{7px}
+
+\subsubsection{Beispiele}\par\smallskip
+\begin{itemize}
+    \item $h'(k) = \lceil \ln (k+1) \rceil \bmod q$: This function is not suitable as a second hash function, because for the key $k = 0$ we have $h'(0) = \lceil \ln (1) \rceil = 0$.
+    \item $s(j,k) = k^j \bmod p$: This function is not suitable as a probing function, because for the keys $k = 0$ and $k = 1$, the function $s(j, k)$ has constant value of 0 and 1.
+    \item $s(j,k) = ((k \cdot j) \bmod q) + 1$: This function is also not suitable as a probing function because its value is constant 1 if the key $k$ is a multiple of $q$.\par Moreover, for all other keys, the image of $s(j, k)$ is $\{1, . . . , q\}$, i.e., $p - q$ addresses of the hash table cannot be reached.
+\end{itemize}
+
+\end{sectionbox}
+
+\newpage
+% SECTION ====================================================================================
+\section{Graphen}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Terminologie}\smallskip
+Ein Graph $G=(V,E)$ besteht aus der Menge von Kanten $V=\{v_{1},\ldots,v_{1^n}\}$ und der Menge von Kanten $E$.\par\smallskip
+
+\textbf{Gerichteter Graph}: $E \subseteq V \times V=\{(u, v): u \in V, v \in V\}$\par
+\begin{itemize}
+    \item $w \in V$ heisst \textbf{adjazent} zu $v \in V$, falls $(v, w) \in E$
+    \item Vorgänger eines Knotens $v$: $N^{-}(v):=\{u \in V |(u, v) \in E\}$
+    \item Nachfolger eines Knotens $v$: $N^{+}(v):=\{u \in V |(v, u) \in E\}$
+    \item Eingangsgrad: $\operatorname{deg}^{-}(v):=|N^{-}(v)|$
+    \item Ausngangsgrad: $\operatorname{deg}^{+}(v):=|N^{+}(v)|$
+\end{itemize}\par\smallskip
+\begin{center}
+    \includegraphics[width=0.5\columnwidth]{../img/gerGraph.png}
+\end{center}\par\smallskip
+
+\textbf{Unerichteter Graph}: $E \subseteq \{(u, v): v \in V, u \in V\}$\par
+\begin{itemize}
+    \item $w \in V$ heisst \textbf{adjazent} zu $v \in V$, falls $\{v, w\} \in E$
+    \item Nachbarschaft: $N(v):=\{w \in V |\{v, w\} \in E\}$
+    \item Grad: $\operatorname{deg}(v):=|N(v)|$ (Schleifen zählen 2)
+\end{itemize}\par\smallskip
+
+\textbf{Vollständiger Graph}: Ungerichteter Graph mit  $E=\{(u, v): u \in V, v \in V, \quad c \neq v\}$\par\smallskip
+\textbf{Bipartiter Graph}: Graph, bei dem $V$ so in disjunkte $U$ und $W$ aufgeteilt werden kann, dass alle $e \in E$ einen Knoten in $U$ und einen in $W$ haben\par
+%\begin{center}
+%   \includegraphics[width=0.25\columnwidth]{../img/biparGraph.png}
+%\end{center}\par\smallskip
+\textbf{Wege}:\par
+\begin{itemize}
+    \item \textbf{Weg / Path}: Sequenz von Knoten $p=\left\langle v_{1}, v_{2}, \ldots, v_{k}\right\rangle$ so dass für jedes $i \in\{1 \ldots k\}$ eine Kante von $v_{i}$ nach $v_{i+1}$ existiert
+    \item \textbf{Pfad / einfacher Pfad / simple path}: Weg der keinen Knoten mehrfach verwendet
+    \item \textbf{Länge des Weges}: Anzahl enthaltene Kanten $k$
+    \item \textbf{Gewicht des Weges} (in gewichteten Graphen): $\sum_{i=1}^{k} c\left(\left(v_{i}, v_{i+1}\right)\right)$ (bzw. $\left.\sum_{i=1}^{k} c\left(\left\{v_{i}, v_{i+1}\right\}\right)\right)$
+\end{itemize}\par\smallskip
+\textbf{Zusammenhang}:\par
+\begin{itemize}
+    \item Ungerichteter Graph heisst \textbf{zusammenhängend}, wenn für jedes Paar $v, w \in V$ ein verbindender Weg existiert.
+    \item Gerichteter Graph heisst \textbf{stark zusammenhängend}, wenn für jedes Paar $v, w \in V$ ein verbindender Weg existiert.
+    \item Gerichteter Graph heisst \textbf{schwach zusammenhängend}, wenn der entsprechende ungerichtete Graph zusammenhängend ist.
+\end{itemize}\par\smallskip
+\textbf{Zyklen}:\par
+\begin{itemize}
+    \item \textbf{Zyklus}: Weg (und nicht einfacher Pfad!) $\left\langle v_{1}, \ldots, v_{k+1}\right\rangle$ mit $v_{1}=v_{k+1}$
+    \item \textbf{Einfacher Zyklus}: Zyklus, aber Knoten kommen nicht mehrfach vor (ausser $s$ und $t$)
+    \item \textbf{Kreis}: Zyklus mit paarweise verschiedenen $v_{1}, \ldots, v_{k},$ welcher keine Kante mehrfach verwendet
+    \item \textbf{Kreisfrei (azyklisch)}: Graph ohne jegliche Kreise.
+\end{itemize}\par\vspace{7px}
+
+\subsubsection{Beobachtungen}\par
+\begin{itemize}
+    \item Allgemein: $0 \leq|E| \in \mathcal{O}\left(|V|^{2}\right)$
+    \item Zusammenhängender Graph: $|E| \in \Omega(|V|)$
+    \item Vollständiger Graph: $|E|=\frac{|V| \cdot(|V|-1)}{2}$ (ungerichtet)
+    \item Maximal $|E|=|V|^{2}(\text { gerichtet })$
+    \item Maximal $|E|=\frac{|V| \cdot(|V|+1)}{2}$ (ungerichtet)
+\end{itemize}\par\smallskip
+\end{sectionbox}
+
+\vspace{100px}
+
+\begin{sectionbox}
+\subsection{Repräsentation von Graphen}\smallskip
+
+\subsubsection{Adjazenzmatrix}\par\smallskip
+Graph $G=(V, E)$ mit Knotenmenge $v_{1}, \ldots, v_{n}$ gespeichert als Adjazenzmatrix $A_{G}=\left(a_{i j}\right)_{1 \leq i, j \leq n}$ mit Einträgen aus $\{0,1\}$. $a_{i j}=1$ genau dann wenn Kante von $v_{i}$ nach $v_{j}$. Speicherbedarf $\Theta\left(|V|^{2}\right)$. $A_{G}$ ist symmetrisch, wenn $G$ ungerichtet.\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/AdjMa.png}
+\end{center}\vspace{10px}
+
+\subsubsection{Adjazenzliste}\par\smallskip
+Viele Graphen $G=(V, E)$ mit Knotenmenge $v_{1}, \ldots, v_{n}$ haben deutlich weniger als $n^{2}$ Kanten. Repräsentation mit Adjazenzliste: Array $A[1], \ldots, A[n]$, $A_{i}$ enthält verkettete Liste aller Knoten in $N^{+}\left(v_{i}\right)$. Speicherbedarf $\Theta\left(|V|+|E|\right)$.\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/AdjList.png}
+\end{center}\vspace{10px}
+
+\subsubsection{Laufzeiten einfacher Operationen}\par\smallskip
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/AdjLaufzeiten.png}
+\end{center}\smallskip
+\end{sectionbox}
+
+\vspace{150px}
+
+\begin{sectionbox}
+\subsection{Graphen Traversieren: Tiefensuche}\smallskip
+Verfolge zuerst Pfad in die Tiefe, bis nichts mehr besucht werden kann.\par
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/DFS_sym.png}
+\end{center}\par
+Reihenfolge: $a, b, c, f, d, e, g, h, i$\medskip
+
+\textbf{Tiefensuche ab Knoten $v$: DFS-Visit(G,v)}\par
+Laufzeit (ohne Rekursion): $\Theta\left(\operatorname{deg}^{+} v\right)$\par\smallskip
+
+\textbf{Tiefensuche für alle Knoten: DFS-Visit(G)}\par
+Laufzeit: $\Theta(|V|+\sum_{v \in V}(\operatorname{deg}^{+}(v)+1))=\Theta(|V|+|E|)$\par\smallskip
+
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+\textbf{DFS-Visit(G,v)} & \textbf{DFS-Visit(G)} \\
+\includegraphics[width = 0.40\columnwidth]{../img/DFSG.png} &
+\includegraphics[width = 0.54\columnwidth]{../img/DFSGv.png} \\
+\end{tabular*}\smallskip
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Graphen Traversieren: Breitensuche}\smallskip
+Verfolge zuerst Pfad in die Breite, gehe dann in die Tiefe.\par
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/DFS_sym.png}
+\end{center}\par
+Reihenfolge: $a, b, d, e, c, f, g, h, i$\medskip
+
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+\textbf{BFS-Visit(G,v)} & $\quad \quad \quad \quad$\textbf{BFS-Visit(G)} \\
+\multicolumn{2}{l}{\includegraphics[width = 0.9\columnwidth]{../img/BFS.png}} \\
+Extraplatz: $\mathcal{O}(|V|)$&  $\quad \quad \quad \quad$ Laufzeit: $\Theta(|V|+|E|)$ \\
+\end{tabular*}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Topologische Sortierung}\smallskip
+\begin{greenbox}
+Ein gerichteter Graph $G=(V, E)$ besitzt genau dann eine topologische Sortierung, wenn er \textbf{kreisfrei} ist.
+\end{greenbox}\smallskip
+
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/topoSort.png}
+\end{center}\par\smallskip
+Augmentiere den Eingangsgrad. Abbarbeitung nur wenn Eingangsgrad $0$ ist. Eingangsgrad verringern entspricht Knotenentfernen.\par\smallskip
+
+\textbf{Topological-Sort(G)}\par
+\includegraphics[width = \columnwidth]{../img/topoSortG.png}\par\smallskip
+
+\textbf{Analyse}\par
+\begin{itemize}
+    \item Sei $G=(V, E)$ ein gerichteter, kreisfreier Graph. Der Algorithmus Topological-Sort berechnet in Zeit $\Theta(|V|+|E|)$ eine topologische Sortierung $\operatorname{ord}$ für $G$.
+    \item Sei $G=(V, E)$ ein gerichteter, \textbf{nicht}-kreisfreier Graph. Der Algorithmus Topological-Sort terminiert in Zeit $\Theta(|V|+|E|)$ und detektiert den Zyklus.
+\end{itemize}
+
+\end{sectionbox}
+
+\newpage
+
+\begin{sectionbox}
+\subsection{Kürzeste Wege}\smallskip
+\textbf{Notation}\par\smallskip
+$\delta(u, v)=$ Gewicht eines kürzesten Weges von $u$ nach $v$\par
+$\delta(u, v)=\left\{\begin{array}{ll}
+\infty & \text { kein Weg von } u \text { nach } v \\
+\min \{c(p): u \stackrel{p}{\longrightarrow} v\} & \text { sonst }
+\end{array}\right.$\par\smallskip
+
+\textbf{Beobachtungen}\par
+\begin{itemize}
+    \item Einfachster Fall: Kantengewicht 1 $\rightarrow$ Breitensuche
+    \item Es gibt Situationen, in denen kein kürzester Weg existiert: negative Zyklen könnten auftreten.
+    \item Es kann exponentiell viele Wege geben $\rightarrow$  alle Wege probieren ist ineffizient
+    \item Ein kürzester Weg von $s$ nach $v$ (ohne weitere Einschränkungen) kann nicht länger sein als ein kürzester Weg von $s$ nach $v$, der $u$ enthalten muss.\par
+    \textcolor{tanne}{\textbf{$\delta(s, v) \leq \delta(s, u)+\delta(u, v)$}}
+    \item \textbf{Optimale Substruktur}: Teilpfade von kürzesten Pfaden sind kürzeste Pfade ( \textbf{\textcolor{tanne}{Kürzester Pfad $\Rightarrow$ kürzeste Subpfäde}} )
+    \item Kürzeste Wege enthalten keine Zyklen
+\end{itemize}\par\vspace{10px}
+
+\subsubsection{Allgemeiner Algorithmus (Relaxier-Algorithmus)}\smallskip
+Gesucht: Kürzeste Wege von einem Startknoten $s$ aus.
+\begin{itemize}
+    \item Gewicht des kürzesten bisher gefundenen Pfades
+    \begin{itemize}
+        \item Zu Beginn: $d_{s}[v]=\infty$ für alle Knoten $v \in V$
+        \item Ziel: $d_{s}[v]=\delta(s, v)$ für alle $v \in V$
+    \end{itemize}
+    \item Vorgänger eines Knotens: u Beginn $\pi_{s}[v]$ undefiniert für jeden Knoten $v \in V$
+\end{itemize}\smallskip
+
+
+\textbf{Algorithmus}\smallskip
+\begin{enumerate}
+    \item Initialisiere $d_{s}$ und $\pi_{s}: d_{s}[v]=\infty$, $\pi_{s}[v]=$ null für alle $v \in V$
+    \item Setze $d_{s}[s] \leftarrow 0$
+    \item Wähle eine Kante $(u, v) \in E$:\par
+    \begin{greenbox}
+    \textbf{Relaxiere $(u, v)$:}\par
+    $\begin{array}{l}
+    \text { if } d_{s}[v]>d[u]+c(u, v) \text { then } \\
+    \qquad \begin{array}{l}
+    d_{s}[v] \leftarrow d_{s}[u]+c(u, v) \\
+    \pi_{s}[v] \leftarrow u
+    \end{array}
+    \end{array}$
+    \end{greenbox}
+    \item Wiederhole 3 bis nichts mehr relaxiert werden kann (bis $\left(d_{s}[v] \leq d_{s}[u]+c(u, v) \quad \forall(u, v) \in E\right)$)
+\end{enumerate}\vspace{10px}
+
+\subsubsection{Dijkstra Algorithmus}\smallskip
+\textbf{Beobachtung}\par
+\begin{center}
+    \includegraphics[width = 0.85\columnwidth]{../img/DijkstraBeobachtung.png}\par
+\end{center}\smallskip
+
+\textbf{Grundidee}\par
+Menge $V$ aller Knoten wird unterteilt in
+\begin{itemize}
+    \item die \textcolor{red}{Menge $M$} von Knoten, für die schon ein kürzester Weg von $s$ bekannt ist
+    \item die \textcolor{blue}{Menge $R=\cup_{v \in M} N^{+}(v) \backslash M$} von Knoten, für die kein kürzester Weg bekannt ist, die jedoch von $M$ direkt erreichbar sind.
+    \item die \textcolor{orange}{Menge $U=V \backslash(M \cup R)$} von Knoten die noch nicht berücksichtigt wurden.
+\end{itemize}
+
+\begin{center}
+    \includegraphics[width = 0.35\columnwidth]{../img/DijkstraSym.png}\par
+\end{center}
+\textit{Betrachte alle Nachbarn der Menge $M$ und füge den Knoten mit dem kürzesten Weg zu $s$ der Menge $M$ hinzu.}\par
+\end{sectionbox}
+
+\begin{sectionbox}
+\textbf{Dijkstra(G,s)}\par
+\includegraphics[width = \columnwidth]{../img/Dijkstra.png}\par
+DecreaseKey (Aufsteigen im MinHeap), Position im Heap: Speichern am Knoten, Hashtabelle oder Lazy Deletion\par\smallskip
+\textbf{Laufzeit}\par
+\begin{itemize}
+    \item $|V| \times$ ExtractMin: $\mathcal{O}(|V| \log |V|)$
+    \item $|E| \times$ Insert oder DecreaseKey: $\mathcal{O}(|E| \log |V|)$
+    \item $1 \times$ Init: $\mathcal{O}(|V|)$
+    \item \textbf{Insgesamt}: $\mathcal{O}(|E| \log |V|)$
+\end{itemize}
+
+\end{sectionbox}
+\begin{sectionbox}
+\textit{Beispiel Dijkstra}\par
+\includegraphics[width = \columnwidth]{../img/DijkstraBsp.png}\par
+\end{sectionbox}
+
+\vspace{300px}
+
+\begin{sectionbox}
+\subsection{Minimale Spannbäume}\smallskip
+\textbf{Problem}\par
+\begin{itemize}
+    \item Gegeben: Ungerichteter, zusammenhängender, gewichteter Graph $G=(V, E, c)$
+    \item Gesucht: Minimaler Spannbaum $T=\left(V, E^{\prime}\right)$ : zusammenhängender, zyklenfreier Teilgraph $E^{\prime} \subset E,$ so dass $\sum_{e \in E^{\prime}} c(e)$ minimal.
+\end{itemize}
+Greedy (gierige) Verfahren berechnen eine Lösung schrittweise, indem lokal beste Lösungen gewählt werden.\par\vspace{10px}
+
+\subsubsection{Union-Find Kruskal Algorithmus}\smallskip
+\textbf{Zur Implementation}\par
+Gegeben eine Menge von Mengen $i \equiv A_{i} \subset V$. Zur Identifikation von Schnitten und Kreisen: Zugehörigkeit der beiden Endpunkte einer Kante zu einer der Mengen.\par
+\begin{center}
+    \includegraphics[width = 0.35\columnwidth]{../img/MST_Sym.png}\par
+\end{center}\smallskip
+
+Allgemeines Problem: Partition (Menge von Teilmengen) benötigt einen abstrakter Datentyp (\textbf{Union-Find}) mit folgenden Operationen:\par
+\begin{itemize}
+    \item Make-Set($(i)$): Hinzufügen einer neuen Menge $i$\par($p[i] \leftarrow i; return i$)
+    \item Find ($e$): Name $i$ der Menge, welche $e$ enthält \par($\operatorname{while} (p[i]\neq 0) do\ i \leftarrow p[i]$; return $i$)
+    \item Union($i,j$): Vereingung der Mengen mit Namen $i$ und $j$ \par($p[j]=i$, wobei $i$ und $j$ die Wurzeln (Namen) sind.)
+\end{itemize}\smallskip
+Laufzeitoptimierungen:\par
+\begin{itemize}
+    \item[a)] Immer kleineren Baum an grösseren hängen
+    \item[b)] Bei Find Knoten immer an den Parent hängen
+\end{itemize}\par\smallskip
+
+\textit{Implementation von Union-Find}\par
+Idee: Baum für jede Teilmenge in der Partition, z.B. {{1, 2, 3, 9}, {7, 6, 4}, {5, 8}, {10}}, wobei die Baumwurzeln $\to$ Namen (Stellvertreter) der Mengen ist.\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.7\columnwidth]{../img/UF.png}\par\smallskip
+    \includegraphics[width = 0.7\columnwidth]{../img/UFarray.png}\par\smallskip
+\end{center}
+
+\textbf{Algorithmus}\par
+\includegraphics[width = \columnwidth]{../img/Kruskal.png}\par\smallskip
+
+\textbf{Laufzeit des Kruskal Alghorithmus}\par
+\begin{itemize}
+    \item Sortieren der Kanten: $\Theta(|E| \log |E|)=\Theta(|E| \log |V|)$
+    \item Initialisieren der Union-Find Datenstruktur $\Theta(|V|)$
+    \item $|E| \times \text { Union }(\text { Find }(x), \text { Find }(y)): \mathcal{O}(|E| \log |V|)$
+    \item \textbf{Insgesamt}: $\Theta(|E| \log |V|)$
+\end{itemize}%\vspace{10px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsubsection{Algorithmus von Jarnik, Prim, Dijkstra}\smallskip
+Idee: Starte mit einem $v \in V$ und lasse von dort unter Verwendung der Auswahlregel einen Spannbaum wachsen:\par
+\includegraphics[width = 0.9\columnwidth]{../img/MST_JPD.png}\par\smallskip
+\textit{Bemerkungen}\par
+\begin{itemize}
+    \item Man braucht keine Union-Find Datenstruktur (Färbung reicht aus)
+    \item Vorgehensweise:
+    \par \tab a) Immer Knoten mit kleinstem Gewicht zur Menge S hinzufügen
+    \par \tab b) Wenn der Knoten noch nicht in S ist $\to$ MST ist zyklenfrei
+\end{itemize}\par\smallskip
+\textbf{Laufzeit insgesamt}: $\mathcal{O}(|E| \log |V|)$
+\end{sectionbox}
+
+%\vspace{105px}
+\newpage
+
+% SECTION ====================================================================================
+\section{Flüsse in Netzen}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Terminologie und Eigenschaften}\medskip
+\textbf{Flussnetzwerk}\par
+\begin{itemize}
+    \item Flussnetzwerk $G=(V, E, c):$ gerichteter Graph mit Kapazitäten
+    \item Antiparallele Kanten verboten
+    \item Quelle $s$ und Senke $t:$ spezielle Knoten. Jeder Knoten $v$ liegt auf einem Pfad zwischen $s$ und $t: s \leadsto v \leadsto t$
+\end{itemize}\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/flussNet.png}
+\end{center}
+
+\textbf{Fluss}  $f: V \times V \rightarrow \mathbb{R}$ erfüllt Bedingungen:\par
+\begin{itemize}
+    \item \textbf{Kapazitätsbeschränkung}: $\forall u, v \in V: f(u, v) \leq c(u, v)$
+    \item \textbf{Schiefsymmetrie}: $\forall u, v \in V: f(u, v)=-f(v, u)$
+    \item \textbf{Flusserhaltung}: $u \in V \backslash\{s, t\}: \sum_{v \in V} f(u, v)=0$
+    \item \textbf{Wert $w$ des Flusses}:$|f|=\sum_{v \in V} f(s, v)$
+\end{itemize}\par\smallskip
+
+\begin{cookbox}{Eigenschaften}
+\item $|f|=f(s, V)$
+\item $f(U, U)=0$
+\item $f\left(U, U^{\prime}\right)=-f\left(U^{\prime}, U\right)$
+\item $f(X \cup Y, Z)=f(X, Z)+f(Y, Z),$ wenn $X \cap Y=\emptyset$
+\item $f(R, V)=0 \text { wenn } R \cap\{s, t\}=\emptyset . \text { [Flusserhaltung! }]$\smallskip
+\par Wobei gilt:
+\par $f\left(U, U^{\prime}\right):=\sum\limits_{u \in U \atop u^{\prime} \in U^{\prime}} f\left(u, u^{\prime}\right)$, $f\left(u, U^{\prime}\right):=f\left(\{u\}U^{\prime}\right)$
+\end{cookbox}\medskip
+
+\textbf{Restnetzwerk}\par
+Restnetzwerk $G_{f}$ gegeben durch alle Kanten mit Restkapazität. Restnetzwerke haben dieselben Eigenschaften wie Flussnetzwerke, ausser dass antiparallele Kapazitäten-Kantenzugelassen sind.\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/restNet.png}
+\end{center}\par\smallskip
+
+\textbf{Erweiterungspfade}\par
+\begin{itemize}
+    \item \textbf{Erweiterungspfad $p$}: einfacher Pfad von $s$ nach $t$ im Restnetzwerk $G_{f}$
+    \item \textbf{Restkapazität} $c_{f}(p)=\min \left\{c_{f}(u, v):(u, v) \text { Kante in } p\right\}$
+\end{itemize}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Maximaler Fluss / Minimaler Schnitt}\smallskip
+\begin{emphbox}
+$|f| \leq \sum\limits_{v \in S, v^{\prime} \in T} c\left(v, v^{\prime}\right)=c(S, T)$
+\end{emphbox}
+Wobei $S$ die Menge der Knoten vor dem Cut und $T$ die Menge der Knoten nach dem Cut ist. Gezählt werden folglich nur die Kapazitäten von $S$ zu $T$ und nicht alle! So ergibt dies im Beispiel: $c(S,T)=12+7+4=23$\par\smallskip
+
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/maxFlow.png}
+\end{center}\par\smallskip
+
+\begin{greenbox}
+\textbf{Max-Flow Min-Cut Theorem}\par
+Wenn $f$ ein Fluss in einem Flussnetzwerk $G=(V, E, c)$ mit Quelle $s$ und Senke $t$ ist, dann sind folgende Aussagen äquivalent:
+\begin{enumerate}
+    \item $f$ ist ein maximaler Fluss in $G$
+    \item Das Restnetzwerk $G_{f}$ enthält keine Erweiterungspfade
+    \item Es gilt $|f|=c(S, T)$ für einen Schnitt $(S, T)$ von $G$
+\end{enumerate}
+\end{greenbox}\vspace{10px}
+
+\subsubsection{Die Ford-Fulkerson Methode}\smallskip
+\begin{itemize}
+    \item Starte mit $f(u, v)=0$ für alle $u, v \in V$
+    \item Bestimme Restnetzwerk $G_{f}$ und Erweiterungspfad in $G_{f}$
+    \item Erhöhe Fluss über den Erweiterungspfad
+    \item Wiederholung bis kein Erweiterungspfad mehr vorhanden.
+\end{itemize}\smallskip
+
+\textbf{Ford-Fulkerson(G,s,t)}\par
+\includegraphics[width = 0.8\columnwidth]{../img/FoFu.png}\par\smallskip
+
+\textit{Praktische Anmerkung zur Implementierung}\par
+In einer Implementation des Ford-Fulkerson Algorithmus müssen die negativen Flusskanten nicht unbedingt gespeichert werden, da ihr Wert sich stets als der negierter Wert der Gegenkante ergibt. Somit kann dies vereinfacht folgendermassen implementiert werden:\par\smallskip
+\includegraphics[width = 0.45\columnwidth]{../img/paFF1.png} wird zu
+\includegraphics[width = 0.4\columnwidth]{../img/paFF2.png}\par\smallskip
+
+\textbf{Analyse}\par
+Der Ford-Fulkerson Algorithmus muss für irrationale Kapazitäten nicht einmal terminieren! Sonst $\mathcal{O}\left(f_{\max }\cdot |E|\right)$.\vspace{10px}
+
+\subsubsection{Edmonds-Karp Algorithmus}\smallskip
+Wähle in der Ford-Fulkerson-Methode zum Finden eines Pfades in $G_{f}$ jeweils einen Erweiterungspfad kürzester Länge (z.B. durch Breitensuche).\par $\Rightarrow$ Gesamte asymptotische Laufzeit: $\mathcal{O}\left(|V| \cdot|E|^{2}\right)$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Bipartites Matching}\smallskip
+Konstruiere zur einer Partition $L, R$ eines bipartiten Graphen ein korrespondierendes Flussnetzwerk mit Quelle $s$ und Senke $t,$ mit gerichteten Kanten von $s$ nach $L$, von $L$ nach $R$ und von $R$ nach $t$. Jede Kante bekommt Kapazität 1.\par
+\includegraphics[width = \columnwidth]{../img/biMa.png}\par\smallskip
+\end{sectionbox}
+
+\vspace{500px}
+
+\begin{sectionbox}
+\subsection{Anwendungen vom Maximalen Fluss}\medskip
+
+\textbf{Knotenkapazitäten in Graphen einbauen}\par
+\includegraphics[width = \columnwidth]{../img/KontenKap.png}\par
+\textit{Trick}: Um Knotenkapazitäten in einen Graphen einzubauen muss man aus einem Knoten zwei machen (\textbf{Input-Knoten} und \textbf{Output-Knoten}). Die Kante zwischen dem Input-Knoten und dem Output-Knoten muss die Kapazität des Knotens haben. D.h. $c(v) = c(v,v')$\par\smallskip
+\end{sectionbox}
+
+\newpage
+% SECTION ====================================================================================
+\section{Dynamische Programmierung}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Idee}\smallskip
+\begin{itemize}
+    \item Aufteilen eines komplexen Problems in eine vernünftige Anzahl kleinerer Teilprobleme
+    \item Die Lösung der Teilprobleme wird zur Lösung des komplexeren Problems verwendet
+    \item Identische Teilprobleme werden nur einmal gerechnet
+\end{itemize}\smallskip
+$\rightarrow$ Wir tauschen Laufzeit gegen Speicherplatz
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Dynamic Programming vs. Divide-And-Conquer}\smallskip
+\begin{itemize}
+    \item \textbf{Optimale Substruktur}: In beiden Fällen ist das Ursprungsproblem (einfacher) lösbar, indem Lösungen von Teilproblemen herangezogen werden können.
+    \item Bei Divide-And-Conquer Algorithmen sind \textbf{Teilprobleme unabhängig}; deren Lösungen werden im Algorithmus nur einmal benötigt.\par
+    Beim DP sind Teilprobleme nicht unabhängig. Das Problem hat \textbf{überlappende Teilprobleme}, welche im Algorithmus mehrfach gebraucht werden.
+    \item Identische Teilprobleme werden nur einmal gerechnet d.h. \textbf{keine zirkulären Abhängigkeiten zwischen Teilproblemen}
+\end{itemize}\smallskip
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Memoization}\smallskip
+Memoization (sic) Abspeichern von Zwischenergebnissen.
+\begin{itemize}
+    \item Bevor ein Teilproblem gelöst wird, wird Existenz eines entsprechenden Zwischenergebnis geprüft
+    \item Existiert ein gespeichertes Zwischenergebnis bereits, so wird dieses verwendet.
+    \item Andernfalls wird der Algorithmus ausgeführt und das Ergebnis wird entsprechend gespeichert
+\end{itemize}\smallskip
+
+\textit{Beispiel Fibonacci}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/memo.png}\par\smallskip
+    \includegraphics[width = 0.54\columnwidth]{../img/Memo_Fib_schema_vor.png}
+    \includegraphics[width = 0.45\columnwidth]{../img/Memo_Fib_schema.png}
+\end{center}
+$\rightarrow$ Genau hingesehen lösen wir das Problem bottom-up
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Dynamic Programming: Beschreibung am Beispiel}\smallskip
+
+\textit{Beispiel Fibonacci}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/DPtable.png}
+\end{center}\smallskip
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Wie findet man den DP Algorithmus?}\smallskip
+\begin{enumerate}
+    \item Genaue Formulierung der gesuchten Lösung
+    \item Definiere Teilprobleme (und bestimme deren Anzahl)
+    \item Raten / Aufzählen (und bestimme die Laufzeit für das Raten)
+    \item Rekursion: verbinde die Teilprobleme
+    \item Memoisieren / Tabellieren. Bestimme die Abhängigkeiten der Teilprobleme
+    \item Lösung des Problems: \par Laufzeit = Anz. Teilprobleme $\times$ $\frac{\text{Zeit}}{\text{Teilproblem}}$
+\end{enumerate}
+
+\end{sectionbox}
+
+
+\begin{sectionbox}
+\subsection{Beispiel Kaninchen}\smallskip
+Ein Kaninchen sitzt auf Platz (1,1) eines $n \times n$ Gitters. Es kann nur nach Osten oder nach Süden gehen. Auf jedem Wegstück liegt eine Anzahl Rüben. Wie viele Rüben sammelt das Kaninchen maximal ein?\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.75\columnwidth]{../img/kan1.png}
+\end{center}\vspace{7px}
+
+\textbf{Rekursion}\par
+Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j)-\left(i^{\prime}, j^{\prime}\right)}$ Anzahl Rüben auf Kante von $(i, j)$ nach $\left(i^{\prime}, j^{\prime}\right)$ Rekursion (maximale Anzahl Rüben von $(i, j) \text { nach }(n, n))$\par\smallskip
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/kanRek.png}
+\end{center}\vspace{7px}
+
+\textbf{Teilabhängigkeitsgraph}\par
+\begin{itemize}
+    \item Richtung der Abhängigkeiten: Links oben nach rechts unten
+    \item Richtung der Berechung: Rechts unten nach links oben
+\end{itemize}\vspace{7px}
+
+\textbf{Bottom-Up Beschreibung am Beispiel}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/kanTable.png}
+\end{center}\smallskip
+
+\end{sectionbox}
+
+
+\begin{sectionbox}
+\subsection{Die Editierdistanz / Levenshteinabstand}\smallskip
+\textbf{Aufgabenstellung}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/ed1.png}
+\end{center}\vspace{7px}
+
+\textbf{Wie findet man den DP Algorithmus?}\par
+\begin{enumerate}
+    \item Genaue Formulierung der gesuchten Lösung:
+    \par $E(n, m)=$ minimale Anzahl Editieroperationen (ED Kosten) für $a_{1 \ldots n} \rightarrow b_{1 \ldots m}$
+    \item Definiere Teilprobleme (und bestimme deren Anzahl):
+    \par Teilprobleme $E(i, j)=$ ED von $a_{1 \dots i} . b_{1 \dots j}$ (Anz. $n \cdot m$)
+    \item Raten / Aufzählen (und bestimme die Laufzeit für das Raten):
+    \par $a_{1 . . i} \rightarrow a_{1 \ldots i-1}(\text { löschen })$
+    $a_{1 . . i} \rightarrow a_{1 \ldots i} b_{j}$ (einfügen)
+    $a_{1 . . i} \rightarrow a_{1 \ldots i-1} b_{j}$ (ersetzen)
+    \item Rekursion: verbinde die Teilprobleme:
+    \par \begin{center}
+        $E(i, j)=\min \left\{\begin{array}{l}\operatorname{del}\left(a_{i}\right)+E(i-1, j) \\ \operatorname{ins}\left(b_{j}\right)+E(i, j-1) \\ \operatorname{repl}\left(a_{i}, b_{j}\right)+E(i-1, j-1)\end{array}\right.$
+    \end{center}
+    \item Memoisieren / Tabellieren. Bestimme die Abhängigkeiten der Teilprobleme:
+    \par \begin{center}
+        \includegraphics[width=0.4\columnwidth]{../img/Lst_Abh.png}
+    \end{center}
+    \par Berechnung von links oben nach rechts unten. Zeilen- oder Spaltenweise.
+    \item Lösung des Problems: Lösung steht in $E(n, m)$
+\end{enumerate}\vspace{7px}
+
+\textbf{Bottom-Up Beschreibung}\par
+\begin{center}
+    \includegraphics[width = \columnwidth]{../img/edTable.png}
+\end{center}\smallskip
+
+\textbf{Analyse}\par
+Anzahl Tabelleneinträge: $(m+1) \cdot (n+1)$\par
+Laufzeit: $\mathcal{O}(m \cdot n)$\smallskip
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Kürzeste Wege: DP Ansatz (Bellman)}\smallskip
+Induktion über Anzahl Kanten $d_{s}[i, v]$: Kürzeste Weglänge von $s$ nach $v$ über maximal $i$ Kanten.\par\vspace{-3px}
+\begin{equation*}
+\begin{array}{l}
+d_{s}[i, v]=\min \left\{\begin{array}{l} d_{s}[i-1, v] \\ \min _{(u, v) \in E}\left(d_{s}[i-1, u]+c(u, v)\right)\end{array}\right. \\
+d_{s}[0, s]=0, \underbrace{d_{s}[0, v]=\infty \forall v \neq s}_{\text{Zyklus}}
+\end{array}
+\end{equation*}\par\smallskip
+\begin{center}
+    \includegraphics[width = 0.9\columnwidth]{../img/BellFordSym.png}
+\end{center}\smallskip
+Algorithmus: Iteriere über letzte Zeile bis die Relaxationsschritte keine Änderung mehr ergeben, maximal aber $n − 1$ mal. Wenn dann noch Änderungen, dann gibt es keinen kürzesten Pfad.\par\vspace{7px}
+
+\textbf{Bellmann-Ford(G,s)}\par
+\includegraphics[width = \columnwidth]{../img/BellFord.png}\smallskip
+
+\textbf{Analyse}\par
+Laufzeit: $\mathcal{O}(|V| \cdot |E|)$\par
+Speicherplatz: $\mathcal{O}(|V|^2)$ $\leadsto$ eigentlich sogar $\mathcal{O}(|V|)$, da nur immer die letzte Zeile abgespeichert werden muss.\smallskip
+\end{sectionbox}
+
+\newpage
+
+% SECTION ====================================================================================
+\section{Code Beispiele}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Beispiel: Levenshtein-Algorithmus}
+\begin{lstlisting}[language=Python]
+def Levenshtein(x, y):
+  # D[n,m] = distance between x and y
+  # D[i,j] = distance between strings x[1..i] and y[1..j]
+  n = len(x)
+  m = len(y)
+  D = [[0 for i in range(m+1)] for j in range(n+1)]
+  for j in range(0,m+1):
+    D[0][j] = j
+  for i in range(1,n+1):
+    D[i][0] = i
+    for j in range(1,m+1):
+      # D[i,j] = min{ 
+      # D[i-1,j-1] + d(x[i],y[j]);
+      # D[i-1,j] + 1
+      # D[i,j-1] + 1 }
+      q = D[i-1][j-1] 
+      if x[i-1] != y[j-1]:
+        q += 1
+      q = min(q, D[i][j-1]+1)
+      q = min(q, D[i-1][j]+1)
+      D[i][j] = q
+  return D[n][m]
+\end{lstlisting}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Längste gemeinsame Teilfolge}
+\begin{lstlisting}[language=Python]
+import Data
+import time
+
+# compute longest ascending sequence for a point of the matrix
+def LASR(A,L,y,x):
+  if L[y][x] > 0:
+    return L[y][x]
+  maxLength = 0
+  if x>0 and A[y][x] < A[y][x-1]: 
+    maxLength = max(maxLength, LASR(A,L,y,x-1))
+  if y>0 and A[y][x] < A[y-1][x]: 
+    maxLength = max(maxLength, LASR(A,L,y-1,x))
+  if y<len(A)-1 and A[y][x] < A[y+1][x]: 
+    maxLength = max(maxLength, LASR(A,L,y+1,x))
+  if x<len(A[y])-1 and A[y][x] < A[y][x+1]: 
+    maxLength = max(maxLength, LASR(A,L,y,x+1))
+  L[y][x] = maxLength + 1;
+  return L[y][x]
+
+# compute longest ascending sequence for each point of the matrix
+def LAS(A):
+  maxLength = 0
+  L = [[0] * len(A[i]) for i in range(len(A))]
+  for y in range(len(A)):
+    for x in range(len(A[y])):
+      L[y][x] = LASR(A,L,y,x)
+      maxLength = max(maxLength, L[y][x])
+  return maxLength,L
+
+A = Data.get()
+
+start = time.time()
+(m,L) = LAS(A)
+stop = time.time();
+
+if len(A)<15 and len(A[0])<15:
+  print("matrix a")
+  Data.print_matrix(A)
+  print("path lengths matrix")
+  Data.print_matrix(L)
+  
+print("maximum length",m)
+print("time:", stop-start, "s")
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Union Find}
+\begin{lstlisting}[language=Python]
+class Set:
+  def __init__(self,n):
+    self.a = [i for i in range(0,n)]
+    self.g = [1] * n
+    
+  def union(self,i,j):
+    i = self.find(i)
+    j = self.find(j)
+    if i == j:
+      return False
+    self.a[j] = i # j under i
+    return True
+
+  def find(self,i):
+    while self.a[i] != i:
+      i = self.a[i]
+    return i
+  
+  def path_length(self,i):
+    count = 1;
+    while self.a[i] != i:
+        i = self.a[i];
+        count = count + 1;
+    return count;
+    
+class SmallUnderLarge(Set):
+  def union(self,i,j):
+    i = self.find(i)
+    j = self.find(j)
+    if i == j:
+      return False
+    if self.g[i] < self.g[j]:
+      i,j = j,i
+    self.a[j] = i # j under i
+    if self.g[i] == self.g[j]:
+      self.g[i] = self.g[i] + 1
+    return True
+
+class ConsolidateFind(Set):
+  def find(self,i):
+    root = i
+    while self.a[root] != root:
+      root = self.a[root]
+    while self.a[i] != root:
+      next = self.a[i]
+      self.a[i] = root
+      i = next
+    return root
+ 
+  # recursive version
+  def find_recursive(self,i):
+    if self.a[i] == i:
+      return i
+    self.a[i] = self.find(self.a[i])
+    return self.a[i]
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Dict Comprehension}
+\begin{lstlisting}[language=Python]
+accounts = {
+    'Food' : { 'Amount' : 1242, 'Kind': 'Credit' },
+    'Insurances' : { 'Amount' : 5547, 'Kind': 'Credit' },
+    'Fun-Time' : { 'Amount' : 3978, 'Kind': 'Credit'},
+    'Salary'   : { 'Amount': 14785, 'Kind': 'Debit' },
+    'Jewelry' : { 'Amount': 14785, 'Kind': 'Debit' }
+}
+
+credit_accounts = { account : record['Amount']
+    for account, record in accounts.items() 
+    if record['Kind'] == 'Credit'   }  # create your dict here
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Sliding Window}
+\begin{lstlisting}[language=Python]
+def main():
+  text = input()
+
+  map = {'a':0, 'b':0, 'c':0}
+  bestl = -1
+  bestr = len(text)
+  l=0
+  r=-1
+  num=0
+  while r < len(text):
+    if num == 3 and bestr-bestl > r-l:
+      bestl = l
+      bestr = r
+    if num >= 3:
+      x = text[l]
+      if x in map:
+        xc = map[x]
+        xc -= 1
+        map[x]=xc
+        if xc == 0:
+            num -= 1
+      l += 1
+    else:
+      r += 1
+      if r < len(text):
+        x = text[r]
+        if x in map:
+            xc = map[x]
+            xc += 1
+            map[x] = xc
+            if xc == 1:
+              num += 1
+  if bestl == -1:
+    print(text,"does not contain a,b AND c.")
+  else:
+    print("contains a,b,c between",bestl,"and",bestr)
+\end{lstlisting}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Palindrome Checker}
+\begin{lstlisting}[language=Python]
+def isPalindrome(word):
+  for i in range(0, len(word)//2):
+    if word[i] != word[-1 -i]:
+      return False
+  return True
+    
+def main():
+  again, word = True, input("Enter a word: ")
+  while again:
+    if isPalindrome(word):
+      cprint(word + ' is a palindrome!')
+    else:
+      cprint(word + ' is not a palindrome')
+    word = input("Enter a word (or just <ENTER> to stop): ")
+    again = len(word) > 0
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\vspace{300px}
+
+% SECTION ====================================================================================
+\section{Anhang}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Nützliche Formeln für asymptotische Laufzeiten}\medskip
+
+\textbf{Gauss'sche Summenformel}\par\vspace{-4px}
+\begin{equation*}
+    \boxed{\sum\limits_{i=0}^n i = \frac{n \cdot (n+1)}{2} \in \theta \left(n^2\right)}
+\end{equation*}\par\smallskip
+
+\textbf{Binomialkoeffizient}\par\vspace{-15px}
+\begin{equation*}
+    \left(\begin{array}{l} n \\ k \end{array}\right)=\frac{n !}{k ! \cdot(n-k) !} = \frac{ \overbrace{n \cdot (n-1) \cdots}^{k\text{-Faktoren}} (n-k)!}{k! \cdot (n-k)!} \in \theta \left( n^k \right)
+\end{equation*}\par\smallskip
+
+\textbf{Spezielle Summen}\par\vspace{-4px}
+\begin{equation*}
+    \sum\limits_{i=0}^{10n} \log{n^n} \in \theta \left(10 \cdot n \cdot \log{n^n}\right) \in \theta \left(n^2 \cdot \log{n}\right)
+\end{equation*}\par\smallskip
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Asymptotische Laufzeiten Python}\medskip
+
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}llllll@{}}
+	 & Wahlfreier & Einfügen & Iteration & Ins. nach & Suchen \\ 
+	 & Zugriff & & & Element & (x in S) \\ \cmrule
+	list & $\Theta(1)$ & $\Theta(1)$ A &  $\Theta(n)$ &  $\Theta(n)$ &  $\Theta(n)$ \\
+	set & - & $\Theta(1)$ P & $\Theta(n)$ & - & $\Theta(1)$ P\\
+	dict & - & $\Theta(1)$ P & $\Theta(n)$ & - & $\Theta(1)$ P \\
+\end{tabular*}\par\smallskip
+A: Amortisiert\par
+P: Erwartet (sonst worst case)
+\end{sectionbox}
+
+
+% DOCUMENT_END =================================================================
+\end{document}
+

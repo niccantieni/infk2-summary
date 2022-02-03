@@ -1,0 +1,2189 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.4)  30 JAN 2022 15:16
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/niccantieni/Dropbox/EEIT_D-ITET/HS2021/Infk2/zusammenfassung/ncantieni_InformatikII_Zusammenfassung/InformatikII.tex
+(/Users/niccantieni/Dropbox/EEIT_D-ITET/HS2021/Infk2/zusammenfassung/ncantieni_InformatikII_Zusammenfassung/InformatikII.tex
+LaTeX2e <2021-06-01>
+L3 programming layer <2021-06-01> (./latex4ei/latex4ei_sheet.cls
+
+LaTeX Warning: You have requested document class `latex4ei/latex4ei_sheet',
+               but the document class provides `latex4ei_sheet'.
+
+Document Class: latex4ei_sheet 2014/03/30 Cheet Sheet Template from LaTeX4EI
+\c@columnnumber=\count182
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2021/03/17 v3.33 KOMA-Script document class (article)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
+))) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw option list on input line 252.
+Already applied: [0000/00/00] compatibility for LaTeX before 2021/05/01 on input line 337.
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2021/03/17 v3.33 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box50
+)
+Package tocbasic Info: babel extension for `toc' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 135.
+
+
+Package scrartcl Warning: You've used obsolete option `6pt'.
+(scrartcl)                Usage of this option indicates an old document
+(scrartcl)                and changes compatibility level using
+(scrartcl)                `fontsize=6pt,version=first,
+(scrartcl)                enabledeprecatedfontcommands' that may result
+(scrartcl)                in further warnings.
+(scrartcl)                If you don't want this, you should simply
+(scrartcl)                replace option `6pt' by `fontsize=6pt'.
+
+Class scrartcl Info: Switching compatibility level to `first'.
+
+Class scrartcl Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrartcl)              Note, that this option was already depreacted when
+(scrartcl)              it has been defined. Support for old font commands
+(scrartcl)              has been removed from KOMA-Script more than one
+(scrartcl)              decade ago. It is not recommended to use them any
+(scrartcl)              longer. Therefore usage of this class option also
+(scrartcl)              is not recommended.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2021/03/17 v3.33 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count183
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+
+
+Package typearea Warning: DIV for 6.0pt and used papersize
+(typearea)                not defined!
+(typearea)                Using DIV=calc.
+
+DIV calculation for typearea with good linewidth.
+
+Package typearea Warning: Very low DIV value!
+(typearea)                DIV values less than 6 result in textwidth/-height
+(typearea)                smaller than total marginwidth/-height.
+(typearea)                You should e.g. increase DIV, increase fontsize or
+(typearea)                change papersize.
+
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 5
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 239.00317pt
+(typearea)              DIV departure   = 1%
+(typearea)              \evensidemargin = 106.98239pt
+(typearea)              \oddsidemargin  = 106.98239pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 344.39914pt
+(typearea)              \topmargin      = 76.93945pt
+(typearea)              \headheight     = 8.99997pt
+(typearea)              \headsep        = 10.79997pt
+(typearea)              \topskip        = 6.0pt
+(typearea)              \footskip       = 25.19992pt
+(typearea)              \baselineskip   = 7.19998pt
+(typearea)              on input line 1741.
+)
+\c@part=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\scr@dte@section@maxnumwidth=\skip53
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4846.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4846.
+\scr@dte@part@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4854.
+\scr@dte@subsection@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4864.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4864.
+\scr@dte@subsubsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4874.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4874.
+\scr@dte@paragraph@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4885.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4885.
+\scr@dte@subparagraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4895.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4895.
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+\c@pti@nb@sid@b@x=\box51
+Package tocbasic Info: babel extension for `lof' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6127.
+\scr@dte@figure@maxnumwidth=\skip61
+\c@figure=\count190
+Package tocbasic Info: babel extension for `lot' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6139.
+\scr@dte@table@maxnumwidth=\skip62
+\c@table=\count191
+Class scrartcl Info: Using old \@makefntext due to compatibility level
+(scrartcl)           less than 3.22 on input line 6290.
+Class scrartcl Info: Redefining `\numberline' on input line 6303.
+\bibindent=\dimen138
+) (./latex4ei/scientific.sty
+
+LaTeX Warning: You have requested package `latex4ei/scientific',
+               but the package provides `scientific'.
+
+Package: scientific 2015/03/30 Scientific Macros for LaTeX4EI
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip63
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen139
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count192
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count193
+\leftroot@=\count194
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count195
+\DOTSCASE@=\count196
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count197
+\c@MaxMatrixCols=\count198
+\dotsspace@=\muskip16
+\c@parentequation=\count199
+\dspbrk@lvl=\count266
+\tag@help=\toks18
+\row@=\count267
+\column@=\count268
+\maxfields@=\count269
+\andhelp@=\toks19
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks20
+\multlinegap=\skip64
+\multlinetaggap=\skip65
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/esint/esint.sty
+Package: esint 
+\symlargesymbolsA=\mathgroup4
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2021-06-01 v3.0.9 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen148
+\l__siunitx_angle_marker_box=\box54
+\l__siunitx_angle_unit_box=\box55
+\l__siunitx_compound_count_int=\count270
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2021/01/17 v1.10a internationalization of LaTeX2e packages (CN)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count271
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+\l__siunitx_number_exponent_fixed_int=\count272
+\l__siunitx_number_min_decimal_int=\count273
+\l__siunitx_number_min_integer_int=\count274
+\l__siunitx_number_round_precision_int=\count275
+\l__siunitx_number_group_minimum_int=\count276
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\l__siunitx_table_tmp_box=\box56
+\l__siunitx_table_tmp_dim=\dimen149
+\l__siunitx_table_column_width_dim=\dimen150
+\l__siunitx_table_integer_box=\box57
+\l__siunitx_table_decimal_box=\box58
+\l__siunitx_table_before_box=\box59
+\l__siunitx_table_after_box=\box60
+\l__siunitx_table_before_dim=\dimen151
+\l__siunitx_table_carry_dim=\dimen152
+\l__siunitx_unit_tmp_int=\count277
+\l__siunitx_unit_position_int=\count278
+\l__siunitx_unit_total_int=\count279
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-06-01 L3 programming layer (loader) 
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count280
+\l__pdf_internal_box=\box61
+))
+Package: l3keys2e 2021-06-01 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen153
+\ar@mcellbox=\box62
+\extrarowheight=\dimen154
+\NC@list=\toks22
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box63
+))
+
+Package siunitx Info: Option "per-mode = reciprocal" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "per-mode = power" as a replacement.
+
+\knuthian@fdfive=\skip68
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count281
+\calc@Bcount=\count282
+\calc@Adimen=\dimen155
+\calc@Bdimen=\dimen156
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count283
+\calc@Cskip=\skip71
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/chemgreek/chemgreek.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2021-06-01 L3 Experimental document command parser
+)
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+\l__chemgreek_tmpa_int=\count284
+\g__chemgreek_tmpa_int=\count285
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count286
+\__mhchem_arrow_extPgfLength_skip=\skip72
+\mhchem@minispace@tmp=\skip73
+\mhchem@minibackspace@tmp=\skip74
+\mhchem@bondwidth=\skip75
+\mhchem@bondheight=\skip76
+\mhchem@smallbondwidth@tmpA=\skip77
+\mhchem@smallbondwidth@tmpB=\skip78
+\mhchem@smallbondwidth=\skip79
+\mhchem@bondtmp@minussidebearingleft=\skip80
+\mhchem@bondtmp@minussidebearingright=\skip81
+\l__mhchem_option_version_int=\count287
+\mhchem@option@minusmathsidebearingleft=\dimen157
+\mhchem@option@minusmathsidebearingright=\dimen158
+\mhchem@option@minustextsidebearingleft=\dimen159
+\mhchem@option@minustextsidebearingright=\dimen160
+)
+\caplength=\skip82
+LaTeX Font Info:    Trying to load font information for U+esint on input line 162.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 162.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 162.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) (./latex4ei/latex4ei.sty
+
+LaTeX Warning: You have requested package `latex4ei/latex4ei',
+               but the package provides `latex4ei'.
+
+Package: latex4ei 2013/05/06 Macros for LaTeX4EI
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+) (./latex4ei/latex4ei_unicode.sty
+
+LaTeX Warning: You have requested package `latex4ei/latex4ei_unicode',
+               but the package provides `latex4ei_unicode'.
+
+Package: latex4ei_unicode 2013/05/01 Unicode Symbols
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+03B1 (decimal 945)
+   defining Unicode char U+03B2 (decimal 946)
+   defining Unicode char U+03B3 (decimal 947)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+03B5 (decimal 949)
+   defining Unicode char U+03B6 (decimal 950)
+   defining Unicode char U+03B7 (decimal 951)
+   defining Unicode char U+03B8 (decimal 952)
+   defining Unicode char U+03B9 (decimal 953)
+   defining Unicode char U+03BA (decimal 954)
+   defining Unicode char U+03BB (decimal 955)
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+03BD (decimal 957)
+   defining Unicode char U+03BE (decimal 958)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03C1 (decimal 961)
+   defining Unicode char U+03C3 (decimal 963)
+   defining Unicode char U+03C4 (decimal 964)
+   defining Unicode char U+03C5 (decimal 965)
+   defining Unicode char U+03C6 (decimal 966)
+   defining Unicode char U+03C7 (decimal 967)
+   defining Unicode char U+03C8 (decimal 968)
+   defining Unicode char U+03C9 (decimal 969)
+   defining Unicode char U+0393 (decimal 915)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+0398 (decimal 920)
+   defining Unicode char U+039B (decimal 923)
+   defining Unicode char U+039E (decimal 926)
+   defining Unicode char U+03A0 (decimal 928)
+   defining Unicode char U+03A3 (decimal 931)
+   defining Unicode char U+03A6 (decimal 934)
+   defining Unicode char U+03A8 (decimal 936)
+   defining Unicode char U+03A9 (decimal 937)
+   defining Unicode char U+03C2 (decimal 962)
+   defining Unicode char U+03D1 (decimal 977)
+   defining Unicode char U+03D2 (decimal 978)
+   defining Unicode char U+03D5 (decimal 981)
+   defining Unicode char U+03D6 (decimal 982)
+   defining Unicode char U+03F0 (decimal 1008)
+   defining Unicode char U+03F1 (decimal 1009)
+   defining Unicode char U+03F5 (decimal 1013)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2113 (decimal 8467)
+   defining Unicode char U+2202 (decimal 8706)
+   defining Unicode char U+2205 (decimal 8709)
+   defining Unicode char U+2207 (decimal 8711)
+   defining Unicode char U+220F (decimal 8719)
+   defining Unicode char U+2211 (decimal 8721)
+   defining Unicode char U+222B (decimal 8747)
+   defining Unicode char U+222C (decimal 8748)
+   defining Unicode char U+222D (decimal 8749)
+   defining Unicode char U+221D (decimal 8733)
+   defining Unicode char U+221E (decimal 8734)
+   defining Unicode char U+222E (decimal 8750)
+   defining Unicode char U+222F (decimal 8751)
+   defining Unicode char U+2230 (decimal 8752)
+   defining Unicode char U+2A0C (decimal 10764)
+   defining Unicode char U+2102 (decimal 8450)
+   defining Unicode char U+210D (decimal 8461)
+   defining Unicode char U+2115 (decimal 8469)
+   defining Unicode char U+2119 (decimal 8473)
+   defining Unicode char U+211A (decimal 8474)
+   defining Unicode char U+211D (decimal 8477)
+   defining Unicode char U+2124 (decimal 8484)
+   defining Unicode char U+1D53C (decimal 120124)
+   defining Unicode char U+1D542 (decimal 120130)
+   defining Unicode char U+1D54A (decimal 120138)
+   defining Unicode char U+1D54B (decimal 120139)
+   defining Unicode char U+1D54C (decimal 120140)
+   defining Unicode char U+1D7D9 (decimal 120793)
+   defining Unicode char U+2070 (decimal 8304)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+2074 (decimal 8308)
+   defining Unicode char U+2075 (decimal 8309)
+   defining Unicode char U+2076 (decimal 8310)
+   defining Unicode char U+2077 (decimal 8311)
+   defining Unicode char U+2078 (decimal 8312)
+   defining Unicode char U+2079 (decimal 8313)
+   defining Unicode char U+207A (decimal 8314)
+   defining Unicode char U+207B (decimal 8315)
+   defining Unicode char U+207C (decimal 8316)
+   defining Unicode char U+207D (decimal 8317)
+   defining Unicode char U+207E (decimal 8318)
+   defining Unicode char U+2080 (decimal 8320)
+   defining Unicode char U+2081 (decimal 8321)
+   defining Unicode char U+2082 (decimal 8322)
+   defining Unicode char U+2083 (decimal 8323)
+   defining Unicode char U+2084 (decimal 8324)
+   defining Unicode char U+2085 (decimal 8325)
+   defining Unicode char U+2086 (decimal 8326)
+   defining Unicode char U+2087 (decimal 8327)
+   defining Unicode char U+2088 (decimal 8328)
+   defining Unicode char U+2089 (decimal 8329)
+   defining Unicode char U+208A (decimal 8330)
+   defining Unicode char U+208B (decimal 8331)
+   defining Unicode char U+1D43 (decimal 7491)
+   defining Unicode char U+1D47 (decimal 7495)
+   defining Unicode char U+1D9C (decimal 7580)
+   defining Unicode char U+1D48 (decimal 7496)
+   defining Unicode char U+1D49 (decimal 7497)
+   defining Unicode char U+1DA0 (decimal 7584)
+   defining Unicode char U+1D4D (decimal 7501)
+   defining Unicode char U+02B0 (decimal 688)
+   defining Unicode char U+2071 (decimal 8305)
+   defining Unicode char U+02B2 (decimal 690)
+   defining Unicode char U+1D4F (decimal 7503)
+   defining Unicode char U+02E1 (decimal 737)
+   defining Unicode char U+1D50 (decimal 7504)
+   defining Unicode char U+207F (decimal 8319)
+   defining Unicode char U+1D52 (decimal 7506)
+   defining Unicode char U+1D56 (decimal 7510)
+   defining Unicode char U+02B3 (decimal 691)
+   defining Unicode char U+02E2 (decimal 738)
+   defining Unicode char U+1D57 (decimal 7511)
+   defining Unicode char U+1D58 (decimal 7512)
+   defining Unicode char U+1D5B (decimal 7515)
+   defining Unicode char U+02B7 (decimal 695)
+   defining Unicode char U+02E3 (decimal 739)
+   defining Unicode char U+02B8 (decimal 696)
+   defining Unicode char U+1DBB (decimal 7611)
+   defining Unicode char U+1D2C (decimal 7468)
+   defining Unicode char U+1D2E (decimal 7470)
+   defining Unicode char U+1D30 (decimal 7472)
+   defining Unicode char U+1D31 (decimal 7473)
+   defining Unicode char U+1D33 (decimal 7475)
+   defining Unicode char U+1D34 (decimal 7476)
+   defining Unicode char U+1D35 (decimal 7477)
+   defining Unicode char U+1D36 (decimal 7478)
+   defining Unicode char U+1D37 (decimal 7479)
+   defining Unicode char U+1D38 (decimal 7480)
+   defining Unicode char U+1D39 (decimal 7481)
+   defining Unicode char U+1D3A (decimal 7482)
+   defining Unicode char U+1D3C (decimal 7484)
+   defining Unicode char U+1D3E (decimal 7486)
+   defining Unicode char U+1D3F (decimal 7487)
+   defining Unicode char U+1D40 (decimal 7488)
+   defining Unicode char U+1D41 (decimal 7489)
+   defining Unicode char U+1D42 (decimal 7490)
+   defining Unicode char U+2200 (decimal 8704)
+   defining Unicode char U+2203 (decimal 8707)
+   defining Unicode char U+2204 (decimal 8708)
+   defining Unicode char U+2208 (decimal 8712)
+   defining Unicode char U+2209 (decimal 8713)
+   defining Unicode char U+220B (decimal 8715)
+   defining Unicode char U+220B (decimal 8715)
+   defining Unicode char U+221A (decimal 8730)
+   defining Unicode char U+221B (decimal 8731)
+   defining Unicode char U+221C (decimal 8732)
+   defining Unicode char U+2264 (decimal 8804)
+   defining Unicode char U+2265 (decimal 8805)
+   defining Unicode char U+226A (decimal 8810)
+   defining Unicode char U+226B (decimal 8811)
+   defining Unicode char U+2A7D (decimal 10877)
+   defining Unicode char U+2A7E (decimal 10878)
+   defining Unicode char U+2248 (decimal 8776)
+   defining Unicode char U+2260 (decimal 8800)
+   defining Unicode char U+2261 (decimal 8801)
+   defining Unicode char U+2262 (decimal 8802)
+   defining Unicode char U+22A5 (decimal 8869)
+   defining Unicode char U+2282 (decimal 8834)
+   defining Unicode char U+2283 (decimal 8835)
+   defining Unicode char U+2229 (decimal 8745)
+   defining Unicode char U+222A (decimal 8746)
+   defining Unicode char U+2227 (decimal 8743)
+   defining Unicode char U+2228 (decimal 8744)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+2212 (decimal 8722)
+   defining Unicode char U+221A (decimal 8730)
+   defining Unicode char U+2295 (decimal 8853)
+   defining Unicode char U+2297 (decimal 8855)
+   defining Unicode char U+229B (decimal 8859)
+   defining Unicode char U+2A01 (decimal 10753)
+   defining Unicode char U+2A02 (decimal 10754)
+   defining Unicode char U+2218 (decimal 8728)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+2213 (decimal 8723)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+21A6 (decimal 8614)
+   defining Unicode char U+21D0 (decimal 8656)
+   defining Unicode char U+21D2 (decimal 8658)
+   defining Unicode char U+21D4 (decimal 8660)
+   defining Unicode char U+22A8 (decimal 8872)
+   defining Unicode char U+22AD (decimal 8877)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdftex/glyphtounicode.tex) (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen161
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel languages
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count290
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing ON on input line 4210.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2021/02/04 v1.41 Bibliographical back referencing
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+with kernel methods
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+))
+\c@Hy@tempcnt=\count291
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen162
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count292
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing ON on input line 6088.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
+\Hy@SectionHShift=\skip83
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/06/02 3.60 The Babel package
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/06/02 3.60 Babel common definitions
+\babel@savecnt=\count298
+\U@D=\dimen165
+\l@unhyphenated=\language87
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count299
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+Package babel Info: Making " an active character on input line 139.
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language21). Reported on input line 108.
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthography)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthography)
+))) (/usr/local/texlive/2021/texmf-dist/tex/generic/oberdiek/iflang.sty
+Package: iflang 2018/01/21 v1.7 Checks for the current language (HO)
+Package iflang Info: Naming convention for patterns: babel.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen166
+\Gin@req@width=\dimen167
+) (./latex4ei/latex4ei_colors.sty
+
+LaTeX Warning: You have requested package `latex4ei/latex4ei_colors',
+               but the package provides `latex4ei_colors'.
+
+Package: latex4ei_colors 2015/03/30 Colors for LaTeX4EI
+(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 204.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/accents/accents.sty
+Package: accents 2006/05/12 v1.4 Math Accent Tools
+\cc@skew=\dimen168
+\cc@wd=\dimen169
+\cc@code=\count300
+\cc@group=\count301
+\cc@skewchar=\count302
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen170
+\captionmargin@=\dimen171
+\captionwidth=\dimen172
+\caption@tempdima=\dimen173
+\caption@indent=\dimen174
+\caption@parindent=\dimen175
+\caption@hangindent=\dimen176
+Package caption Info: KOMA-Script document class detected.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption-koma.sto
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count303
+\c@continuedfloat=\count304
+Package caption Info: hyperref package is loaded.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count305
+\lst@gtempboxa=\box64
+\lst@token=\toks25
+\lst@length=\count306
+\lst@currlwidth=\dimen177
+\lst@column=\count307
+\lst@pos=\count308
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count309
+\lst@lineno=\count310
+\lst@maxwidth=\dimen180
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count311
+\lst@skipnumbers=\count312
+\lst@framebox=\box65
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+) (./latex4ei/latex4ei_boxes.sty
+
+LaTeX Warning: You have requested package `latex4ei/latex4ei_boxes',
+               but the package provides `latex4ei_boxes'.
+
+Package: latex4ei_boxes 2015/02/06 Boxes for LaTeX4EI
+(/usr/local/texlive/2021/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count313
+Package zref Info: New property: abspage on input line 66.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip84
+\c@mdf@globalstyle@cnt=\count314
+\mdf@skipabove@length=\skip85
+\mdf@skipbelow@length=\skip86
+\mdf@leftmargin@length=\skip87
+\mdf@rightmargin@length=\skip88
+\mdf@innerleftmargin@length=\skip89
+\mdf@innerrightmargin@length=\skip90
+\mdf@innertopmargin@length=\skip91
+\mdf@innerbottommargin@length=\skip92
+\mdf@splittopskip@length=\skip93
+\mdf@splitbottomskip@length=\skip94
+\mdf@outermargin@length=\skip95
+\mdf@innermargin@length=\skip96
+\mdf@linewidth@length=\skip97
+\mdf@innerlinewidth@length=\skip98
+\mdf@middlelinewidth@length=\skip99
+\mdf@outerlinewidth@length=\skip100
+\mdf@roundcorner@length=\skip101
+\mdf@footenotedistance@length=\skip102
+\mdf@userdefinedwidth@length=\skip103
+\mdf@needspace@length=\skip104
+\mdf@frametitleaboveskip@length=\skip105
+\mdf@frametitlebelowskip@length=\skip106
+\mdf@frametitlerulewidth@length=\skip107
+\mdf@frametitleleftmargin@length=\skip108
+\mdf@frametitlerightmargin@length=\skip109
+\mdf@shadowsize@length=\skip110
+\mdf@extratopheight@length=\skip111
+\mdf@subtitleabovelinewidth@length=\skip112
+\mdf@subtitlebelowlinewidth@length=\skip113
+\mdf@subtitleaboveskip@length=\skip114
+\mdf@subtitlebelowskip@length=\skip115
+\mdf@subtitleinneraboveskip@length=\skip116
+\mdf@subtitleinnerbelowskip@length=\skip117
+\mdf@subsubtitleabovelinewidth@length=\skip118
+\mdf@subsubtitlebelowlinewidth@length=\skip119
+\mdf@subsubtitleaboveskip@length=\skip120
+\mdf@subsubtitlebelowskip@length=\skip121
+\mdf@subsubtitleinneraboveskip@length=\skip122
+\mdf@subsubtitleinnerbelowskip@length=\skip123
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box66
+\mdf@footnotebox=\box67
+\mdf@splitbox@one=\box68
+\mdf@splitbox@two=\box69
+\mdf@splitbox@save=\box70
+\mdfsplitboxwidth=\skip124
+\mdfsplitboxtotalwidth=\skip125
+\mdfsplitboxheight=\skip126
+\mdfsplitboxdepth=\skip127
+\mdfsplitboxtotalheight=\skip128
+\mdfframetitleboxwidth=\skip129
+\mdfframetitleboxtotalwidth=\skip130
+\mdfframetitleboxheight=\skip131
+\mdfframetitleboxdepth=\skip132
+\mdfframetitleboxtotalheight=\skip133
+\mdffootnoteboxwidth=\skip134
+\mdffootnoteboxtotalwidth=\skip135
+\mdffootnoteboxheight=\skip136
+\mdffootnoteboxdepth=\skip137
+\mdffootnoteboxtotalheight=\skip138
+\mdftotallinewidth=\skip139
+\mdfboundingboxwidth=\skip140
+\mdfboundingboxtotalwidth=\skip141
+\mdfboundingboxheight=\skip142
+\mdfboundingboxdepth=\skip143
+\mdfboundingboxtotalheight=\skip144
+\mdf@freevspace@length=\skip145
+\mdf@horizontalwidthofbox@length=\skip146
+\mdf@verticalmarginwhole@length=\skip147
+\mdf@horizontalspaceofbox=\skip148
+\mdfsubtitleheight=\skip149
+\mdfsubsubtitleheight=\skip150
+\c@mdfcountframes=\count315
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count316
+\c@mdf@env@i=\count317
+\c@mdf@env@ii=\count318
+\c@mdf@zref@counter=\count319
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip151
+\enit@outerparindent=\dimen181
+\enit@toks=\toks26
+\enit@inbox=\box71
+\enit@count@id=\count320
+\enitdp@description=\count321
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count322
+\Gm@cntv=\count323
+\c@Gm@tempcnt=\count324
+\Gm@bindingoffset=\dimen182
+\Gm@wd@mp=\dimen183
+\Gm@odd@mp=\dimen184
+\Gm@even@mp=\dimen185
+\Gm@layoutwidth=\dimen186
+\Gm@layoutheight=\dimen187
+\Gm@layouthoffset=\dimen188
+\Gm@layoutvoffset=\dimen189
+\Gm@dimlist=\toks27
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count325
+\mult@box=\box72
+\multicol@leftmargin=\dimen190
+\c@unbalance=\count326
+\c@collectmore=\count327
+\doublecol@number=\count328
+\multicoltolerance=\count329
+\multicolpretolerance=\count330
+\full@width=\dimen191
+\page@free=\dimen192
+\premulticols=\dimen193
+\postmulticols=\dimen194
+\multicolsep=\skip152
+\multicolbaselineskip=\skip153
+\partial@page=\box73
+\last@line=\box74
+\maxbalancingoverflow=\dimen195
+\mult@rightbox=\box75
+\mult@grightbox=\box76
+\mult@gfirstbox=\box77
+\mult@firstbox=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\c@minrows=\count331
+\c@columnbadness=\count332
+\c@finalcolumnbadness=\count333
+\last@try=\dimen196
+\multicolovershoot=\dimen197
+\multicolundershoot=\dimen198
+\mult@nat@firstbox=\box116
+\colbreak@box=\box117
+\mc@col@check@num=\count334
+)
+
+Class scrartcl Warning: Usage of package `fancyhdr' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use 
+(scrartcl)              package `scrlayer' or `scrlayer-scrpage', because
+(scrartcl)              they support KOMA-Script classes.
+(scrartcl)              With `fancyhdr' several features of class `scrartcl'
+(scrartcl)              like options `headsepline', `footsepline' or command
+(scrartcl)              `\MakeMarkcase' and the commands `\setkomafont' and
+(scrartcl)              `\addtokomafont' for the page style elements need
+(scrartcl)              explicite user intervention to work.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `fancyhdr' on input line 99.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip154
+\f@nch@O@elh=\skip155
+\f@nch@O@erh=\skip156
+\f@nch@O@olh=\skip157
+\f@nch@O@orh=\skip158
+\f@nch@O@elf=\skip159
+\f@nch@O@erf=\skip160
+\f@nch@O@olf=\skip161
+\f@nch@O@orf=\skip162
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box118
+\beforetitleunit=\skip163
+\aftertitleunit=\skip164
+\ttl@plus=\dimen199
+\ttl@minus=\dimen256
+\ttl@toksa=\toks28
+\titlewidth=\dimen257
+\titlewidthlast=\dimen258
+\titlewidthfirst=\dimen259
+
+
+Package titlesec Warning: Non standard sectioning command \section
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subsection
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subsubsection
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \paragraph
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subparagraph
+(titlesec)                detected. Using default spacing and no format.
+
+)
+
+Class scrartcl Warning: Usage of this version of package `titlesec'
+(scrartcl)              with KOMA-Script class `scrartcl' is
+(scrartcl)              not recommended, because the package does not
+(scrartcl)              support KOMA-Script classes, but break them.
+(scrartcl)              If you want to use `titlesec' with KOMA-Script
+(scrartcl)              classes instead of using the KOMA-Script's
+(scrartcl)              user interface to configure the headings of
+(scrartcl)              parts, sections, subsections ... subparagraphs,
+(scrartcl)              please ask the author of `titlesec' for support.
+(scrartcl)              Expect errors like:
+(scrartcl)                - ``Illegal unit of measure (pt inserted).''
+(scrartcl)                - ``Missing number, treated as zero''
+(scrartcl)              after loading `titlesec' on input line 129.
+
+
+Class scrartcl Warning: Usage of package `parskip' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use option
+(scrartcl)              `parskip' with one of it's several values.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `parskip' on input line 153.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+Couldn't patch \@startsection
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip165
+\multirow@cntb=\count335
+\multirow@dima=\skip166
+\bigstrutjot=\dimen260
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen261
+\TX@old@table=\dimen262
+\TX@old@col=\dimen263
+\TX@target=\dimen264
+\TX@delta=\dimen265
+\TX@cols=\count336
+\TX@ftn=\toks29
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/pbox/pbox.sty
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\pb@xlen=\skip167
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip168
+\L@UnitsRaiseTextstyle=\skip169
+\L@UnitsRaiseScriptstyle=\skip170
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen266
+\WF@size=\dimen267
+\c@WF@wrappedlines=\count337
+\WF@box=\box119
+\WF@everypar=\toks30
+Package: wrapfig 2003/01/31  v 3.6
+)
+
+LaTeX Warning: Unused global option(s):
+    [landscape].
+
+(./InformatikII.aux)
+\openout1 = `InformatikII.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/translations/translations-basic-dictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 41.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 41.
+ (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count338
+\scratchdimen=\dimen268
+\scratchbox=\box120
+\nofMPsegments=\count339
+\nofMParguments=\count340
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count341
+\MPscratchDim=\dimen269
+\MPnumerator=\count342
+\makeMPintoPDFobject=\count343
+\everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+
+Package chemgreek Info: Activating mapping `default' on line 41.
+
+Package hyperref Info: Link coloring ON on input line 41.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count344
+)
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
+ (./InformatikII.out) (./InformatikII.out)
+\@outlinefile=\write3
+\openout3 = `InformatikII.out'.
+
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 41.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count345
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count346
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: landscape includefoot 
+* h-part:(L,W,R)=(17.07164pt, 810.90356pt, 17.07164pt)
+* v-part:(T,H,B)=(17.07164pt, 566.20987pt, 14.22636pt)
+* \paperwidth=845.04684pt
+* \paperheight=597.50787pt
+* \textwidth=810.90356pt
+* \textheight=553.74338pt
+* \oddsidemargin=-55.19835pt
+* \evensidemargin=-55.19835pt
+* \topmargin=-74.99829pt
+* \headheight=8.99997pt
+* \headsep=10.79997pt
+* \topskip=6.0pt
+* \footskip=12.46649pt
+* \marginparwidth=119.50159pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=5.39996pt plus 1.99979pt minus 3.60004pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package siunitx Warning: Option "math-rm" has been removed in this release.
+
+
+Package siunitx Warning: Option "text-rm" has been removed in this release.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <12.44403> not available
+(Font)              size <12> substituted on input line 43.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <12.44403> not available
+(Font)              size <12> substituted on input line 43.
+
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 53.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 62.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <5.47504> not available
+(Font)              size <5> substituted on input line 62.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 72.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 82.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 89.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 98.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 103.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 114.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 122.
+
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <6> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 169.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 173.
+
+<img//../img/DaQ.png, id=4, 620.98666pt x 349.97417pt>
+File: img//../img/DaQ.png Graphic file (type png)
+<use img//../img/DaQ.png>
+Package pdftex.def Info: img//../img/DaQ.png  used on input line 205.
+(pdftex.def)             Requested size: 116.65672pt x 65.74281pt.
+<img//../img/BSearch.png, id=6, 607.26875pt x 316.18124pt>
+File: img//../img/BSearch.png Graphic file (type png)
+<use img//../img/BSearch.png>
+Package pdftex.def Info: img//../img/BSearch.png  used on input line 211.
+(pdftex.def)             Requested size: 194.4259pt x 101.2283pt.
+<img//../img/LaufzeitenSort.png, id=7, 416.22166pt x 206.10333pt>
+File: img//../img/LaufzeitenSort.png Graphic file (type png)
+<use img//../img/LaufzeitenSort.png>
+Package pdftex.def Info: img//../img/LaufzeitenSort.png  used on input line 222.
+(pdftex.def)             Requested size: 194.4259pt x 96.27419pt.
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 228.
+
+<img//../img/selectSort.png, id=8, 382.42876pt x 292.09125pt>
+File: img//../img/selectSort.png Graphic file (type png)
+<use img//../img/selectSort.png>
+Package pdftex.def Info: img//../img/selectSort.png  used on input line 241.
+(pdftex.def)             Requested size: 97.21295pt x 74.24828pt.
+
+Overfull \hbox (1.86517pt too wide) in alignment at lines 240--251
+[] [] 
+ []
+
+<img//../img/selectSortCode.png, id=9, 368.71083pt x 208.44542pt>
+File: img//../img/selectSortCode.png Graphic file (type png)
+<use img//../img/selectSortCode.png>
+Package pdftex.def Info: img//../img/selectSortCode.png  used on input line 254.
+(pdftex.def)             Requested size: 136.09753pt x 76.93912pt.
+<img//../img/InsSort.png, id=10, 408.52625pt x 295.1025pt>
+File: img//../img/InsSort.png Graphic file (type png)
+<use img//../img/InsSort.png>
+Package pdftex.def Info: img//../img/InsSort.png  used on input line 266.
+(pdftex.def)             Requested size: 106.93483pt x 77.24266pt.
+
+Overfull \vbox (18.9232pt too high) detected at line 266
+ []
+
+<img//../img/InsSortCode.png, id=11, 615.63333pt x 214.46791pt>
+File: img//../img/InsSortCode.png Graphic file (type png)
+<use img//../img/InsSortCode.png>
+Package pdftex.def Info: img//../img/InsSortCode.png  used on input line 278.
+(pdftex.def)             Requested size: 194.4259pt x 67.73119pt.
+<img//../img/Merge.png, id=12, 459.04834pt x 206.7725pt>
+File: img//../img/Merge.png Graphic file (type png)
+<use img//../img/Merge.png>
+Package pdftex.def Info: img//../img/Merge.png  used on input line 290.
+(pdftex.def)             Requested size: 97.21295pt x 43.78633pt.
+<img//../img/MergeCode.png, id=13, 490.83376pt x 299.45209pt>
+File: img//../img/MergeCode.png Graphic file (type png)
+<use img//../img/MergeCode.png>
+Package pdftex.def Info: img//../img/MergeCode.png  used on input line 293.
+(pdftex.def)             Requested size: 145.81943pt x 88.95901pt.
+<img//../img/Mergesort.png, id=14, 443.32292pt x 320.53084pt>
+File: img//../img/Mergesort.png Graphic file (type png)
+<use img//../img/Mergesort.png>
+Package pdftex.def Info: img//../img/Mergesort.png  used on input line 298.
+(pdftex.def)             Requested size: 97.21295pt x 70.28223pt.
+<img//../img/MergesortCode.png, id=15, 504.21709pt x 175.99083pt>
+File: img//../img/MergesortCode.png Graphic file (type png)
+<use img//../img/MergesortCode.png>
+Package pdftex.def Info: img//../img/MergesortCode.png  used on input line 301.
+(pdftex.def)             Requested size: 145.81943pt x 50.89638pt.
+<img//../img/pivot1.png, id=16, 506.55917pt x 57.21375pt>
+File: img//../img/pivot1.png Graphic file (type png)
+<use img//../img/pivot1.png>
+Package pdftex.def Info: img//../img/pivot1.png  used on input line 311.
+(pdftex.def)             Requested size: 77.76917pt x 8.78334pt.
+<img//../img/pivot2.png, id=17, 505.89pt x 55.54083pt>
+File: img//../img/pivot2.png Graphic file (type png)
+<use img//../img/pivot2.png>
+Package pdftex.def Info: img//../img/pivot2.png  used on input line 313.
+(pdftex.def)             Requested size: 77.76917pt x 8.53754pt.
+<img//../img/pivot3.png, id=18, 504.21709pt x 55.54083pt>
+File: img//../img/pivot3.png Graphic file (type png)
+<use img//../img/pivot3.png>
+Package pdftex.def Info: img//../img/pivot3.png  used on input line 315.
+(pdftex.def)             Requested size: 77.76917pt x 8.56636pt.
+<img//../img/pivot4.png, id=19, 505.89pt x 58.55208pt>
+File: img//../img/pivot4.png Graphic file (type png)
+<use img//../img/pivot4.png>
+Package pdftex.def Info: img//../img/pivot4.png  used on input line 316.
+(pdftex.def)             Requested size: 77.76917pt x 9.00041pt.
+<img//../img/PartCode.png, id=20, 657.79083pt x 269.33958pt>
+File: img//../img/PartCode.png Graphic file (type png)
+<use img//../img/PartCode.png>
+Package pdftex.def Info: img//../img/PartCode.png  used on input line 322.
+(pdftex.def)             Requested size: 194.4259pt x 79.61066pt.
+<img//../img/QuicksortCode.png, id=21, 396.48125pt x 172.31041pt>
+File: img//../img/QuicksortCode.png Graphic file (type png)
+<use img//../img/QuicksortCode.png>
+Package pdftex.def Info: img//../img/QuicksortCode.png  used on input line 326.
+(pdftex.def)             Requested size: 155.5413pt x 67.5978pt.
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img//../img/DaQ.png> <./img//../img/BSearch.png> <./img//../img/LaufzeitenSort.png> <./img//../img/selectSort.png> <./img//../img/selectSortCode.png> <./img//../img/InsSort.png> <./img//../img/InsSortCode.png> <./img//../img/Merge.png> <./img//../img/MergeCode.png> <./img//../img/Mergesort.png> <./img//../img/MergesortCode.png>]
+<img//../img/BaumNomen.png, id=136, 711.32417pt x 242.23833pt>
+File: img//../img/BaumNomen.png Graphic file (type png)
+<use img//../img/BaumNomen.png>
+Package pdftex.def Info: img//../img/BaumNomen.png  used on input line 342.
+(pdftex.def)             Requested size: 194.4259pt x 66.211pt.
+
+Overfull \hbox (1.88492pt too wide) in paragraph at lines 356--356
+[]$\OML/cmm/m/it/6 h\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 r\OT1/cmr/m/n/6 ) = []$ 
+ []
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 363.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 377.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 407.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 429.
+
+<img//../img/symVorg.png, id=137, 221.82875pt x 197.06958pt>
+File: img//../img/symVorg.png Graphic file (type png)
+<use img//../img/symVorg.png>
+Package pdftex.def Info: img//../img/symVorg.png  used on input line 452.
+(pdftex.def)             Requested size: 77.76917pt x 69.08664pt.
+<img//../img/symNachf.png, id=138, 232.53542pt x 190.37791pt>
+File: img//../img/symNachf.png Graphic file (type png)
+<use img//../img/symNachf.png>
+Package pdftex.def Info: img//../img/symNachf.png  used on input line 453.
+(pdftex.def)             Requested size: 77.76917pt x 63.67023pt.
+<img//../img/BspBST.png, id=139, 152.57pt x 141.52875pt>
+File: img//../img/BspBST.png Graphic file (type png)
+<use img//../img/BspBST.png>
+Package pdftex.def Info: img//../img/BspBST.png  used on input line 471.
+(pdftex.def)             Requested size: 77.76917pt x 72.14415pt.
+<img//../img/BspAVLHoehen.png, id=140, 686.565pt x 229.52417pt>
+File: img//../img/BspAVLHoehen.png Graphic file (type png)
+<use img//../img/BspAVLHoehen.png>
+Package pdftex.def Info: img//../img/BspAVLHoehen.png  used on input line 511.
+(pdftex.def)             Requested size: 194.4259pt x 64.99478pt.
+<img//../img/rotR.png, id=141, 860.21375pt x 433.62pt>
+File: img//../img/rotR.png Graphic file (type png)
+<use img//../img/rotR.png>
+Package pdftex.def Info: img//../img/rotR.png  used on input line 530.
+(pdftex.def)             Requested size: 194.4259pt x 98.00359pt.
+<img//../img/rotLR.png, id=142, 896.34875pt x 437.96959pt>
+File: img//../img/rotLR.png Graphic file (type png)
+<use img//../img/rotLR.png>
+Package pdftex.def Info: img//../img/rotLR.png  used on input line 534.
+(pdftex.def)             Requested size: 194.4259pt x 94.99698pt.
+<img//../img/Doppelrotationen.jpg, id=143, 738.0766pt x 261.40213pt>
+File: img//../img/Doppelrotationen.jpg Graphic file (type jpg)
+<use img//../img/Doppelrotationen.jpg>
+Package pdftex.def Info: img//../img/Doppelrotationen.jpg  used on input line 535.
+(pdftex.def)             Requested size: 194.4259pt x 68.8564pt.
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 546.
+
+[2 <./img//../img/pivot1.png> <./img//../img/pivot2.png> <./img//../img/pivot3.png> <./img//../img/pivot4.png> <./img//../img/PartCode.png> <./img//../img/QuicksortCode.png> <./img//../img/BaumNomen.png> <./img//../img/symVorg.png> <./img//../img/symNachf.png> <./img//../img/BspBST.png> <./img//../img/BspAVLHoehen.png> <./img//../img/rotR.png> <./img//../img/rotLR.png> <./img//../img/Doppelrotationen.jpg>]
+<img//../img/heaps.png, id=255, 388.45125pt x 141.52875pt>
+File: img//../img/heaps.png Graphic file (type png)
+<use img//../img/heaps.png>
+Package pdftex.def Info: img//../img/heaps.png  used on input line 579.
+(pdftex.def)             Requested size: 194.4259pt x 70.83762pt.
+<img//../img/Aufsteigen.png, id=256, 628.3475pt x 280.71542pt>
+File: img//../img/Aufsteigen.png Graphic file (type png)
+<use img//../img/Aufsteigen.png>
+Package pdftex.def Info: img//../img/Aufsteigen.png  used on input line 593.
+(pdftex.def)             Requested size: 194.4259pt x 86.85811pt.
+<img//../img/Versickern.png, id=257, 633.03166pt x 295.77167pt>
+File: img//../img/Versickern.png Graphic file (type png)
+<use img//../img/Versickern.png>
+Package pdftex.def Info: img//../img/Versickern.png  used on input line 604.
+(pdftex.def)             Requested size: 194.4259pt x 90.8398pt.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 616.
+
+<img//../img/BspPreHashing.png, id=258, 385.44pt x 72.27pt>
+File: img//../img/BspPreHashing.png Graphic file (type png)
+<use img//../img/BspPreHashing.png>
+Package pdftex.def Info: img//../img/BspPreHashing.png  used on input line 666.
+(pdftex.def)             Requested size: 155.5413pt x 29.16331pt.
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 691.
+
+<img//../img/hashVerkettung.png, id=259, 668.4975pt x 364.36125pt>
+File: img//../img/hashVerkettung.png Graphic file (type png)
+<use img//../img/hashVerkettung.png>
+Package pdftex.def Info: img//../img/hashVerkettung.png  used on input line 726.
+(pdftex.def)             Requested size: 194.4259pt x 105.96783pt.
+<img//../img/BspLinSond.png, id=260, 488.49167pt x 127.81084pt>
+File: img//../img/BspLinSond.png Graphic file (type png)
+<use img//../img/BspLinSond.png>
+Package pdftex.def Info: img//../img/BspLinSond.png  used on input line 756.
+(pdftex.def)             Requested size: 174.98212pt x 45.78172pt.
+<img//../img/BspQuadSond.png, id=261, 486.14958pt x 127.14166pt>
+File: img//../img/BspQuadSond.png Graphic file (type png)
+<use img//../img/BspQuadSond.png>
+Package pdftex.def Info: img//../img/BspQuadSond.png  used on input line 767.
+(pdftex.def)             Requested size: 174.98212pt x 45.7632pt.
+<img//../img/BespDoubHash.png, id=262, 485.48042pt x 126.4725pt>
+File: img//../img/BespDoubHash.png Graphic file (type png)
+<use img//../img/BespDoubHash.png>
+Package pdftex.def Info: img//../img/BespDoubHash.png  used on input line 783.
+(pdftex.def)             Requested size: 174.98212pt x 45.58409pt.
+[3 <./img//../img/heaps.png> <./img//../img/Aufsteigen.png> <./img//../img/Versickern.png> <./img//../img/BspPreHashing.png> <./img//../img/hashVerkettung.png> <./img//../img/BspLinSond.png> <./img//../img/BspQuadSond.png> <./img//../img/BespDoubHash.png>]
+<img//../img/gerGraph.png, id=340, 243.91125pt x 231.86626pt>
+File: img//../img/gerGraph.png Graphic file (type png)
+<use img//../img/gerGraph.png>
+Package pdftex.def Info: img//../img/gerGraph.png  used on input line 813.
+(pdftex.def)             Requested size: 97.21295pt x 92.41228pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--834
+[]\OT1/cmss/bx/n/6 Gewicht des Weges \OT1/cmss/m/n/6 (in ge-wich-te-ten Gra-phen):
+ []
+
+<img//../img/AdjMa.png, id=341, 293.42958pt x 118.77708pt>
+File: img//../img/AdjMa.png Graphic file (type png)
+<use img//../img/AdjMa.png>
+Package pdftex.def Info: img//../img/AdjMa.png  used on input line 867.
+(pdftex.def)             Requested size: 174.98212pt x 70.83182pt.
+<img//../img/AdjList.png, id=342, 260.30583pt x 191.71625pt>
+File: img//../img/AdjList.png Graphic file (type png)
+<use img//../img/AdjList.png>
+Package pdftex.def Info: img//../img/AdjList.png  used on input line 873.
+(pdftex.def)             Requested size: 174.98212pt x 128.87631pt.
+<img//../img/AdjLaufzeiten.png, id=343, 407.18791pt x 160.26541pt>
+File: img//../img/AdjLaufzeiten.png Graphic file (type png)
+<use img//../img/AdjLaufzeiten.png>
+Package pdftex.def Info: img//../img/AdjLaufzeiten.png  used on input line 878.
+(pdftex.def)             Requested size: 194.4259pt x 76.52545pt.
+<img//../img/DFS_sym.png, id=344, 669.83583pt x 249.93375pt>
+File: img//../img/DFS_sym.png Graphic file (type png)
+<use img//../img/DFS_sym.png>
+Package pdftex.def Info: img//../img/DFS_sym.png  used on input line 888.
+(pdftex.def)             Requested size: 174.98212pt x 65.29015pt.
+<img//../img/DFSG.png, id=345, 162.6075pt x 123.46124pt>
+File: img//../img/DFSG.png Graphic file (type png)
+<use img//../img/DFSG.png>
+Package pdftex.def Info: img//../img/DFSG.png  used on input line 900.
+(pdftex.def)             Requested size: 77.76917pt x 59.04784pt.
+<img//../img/DFSGv.png, id=346, 217.47917pt x 120.45pt>
+File: img//../img/DFSGv.png Graphic file (type png)
+<use img//../img/DFSGv.png>
+Package pdftex.def Info: img//../img/DFSGv.png  used on input line 901.
+(pdftex.def)             Requested size: 104.98868pt x 58.148pt.
+
+Overfull \hbox (0.33197pt too wide) in alignment at lines 898--902
+[] [] 
+ []
+
+File: img//../img/DFS_sym.png Graphic file (type png)
+<use img//../img/DFS_sym.png>
+Package pdftex.def Info: img//../img/DFS_sym.png  used on input line 909.
+(pdftex.def)             Requested size: 174.98212pt x 65.29015pt.
+<img//../img/BFS.png, id=347, 346.29375pt x 192.72pt>
+File: img//../img/BFS.png Graphic file (type png)
+<use img//../img/BFS.png>
+Package pdftex.def Info: img//../img/BFS.png  used on input line 915.
+(pdftex.def)             Requested size: 174.98212pt x 97.3831pt.
+<img//../img/topoSort.png, id=348, 272.35083pt x 131.49126pt>
+File: img//../img/topoSort.png Graphic file (type png)
+<use img//../img/topoSort.png>
+Package pdftex.def Info: img//../img/topoSort.png  used on input line 928.
+(pdftex.def)             Requested size: 174.98212pt x 84.48315pt.
+<img//../img/topoSortG.png, id=349, 465.74pt x 242.9075pt>
+File: img//../img/topoSortG.png Graphic file (type png)
+<use img//../img/topoSortG.png>
+Package pdftex.def Info: img//../img/topoSortG.png  used on input line 933.
+(pdftex.def)             Requested size: 194.4259pt x 101.40146pt.
+[4 <./img//../img/gerGraph.png> <./img//../img/AdjMa.png> <./img//../img/AdjList.png> <./img//../img/AdjLaufzeiten.png> <./img//../img/DFS_sym.png> <./img//../img/DFSG.png> <./img//../img/DFSGv.png> <./img//../img/BFS.png> <./img//../img/topoSort.png> <./img//../img/topoSortG.png>]
+Underfull \hbox (badness 6204) in paragraph at lines 992--993
+[]\OT1/cmss/m/n/6 Wiederhole 3 bis nichts mehr re-la-xiert wer-den kann (bis
+ []
+
+<img//../img/DijkstraBeobachtung.png, id=376, 618.64458pt x 226.51292pt>
+File: img//../img/DijkstraBeobachtung.png Graphic file (type png)
+<use img//../img/DijkstraBeobachtung.png>
+Package pdftex.def Info: img//../img/DijkstraBeobachtung.png  used on input line 998.
+(pdftex.def)             Requested size: 165.2632pt x 60.5095pt.
+<img//../img/DijkstraSym.png, id=377, 270.00874pt x 216.81pt>
+File: img//../img/DijkstraSym.png Graphic file (type png)
+<use img//../img/DijkstraSym.png>
+Package pdftex.def Info: img//../img/DijkstraSym.png  used on input line 1010.
+(pdftex.def)             Requested size: 68.05025pt x 54.64235pt.
+<img//../img/Dijkstra.png, id=378, 457.71pt x 291.0875pt>
+File: img//../img/Dijkstra.png Graphic file (type png)
+<use img//../img/Dijkstra.png>
+Package pdftex.def Info: img//../img/Dijkstra.png  used on input line 1017.
+(pdftex.def)             Requested size: 194.4259pt x 123.64613pt.
+<img//../img/DijkstraBsp.png, id=379, 363.3575pt x 469.755pt>
+File: img//../img/DijkstraBsp.png Graphic file (type png)
+<use img//../img/DijkstraBsp.png>
+Package pdftex.def Info: img//../img/DijkstraBsp.png  used on input line 1030.
+(pdftex.def)             Requested size: 194.4259pt x 251.36304pt.
+<img//../img/MST_Sym.png, id=380, 157.92334pt x 152.57pt>
+File: img//../img/MST_Sym.png Graphic file (type png)
+<use img//../img/MST_Sym.png>
+Package pdftex.def Info: img//../img/MST_Sym.png  used on input line 1048.
+(pdftex.def)             Requested size: 68.05025pt x 65.7435pt.
+<img//../img/UF.png, id=381, 384.43625pt x 133.16417pt>
+File: img//../img/UF.png Graphic file (type png)
+<use img//../img/UF.png>
+Package pdftex.def Info: img//../img/UF.png  used on input line 1066.
+(pdftex.def)             Requested size: 136.09753pt x 47.14255pt.
+<img//../img/UFarray.png, id=382, 362.01917pt x 58.55208pt>
+File: img//../img/UFarray.png Graphic file (type png)
+<use img//../img/UFarray.png>
+Package pdftex.def Info: img//../img/UFarray.png  used on input line 1067.
+(pdftex.def)             Requested size: 136.09753pt x 22.01146pt.
+<img//../img/Kruskal.png, id=383, 477.785pt x 238.55792pt>
+File: img//../img/Kruskal.png Graphic file (type png)
+<use img//../img/Kruskal.png>
+Package pdftex.def Info: img//../img/Kruskal.png  used on input line 1071.
+(pdftex.def)             Requested size: 194.4259pt x 97.07407pt.
+<img//../img/MST_JPD.png, id=384, 375.4025pt x 113.42375pt>
+File: img//../img/MST_JPD.png Graphic file (type png)
+<use img//../img/MST_JPD.png>
+Package pdftex.def Info: img//../img/MST_JPD.png  used on input line 1085.
+(pdftex.def)             Requested size: 174.98212pt x 52.86955pt.
+[5 <./img//../img/DijkstraBeobachtung.png> <./img//../img/DijkstraSym.png> <./img//../img/Dijkstra.png> <./img//../img/DijkstraBsp.png> <./img//../img/MST_Sym.png> <./img//../img/UF.png> <./img//../img/UFarray.png> <./img//../img/Kruskal.png> <./img//../img/MST_JPD.png>]
+<img//../img/flussNet.png, id=410, 160.26541pt x 82.64209pt>
+File: img//../img/flussNet.png Graphic file (type png)
+<use img//../img/flussNet.png>
+Package pdftex.def Info: img//../img/flussNet.png  used on input line 1112.
+(pdftex.def)             Requested size: 174.98212pt x 90.23822pt.
+
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 1130.
+
+<img//../img/restNet.png, id=411, 313.17pt x 164.615pt>
+File: img//../img/restNet.png Graphic file (type png)
+<use img//../img/restNet.png>
+Package pdftex.def Info: img//../img/restNet.png  used on input line 1136.
+(pdftex.def)             Requested size: 174.98212pt x 91.9803pt.
+<img//../img/maxFlow.png, id=412, 231.86626pt x 140.525pt>
+File: img//../img/maxFlow.png Graphic file (type png)
+<use img//../img/maxFlow.png>
+Package pdftex.def Info: img//../img/maxFlow.png  used on input line 1155.
+(pdftex.def)             Requested size: 174.98212pt x 106.05176pt.
+<img//../img/FoFu.png, id=413, 311.49709pt x 175.99083pt>
+File: img//../img/FoFu.png Graphic file (type png)
+<use img//../img/FoFu.png>
+Package pdftex.def Info: img//../img/FoFu.png  used on input line 1177.
+(pdftex.def)             Requested size: 155.5413pt x 87.87971pt.
+<img//../img/paFF1.png, id=414, 272.35083pt x 58.2175pt>
+File: img//../img/paFF1.png Graphic file (type png)
+<use img//../img/paFF1.png>
+Package pdftex.def Info: img//../img/paFF1.png  used on input line 1181.
+(pdftex.def)             Requested size: 87.49106pt x 18.70192pt.
+<img//../img/paFF2.png, id=415, 272.35083pt x 106.06291pt>
+File: img//../img/paFF2.png Graphic file (type png)
+<use img//../img/paFF2.png>
+Package pdftex.def Info: img//../img/paFF2.png  used on input line 1182.
+(pdftex.def)             Requested size: 77.76917pt x 30.2865pt.
+<img//../img/biMa.png, id=416, 352.98541pt x 169.29916pt>
+File: img//../img/biMa.png Graphic file (type png)
+<use img//../img/biMa.png>
+Package pdftex.def Info: img//../img/biMa.png  used on input line 1195.
+(pdftex.def)             Requested size: 194.4259pt x 93.24915pt.
+<img//../img/KontenKap.png, id=417, 581.84042pt x 146.5475pt>
+File: img//../img/KontenKap.png Graphic file (type png)
+<use img//../img/KontenKap.png>
+Package pdftex.def Info: img//../img/KontenKap.png  used on input line 1204.
+(pdftex.def)             Requested size: 194.4259pt x 48.96904pt.
+[6 <./img//../img/flussNet.png> <./img//../img/restNet.png> <./img//../img/maxFlow.png> <./img//../img/FoFu.png> <./img//../img/paFF1.png> <./img//../img/paFF2.png> <./img//../img/biMa.png> <./img//../img/KontenKap.png>]
+<img//../img/memo.png, id=449, 446.33417pt x 185.69376pt>
+File: img//../img/memo.png Graphic file (type png)
+<use img//../img/memo.png>
+Package pdftex.def Info: img//../img/memo.png  used on input line 1244.
+(pdftex.def)             Requested size: 194.4259pt x 80.88947pt.
+<img//../img/Memo_Fib_schema_vor.png, id=450, 559.75792pt x 289.08pt>
+File: img//../img/Memo_Fib_schema_vor.png Graphic file (type png)
+<use img//../img/Memo_Fib_schema_vor.png>
+Package pdftex.def Info: img//../img/Memo_Fib_schema_vor.png  used on input line 1245.
+(pdftex.def)             Requested size: 104.98868pt x 54.22pt.
+<img//../img/Memo_Fib_schema.png, id=451, 463.7325pt x 293.095pt>
+File: img//../img/Memo_Fib_schema.png Graphic file (type png)
+<use img//../img/Memo_Fib_schema.png>
+Package pdftex.def Info: img//../img/Memo_Fib_schema.png  used on input line 1246.
+(pdftex.def)             Requested size: 87.49106pt x 55.29506pt.
+<img//../img/DPtable.png, id=452, 481.8pt x 235.54666pt>
+File: img//../img/DPtable.png Graphic file (type png)
+<use img//../img/DPtable.png>
+Package pdftex.def Info: img//../img/DPtable.png  used on input line 1257.
+(pdftex.def)             Requested size: 194.4259pt x 95.05083pt.
+<img//../img/kan1.png, id=453, 244.58041pt x 249.93375pt>
+File: img//../img/kan1.png Graphic file (type png)
+<use img//../img/kan1.png>
+Package pdftex.def Info: img//../img/kan1.png  used on input line 1280.
+(pdftex.def)             Requested size: 145.81943pt x 149.0118pt.
+<img//../img/kanRek.png, id=454, 442.65375pt x 86.3225pt>
+File: img//../img/kanRek.png Graphic file (type png)
+<use img//../img/kanRek.png>
+Package pdftex.def Info: img//../img/kanRek.png  used on input line 1286.
+(pdftex.def)             Requested size: 194.4259pt x 37.91614pt.
+<img//../img/kanTable.png, id=455, 483.13834pt x 271.0125pt>
+File: img//../img/kanTable.png Graphic file (type png)
+<use img//../img/kanTable.png>
+Package pdftex.def Info: img//../img/kanTable.png  used on input line 1297.
+(pdftex.def)             Requested size: 194.4259pt x 109.06058pt.
+<img//../img/ed1.png, id=456, 474.10458pt x 176.66pt>
+File: img//../img/ed1.png Graphic file (type png)
+<use img//../img/ed1.png>
+Package pdftex.def Info: img//../img/ed1.png  used on input line 1307.
+(pdftex.def)             Requested size: 194.4259pt x 72.44724pt.
+<img//../img/Lst_Abh.png, id=457, 173.64874pt x 175.32167pt>
+File: img//../img/Lst_Abh.png Graphic file (type png)
+<use img//../img/Lst_Abh.png>
+Package pdftex.def Info: img//../img/Lst_Abh.png  used on input line 1326.
+(pdftex.def)             Requested size: 77.76917pt x 78.51949pt.
+<img//../img/edTable.png, id=458, 456.03708pt x 361.35pt>
+File: img//../img/edTable.png Graphic file (type png)
+<use img//../img/edTable.png>
+Package pdftex.def Info: img//../img/edTable.png  used on input line 1334.
+(pdftex.def)             Requested size: 194.4259pt x 154.05417pt.
+<img//../img/BellFordSym.png, id=459, 545.03625pt x 156.585pt>
+File: img//../img/BellFordSym.png Graphic file (type png)
+<use img//../img/BellFordSym.png>
+Package pdftex.def Info: img//../img/BellFordSym.png  used on input line 1352.
+(pdftex.def)             Requested size: 174.98212pt x 50.27069pt.
+<img//../img/BellFord.png, id=460, 453.695pt x 234.8775pt>
+File: img//../img/BellFord.png Graphic file (type png)
+<use img//../img/BellFord.png>
+Package pdftex.def Info: img//../img/BellFord.png  used on input line 1357.
+(pdftex.def)             Requested size: 194.4259pt x 100.65488pt.
+ [7 <./img//../img/memo.png> <./img//../img/Memo_Fib_schema_vor.png> <./img//../img/Memo_Fib_schema.png> <./img//../img/DPtable.png> <./img//../img/kan1.png> <./img//../img/kanRek.png> <./img//../img/kanTable.png> <./img//../img/ed1.png> <./img//../img/Lst_Abh.png> <./img//../img/edTable.png> <./img//../img/BellFordSym.png> <./img//../img/BellFord.png>]
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 1372.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 1400.
+
+
+Overfull \hbox (3.20383pt too wide) in paragraph at lines 1404--1405
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (12.76656pt too wide) in paragraph at lines 1420--1421
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 1449.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 1510.
+
+
+Overfull \hbox (3.20383pt too wide) in paragraph at lines 1521--1522
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 1527.
+
+
+Class scrartcl Warning: deprecated old font command `\tt' used.
+(scrartcl)              You should note, that since 1994 LaTeX2e provides a
+(scrartcl)              new font selection scheme called NFSS2 with several
+(scrartcl)              new, combinable font commands. New KOMA-Script classes
+(scrartcl)              defined the old font commands like `\tt' only for
+(scrartcl)              compatibility with LaTeX 2.09 document styles of
+(scrartcl)              Script 2.0. These commands are deprecated and
+(scrartcl)              undocumented at least since 2003. Since 2013,
+(scrartcl)              KOMA-Script classes warned about soon removement of
+(scrartcl)              these deprecated commands. Now, after two decades of
+(scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrartcl)              not work any longer. If loading a package results in
+(scrartcl)              this message you should contact the author of that
+(scrartcl)              package and ask him to replace the depracted font
+(scrartcl)              command `\tt', e.g., by `\normalfont \ttfamily '.
+(scrartcl)              Otherwise you should reconfigure or replace the
+(scrartcl)              package. If you have used the old font command
+(scrartcl)              `\tt' yourself you should replace it, e.g., by
+(scrartcl)              `\normalfont \ttfamily ' on input line 1569.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 286.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[figure] on input line 305.
+See the caption package documentation for explanation.
+
+[8] (./InformatikII.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.47504pt have occurred.
+
+Package rerunfilecheck Info: File `InformatikII.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 26241 strings out of 478557
+ 490338 string characters out of 5850905
+ 1426593 words of memory out of 5000000
+ 43234 multiletter control sequences out of 15000+600000
+ 409486 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 122i,15n,122p,10736b,1740s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb>
+Output written on InformatikII.pdf (8 pages, 4577762 bytes).
+PDF statistics:
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 952 compressed objects within 10 object streams
+ 498 named destinations out of 1000 (max. 500000)
+ 1081 words of extra memory for PDF output out of 10000 (max. 10000000)
+
