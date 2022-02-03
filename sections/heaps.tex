@@ -1,0 +1,98 @@
+% SECTION ====================================================================================
+\section{Heaps}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{[Max-]Heap}\smallskip
+Datenstruktur optimiert zum schnellen Extrahieren von Minimum oder Maximum und Sortieren.\par\smallskip
+
+Binärer Baum mit folgenden Eigenschaften\par
+\begin{enumerate}
+    \item Vollständig, bis auf die letzte Ebene
+    \item Lücken des Baumes in der letzten Ebene höchstens rechts.
+    \item \textbf{Heap-Bedingung}:
+    \par Max-(Min-)Heap: Schlüssel eines Kindes kleiner (grösser) als der des Elternknotens
+\end{enumerate}\smallskip
+
+Baum $\rightarrow$ Array:
+\begin{enumerate}
+    \item Kinder $(i)=\{2 i, 2 i+1\}$
+    \item Elter $(i)=\lfloor i / 2\rfloor$
+\end{enumerate}\smallskip
+
+\includegraphics[width = \columnwidth]{../img/heaps.png}\smallskip
+
+\textbf{Höhe eines Heaps}: $H(n)=\left\lceil\log _{2}(n+1)\right\rceil$\par\smallskip
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Einfügen}\smallskip
+\begin{itemize}
+    \item Füge neues Element an erste freie Stelle ein.
+    \item Stelle Heap Eigenschaft wieder her: \textbf{Sukzessives Aufsteigen}
+    \item Anzahl Operationen im worst case: $\mathcal{O}(\operatorname{log}(n))$
+\end{itemize}\smallskip
+\textbf{Aufsteigen(A,m)}\par
+\includegraphics[width = \columnwidth]{../img/Aufsteigen.png}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Maximum entfernen}\smallskip
+\begin{itemize}
+    \item Ersetze das Maximum durch das unterste rechte Element.
+    \item Stelle Heap Eigenschaft wieder her: \textbf{Sukzessives Absinken} (in Richtung des grösseren Kindes / "Max. aufsteigen lassen")
+    \item Anzahl Operationen im worst case: $\mathcal{O}(\operatorname{log}(n))$
+\end{itemize}\smallskip
+\textbf{Versickern(A,i,m)}\par
+\includegraphics[width = \columnwidth]{../img/Versickern.png}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Heap sortieren}\smallskip
+\begin{itemize}
+    \item Extrahiere Maximum, stelle es hinten hin
+    \item Stelle Heap Eigenschaft wieder her
+    \item Wiederhole
+    \item Worst case: $\mathcal{O}(n \cdot \operatorname{log}(n))$
+\end{itemize}
+
+\begin{lstlisting}[language=Python]
+class HeapSort(object):
+
+    def swap(self, list_a, i, j):
+      list_a[i], list_a[j] = list_a[j], list_a[i]
+
+    def siftDown(self, list_a, index, size):
+      while(2 * index + 1 < size):
+          j = 2 * index + 1
+          if j + 1 < size and list_a[j] < list_a[j+1]:
+              j += 1
+          if list_a[index] < list_a[j]:
+              self.swap(list_a,index,j)
+              index = j
+          else:
+              return
+
+    def heapify(self, list_a):
+      n = len(list_a)
+      for i in range(n//2 - 1,-1,-1):
+        self.siftDown(list_a, i, n)
+
+    def sort(self, list_a):
+      n = len(list_a)
+      self.heapify(list_a)
+      for i in range(n-1,0,-1):
+        self.swap(list_a, 0, i)
+        self.siftDown(list_a, 0, i)
+\end{lstlisting}\vspace{-4px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Heap bauen}\smallskip
+\begin{itemize}
+    \item Jedes Blatt eines Heaps ist für sich schon ein korrekter Heap. $\rightarrow$ Induktion von unten!
+    \item Aufrufe an Versickern: $n/2$. Also Anzahl Vergleiche und Bewegungen $v(n) \in \mathcal{O}(n \cdot \operatorname{log}(n))$.
+    \item Versickerpfade sind aber im Mittel viel kürzer: $\mathcal{O}(n)$
+\end{itemize}
+\end{sectionbox}

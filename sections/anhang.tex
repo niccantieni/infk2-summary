@@ -1,0 +1,37 @@
+% SECTION ====================================================================================
+\section{Anhang}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Nützliche Formeln für asymptotische Laufzeiten}\medskip
+
+\textbf{Gauss'sche Summenformel}\par\vspace{-4px}
+\begin{equation*}
+    \boxed{\sum\limits_{i=0}^n i = \frac{n \cdot (n+1)}{2} \in \theta \left(n^2\right)}
+\end{equation*}\par\smallskip
+
+\textbf{Binomialkoeffizient}\par\vspace{-15px}
+\begin{equation*}
+    \left(\begin{array}{l} n \\ k \end{array}\right)=\frac{n !}{k ! \cdot(n-k) !} = \frac{ \overbrace{n \cdot (n-1) \cdots}^{k\text{-Faktoren}} (n-k)!}{k! \cdot (n-k)!} \in \theta \left( n^k \right)
+\end{equation*}\par\smallskip
+
+\textbf{Spezielle Summen}\par\vspace{-4px}
+\begin{equation*}
+    \sum\limits_{i=0}^{10n} \log{n^n} \in \theta \left(10 \cdot n \cdot \log{n^n}\right) \in \theta \left(n^2 \cdot \log{n}\right)
+\end{equation*}\par\smallskip
+
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Asymptotische Laufzeiten Python}\medskip
+
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}llllll@{}}
+	 & Wahlfreier & Einfügen & Iteration & Ins. nach & Suchen \\ 
+	 & Zugriff & & & Element & (x in S) \\ \cmrule
+	list & $\Theta(1)$ & $\Theta(1)$ A &  $\Theta(n)$ &  $\Theta(n)$ &  $\Theta(n)$ \\
+	set & - & $\Theta(1)$ P & $\Theta(n)$ & - & $\Theta(1)$ P\\
+	dict & - & $\Theta(1)$ P & $\Theta(n)$ & - & $\Theta(1)$ P \\
+\end{tabular*}\par\smallskip
+A: Amortisiert\par
+P: Erwartet (sonst worst case)
+\end{sectionbox}

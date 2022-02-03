@@ -1,0 +1,221 @@
+% SECTION ====================================================================================
+\section{Code Beispiele}
+% ============================================================================================
+
+\begin{sectionbox}
+\subsection{Beispiel: Levenshtein-Algorithmus}
+\begin{lstlisting}[language=Python]
+def Levenshtein(x, y):
+  # D[n,m] = distance between x and y
+  # D[i,j] = distance between strings x[1..i] and y[1..j]
+  n = len(x)
+  m = len(y)
+  D = [[0 for i in range(m+1)] for j in range(n+1)]
+  for j in range(0,m+1):
+    D[0][j] = j
+  for i in range(1,n+1):
+    D[i][0] = i
+    for j in range(1,m+1):
+      # D[i,j] = min{ 
+      # D[i-1,j-1] + d(x[i],y[j]);
+      # D[i-1,j] + 1
+      # D[i,j-1] + 1 }
+      q = D[i-1][j-1] 
+      if x[i-1] != y[j-1]:
+        q += 1
+      q = min(q, D[i][j-1]+1)
+      q = min(q, D[i-1][j]+1)
+      D[i][j] = q
+  return D[n][m]
+\end{lstlisting}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Längste gemeinsame Teilfolge}
+\begin{lstlisting}[language=Python]
+import Data
+import time
+
+# compute longest ascending sequence for a point of the matrix
+def LASR(A,L,y,x):
+  if L[y][x] > 0:
+    return L[y][x]
+  maxLength = 0
+  if x>0 and A[y][x] < A[y][x-1]: 
+    maxLength = max(maxLength, LASR(A,L,y,x-1))
+  if y>0 and A[y][x] < A[y-1][x]: 
+    maxLength = max(maxLength, LASR(A,L,y-1,x))
+  if y<len(A)-1 and A[y][x] < A[y+1][x]: 
+    maxLength = max(maxLength, LASR(A,L,y+1,x))
+  if x<len(A[y])-1 and A[y][x] < A[y][x+1]: 
+    maxLength = max(maxLength, LASR(A,L,y,x+1))
+  L[y][x] = maxLength + 1;
+  return L[y][x]
+
+# compute longest ascending sequence for each point of the matrix
+def LAS(A):
+  maxLength = 0
+  L = [[0] * len(A[i]) for i in range(len(A))]
+  for y in range(len(A)):
+    for x in range(len(A[y])):
+      L[y][x] = LASR(A,L,y,x)
+      maxLength = max(maxLength, L[y][x])
+  return maxLength,L
+
+A = Data.get()
+
+start = time.time()
+(m,L) = LAS(A)
+stop = time.time();
+
+if len(A)<15 and len(A[0])<15:
+  print("matrix a")
+  Data.print_matrix(A)
+  print("path lengths matrix")
+  Data.print_matrix(L)
+  
+print("maximum length",m)
+print("time:", stop-start, "s")
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Union Find}
+\begin{lstlisting}[language=Python]
+class Set:
+  def __init__(self,n):
+    self.a = [i for i in range(0,n)]
+    self.g = [1] * n
+    
+  def union(self,i,j):
+    i = self.find(i)
+    j = self.find(j)
+    if i == j:
+      return False
+    self.a[j] = i # j under i
+    return True
+
+  def find(self,i):
+    while self.a[i] != i:
+      i = self.a[i]
+    return i
+  
+  def path_length(self,i):
+    count = 1;
+    while self.a[i] != i:
+        i = self.a[i];
+        count = count + 1;
+    return count;
+    
+class SmallUnderLarge(Set):
+  def union(self,i,j):
+    i = self.find(i)
+    j = self.find(j)
+    if i == j:
+      return False
+    if self.g[i] < self.g[j]:
+      i,j = j,i
+    self.a[j] = i # j under i
+    if self.g[i] == self.g[j]:
+      self.g[i] = self.g[i] + 1
+    return True
+
+class ConsolidateFind(Set):
+  def find(self,i):
+    root = i
+    while self.a[root] != root:
+      root = self.a[root]
+    while self.a[i] != root:
+      next = self.a[i]
+      self.a[i] = root
+      i = next
+    return root
+ 
+  # recursive version
+  def find_recursive(self,i):
+    if self.a[i] == i:
+      return i
+    self.a[i] = self.find(self.a[i])
+    return self.a[i]
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Dict Comprehension}
+\begin{lstlisting}[language=Python]
+accounts = {
+    'Food' : { 'Amount' : 1242, 'Kind': 'Credit' },
+    'Insurances' : { 'Amount' : 5547, 'Kind': 'Credit' },
+    'Fun-Time' : { 'Amount' : 3978, 'Kind': 'Credit'},
+    'Salary'   : { 'Amount': 14785, 'Kind': 'Debit' },
+    'Jewelry' : { 'Amount': 14785, 'Kind': 'Debit' }
+}
+
+credit_accounts = { account : record['Amount']
+    for account, record in accounts.items() 
+    if record['Kind'] == 'Credit'   }  # create your dict here
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Sliding Window}
+\begin{lstlisting}[language=Python]
+def main():
+  text = input()
+
+  map = {'a':0, 'b':0, 'c':0}
+  bestl = -1
+  bestr = len(text)
+  l=0
+  r=-1
+  num=0
+  while r < len(text):
+    if num == 3 and bestr-bestl > r-l:
+      bestl = l
+      bestr = r
+    if num >= 3:
+      x = text[l]
+      if x in map:
+        xc = map[x]
+        xc -= 1
+        map[x]=xc
+        if xc == 0:
+            num -= 1
+      l += 1
+    else:
+      r += 1
+      if r < len(text):
+        x = text[r]
+        if x in map:
+            xc = map[x]
+            xc += 1
+            map[x] = xc
+            if xc == 1:
+              num += 1
+  if bestl == -1:
+    print(text,"does not contain a,b AND c.")
+  else:
+    print("contains a,b,c between",bestl,"and",bestr)
+\end{lstlisting}
+\end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Beispiel: Palindrome Checker}
+\begin{lstlisting}[language=Python]
+def isPalindrome(word):
+  for i in range(0, len(word)//2):
+    if word[i] != word[-1 -i]:
+      return False
+  return True
+    
+def main():
+  again, word = True, input("Enter a word: ")
+  while again:
+    if isPalindrome(word):
+      cprint(word + ' is a palindrome!')
+    else:
+      cprint(word + ' is not a palindrome')
+    word = input("Enter a word (or just <ENTER> to stop): ")
+    again = len(word) > 0
+\end{lstlisting}\vspace{-6px}
+\end{sectionbox}

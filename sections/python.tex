@@ -1,0 +1,88 @@
+% SECTION ====================================================================================
+\section{Python}
+% ============================================================================================
+
+\begin{sectionbox}
+
+\textbf{Interessante Operatoren}
+\begin{itemize}
+    \item Basisoperationen wie in Java (ausser / wird immer float, // für Ganzzahldivison, ** für Potenzierung, a**b = $a^{b}$)
+    \item Vergleichsoperatoren: $==$, $>=$, $<=$, $>$, $<$, !$=$
+    \item Logische Operatoren: and, or, not
+    \item Membership Operator: “ \textbf{in} ” Gibt an, ob ein Wert in einer Liste, einem Set oder einer Zeichenkette ist.
+    \item Identitäts Operator: “ \textbf{is} ” Prüft, ob zwei Variablen auf das gleiche Objekt zeigen (in Java wäre das == ).
+\end{itemize}\medskip
+
+\textbf{Listen, Dicts, Tuples und Sets}\par
+Es gibt keine Arrays in Python\par\vspace{-4px}
+\begin{lstlisting}[language=C++]
+List = [ 17, True, "abc"]       # Mutierbare, geord. Sequenz
+Dict = { "a": 42, False: "Ah!"} # Mutierbarer Key-Wert Store
+Tuple = ( 17, True, "abc")      # Nicht-aenderbare,
+                                # geordnete Sequenz
+Set = {17, True, "abc"}         # Menge (mutierbare ungeordn.
+                                # Sequenz ohne Duplikate)
+\end{lstlisting}
+
+\textbf{List Slicing}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+a = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("a[2:4] =", a[2:4])       # a[2:4] = [3, 4]
+print("a[3:-3] =", a[3:-3])     # a[3:-3] = [4, 5, 6]
+print("a[-3:-1] =", a[-3:-1])   # a[-3:-1] = [7, 8]
+print("a[5:] =", a[5:])         # a[5:] = [6, 7, 8, 9]
+print("a[:3] =", a[:3])         # a[:3] = [1, 2, 3]
+\end{lstlisting}
+
+\textbf{Variablen dynamisch typisiert}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+a = "Eine Variable eines beliebigen Typs";
+print("Wert:", a, "\nTyp:", type(a), end="\n\n")
+\end{lstlisting}
+
+
+\textbf{Klassen}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+class Node:
+    def __init__(self, k, l = None, r = None):  # Constructor
+        self.key, self.left, self.right = k, l, r
+    def __str__(self):                          # toString
+        return str(self.k)
+\end{lstlisting}
+
+\textbf{Bedingte Ausdrücke}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+a = a // 2 if a % 2 == 0 else a * 3 + 1
+\end{lstlisting}
+
+\textbf{List, Dict and Set Comprehension}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+n_list = [ int(x) for x in s_list if int(x) > 0 ]
+d_list = [ int(x)**2 for x in s_list ]
+cleaned = [ item.strip() for item in line ]
+
+prices = {key:value['Price'] for key, value in data.items()}
+total_prices = { key : value['Amount'] * value['Price'] 
+    for key, value in data.items() if 'Amount' in value }
+\end{lstlisting}
+
+\textbf{Ausnahmebehandlung}\vspace{-4px}
+\begin{lstlisting}[language=Python]
+try:
+    prices={key:value['Price'] for key,value in data.items()}
+    printDict(prices)
+except KeyError as e:
+    print('Whoops! Key not found:', e.args[0])
+\end{lstlisting}\vspace{-6px}
+
+\begin{lstlisting}[language=Python]
+def readNumber(input):
+    x = 0
+    try:
+        x = int(input)
+    except ValueError:
+        print('Oh boy, that was no number...')
+    return x
+\end{lstlisting}\vspace{-6px}
+
+\end{sectionbox}
