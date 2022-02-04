@@ -28,16 +28,16 @@ darauf operierenden Algorithmen) effizient nutzen kann.\par\smallskip
 \textbf{Theorem}\par
 Seien $f, g: \mathbb{N} \rightarrow \mathbb{R}^{+}$ zwei Funktionen. Dann gilt.
 \begin{enumerate}
-    \item $\lim _{n \rightarrow \infty} \frac{f(n)}{g(n)}=0 \Rightarrow f \in \mathcal{O}(g), \mathcal{O}(f) \subsetneq \mathcal{O}(g)$
-    \item $\lim _{n \rightarrow \infty} \frac{f(n)}{g(n)}=C>0\ (C \text { konstant}) \Rightarrow f \in \Theta(g)$
-    \item $\frac{f(n)}{g(n)} \underset{n \rightarrow \infty}{\longrightarrow} \infty \Rightarrow g \in \mathcal{O}(f), \mathcal{O}(g) \subsetneq \mathcal{O}(f)$
+    \item $\lim _{n \rightarrow \infty}\limits \frac{f(n)}{g(n)}=0 \Rightarrow f \in \mathcal{O}(g), \mathcal{O}(f) \subsetneq \mathcal{O}(g)$
+    \item $\lim _{n \rightarrow \infty}\limits \frac{f(n)}{g(n)}=C>0\ (C \text { konstant}) \Rightarrow f \in \Theta(g)$
+    \item $\lim _{n \rightarrow \infty}\limits \frac{f(n)}{g(n)} \longrightarrow \infty \Rightarrow g \in \mathcal{O}(f), \mathcal{O}(g) \subsetneq \mathcal{O}(f)$
 \end{enumerate}
 \end{greenbox}\smallskip
 \textit{Beispiel aufsteigende Laufzeiten:}\par
 $ 2^{16},\ \log(n^4),\ \log^8(n),\ \sqrt{n},\ n\log n,\ \binom{n}{3},\ n^5+n,\ \frac{2^n}{n^2},\ n!,\ n^n$\par\smallskip
 
 \textbf{Analyse mit Rekurenz und Teleskopie}\par\vspace{-4px}
-\begin{lstlisting}[language=Java]
+\begin{lstlisting}[language=c++]
 void g(int n) {
     if (n>1) {
         g(n/2);
