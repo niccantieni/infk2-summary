@@ -11,13 +11,15 @@
 
 \begin{sectionbox}
 \subsection{Bubble-Sort}
-\begin{lstlisting}[language=Python]
-def bubbleSort(arr): 
-    n = len(arr) 
-    for i in range(n):
-        for j in range(n-i-1): 
-            if arr[j] > arr[j+1] : 
-                arr[j], arr[j+1] = arr[j+1], arr[j] 
+\begin{lstlisting}[language=C++]
+void bubbleSort(std::vector<T> vec) { 
+    n = vec.size();
+    for (unsigned int i = 0; i < n; ++i) {
+        for (unsigned int j = 0; j < n - i - 1; ++j) {
+            if (vec[j] > vec[j+1]) {
+                std::swap(arr[j], arr[j+1]);
+            }
+}}}
 \end{lstlisting}\vspace{-6px}
 \end{sectionbox}
 
