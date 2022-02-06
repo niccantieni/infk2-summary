@@ -2,7 +2,7 @@
 \section{Code Beispiele}
 % ============================================================================================
 
-\begin{sectionbox}
+% \begin{sectionbox}
 \subsection{Beispiel: Levenshtein-Algorithmus}
 \begin{lstlisting}[language=Python]
 def Levenshtein(x, y):
@@ -28,9 +28,9 @@ def Levenshtein(x, y):
       D[i][j] = q
   return D[n][m]
 \end{lstlisting}
-\end{sectionbox}
+% \end{sectionbox}
 
-\begin{sectionbox}
+% \begin{sectionbox}
 \subsection{Beispiel: Längste gemeinsame Teilfolge}
 \begin{lstlisting}[language=Python]
 import Data
@@ -77,9 +77,9 @@ if len(A)<15 and len(A[0])<15:
 print("maximum length",m)
 print("time:", stop-start, "s")
 \end{lstlisting}\vspace{-6px}
-\end{sectionbox}
+% \end{sectionbox}
 
-\begin{sectionbox}
+% \begin{sectionbox}
 \subsection{Beispiel: Union Find}
 \begin{lstlisting}[language=Python]
 class Set:
@@ -138,9 +138,9 @@ class ConsolidateFind(Set):
     self.a[i] = self.find(self.a[i])
     return self.a[i]
 \end{lstlisting}\vspace{-6px}
-\end{sectionbox}
+% \end{sectionbox}
 
-\begin{sectionbox}
+% \begin{sectionbox}
 \subsection{Beispiel: Dict Comprehension}
 \begin{lstlisting}[language=Python]
 accounts = {
@@ -155,9 +155,9 @@ credit_accounts = { account : record['Amount']
     for account, record in accounts.items() 
     if record['Kind'] == 'Credit'   }  # create your dict here
 \end{lstlisting}\vspace{-6px}
-\end{sectionbox}
+% \end{sectionbox}
 
-\begin{sectionbox}
+% \begin{sectionbox}
 \subsection{Beispiel: Sliding Window}
 \begin{lstlisting}[language=Python]
 def main():
@@ -197,9 +197,9 @@ def main():
   else:
     print("contains a,b,c between",bestl,"and",bestr)
 \end{lstlisting}
-\end{sectionbox}
+% \end{sectionbox}
 
-\begin{sectionbox}
+% \begin{sectionbox}
 \subsection{Beispiel: Palindrome Checker}
 \begin{lstlisting}[language=Python]
 def isPalindrome(word):
@@ -218,4 +218,4 @@ def main():
     word = input("Enter a word (or just <ENTER> to stop): ")
     again = len(word) > 0
 \end{lstlisting}\vspace{-6px}
-\end{sectionbox}
+% \end{sectionbox}
