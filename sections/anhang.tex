@@ -22,16 +22,3 @@
 
 \end{sectionbox}
 \vspace{-4pt}
-\begin{sectionbox}
-\subsection{Asymptotische Laufzeiten Python}\medskip
-
-\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}llllll@{}}
-	 & Wahlfreier & Einfügen & Iteration & Ins. nach & Suchen \\ 
-	 & Zugriff & & & Element & (x in S) \\ \cmrule
-	list & $\Theta(1)$ & $\Theta(1)$ A &  $\Theta(n)$ &  $\Theta(n)$ &  $\Theta(n)$ \\
-	set & - & $\Theta(1)$ P & $\Theta(n)$ & - & $\Theta(1)$ P\\
-	dict & - & $\Theta(1)$ P & $\Theta(n)$ & - & $\Theta(1)$ P \\
-\end{tabular*}\par\smallskip
-A: Amortisiert\par
-P: Erwartet (sonst worst case)
-\end{sectionbox}

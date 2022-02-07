@@ -141,23 +141,6 @@ class ConsolidateFind(Set):
 % \end{sectionbox}
 
 % \begin{sectionbox}
-\subsection{Beispiel: Dict Comprehension}
-\begin{lstlisting}[language=Python]
-accounts = {
-    'Food' : { 'Amount' : 1242, 'Kind': 'Credit' },
-    'Insurances' : { 'Amount' : 5547, 'Kind': 'Credit' },
-    'Fun-Time' : { 'Amount' : 3978, 'Kind': 'Credit'},
-    'Salary'   : { 'Amount': 14785, 'Kind': 'Debit' },
-    'Jewelry' : { 'Amount': 14785, 'Kind': 'Debit' }
-}
-
-credit_accounts = { account : record['Amount']
-    for account, record in accounts.items() 
-    if record['Kind'] == 'Credit'   }  # create your dict here
-\end{lstlisting}\vspace{-6px}
-% \end{sectionbox}
-
-% \begin{sectionbox}
 \subsection{Beispiel: Sliding Window}
 \begin{lstlisting}[language=Python]
 def main():
