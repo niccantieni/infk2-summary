@@ -1,7 +1,7 @@
 % SECTION ====================================================================================
 \section{Dynamische Programmierung}
 % ============================================================================================
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Idee}\smallskip
 \begin{itemize}
@@ -11,7 +11,7 @@
 \end{itemize}\smallskip
 $\rightarrow$ Wir tauschen Laufzeit gegen Speicherplatz
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Dynamic Programming vs. Divide-And-Conquer}\smallskip
 \begin{itemize}
@@ -21,7 +21,7 @@ $\rightarrow$ Wir tauschen Laufzeit gegen Speicherplatz
     \item Identische Teilprobleme werden nur einmal gerechnet d.h. \textbf{keine zirkulären Abhängigkeiten zwischen Teilproblemen}
 \end{itemize}\smallskip
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Memoization}\smallskip
 Memoization (sic) Abspeichern von Zwischenergebnissen.
@@ -40,7 +40,7 @@ Memoization (sic) Abspeichern von Zwischenergebnissen.
 $\rightarrow$ Genau hingesehen lösen wir das Problem bottom-up
 
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Dynamic Programming: Beschreibung am Beispiel}\smallskip
 
@@ -50,7 +50,7 @@ $\rightarrow$ Genau hingesehen lösen wir das Problem bottom-up
 \end{center}\smallskip
 
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Wie findet man den DP Algorithmus?}\smallskip
 \begin{enumerate}
@@ -63,8 +63,7 @@ $\rightarrow$ Genau hingesehen lösen wir das Problem bottom-up
 \end{enumerate}
 
 \end{sectionbox}
-
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Beispiel Kaninchen}\smallskip
 Ein Kaninchen sitzt auf Platz (1,1) eines $n \times n$ Gitters. Es kann nur nach Osten oder nach Süden gehen. Auf jedem Wegstück liegt eine Anzahl Rüben. Wie viele Rüben sammelt das Kaninchen maximal ein?\par\smallskip
@@ -91,7 +90,7 @@ Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j
 
 \end{sectionbox}
 
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Die Editierdistanz / Levenshteinabstand}\smallskip
 \textbf{Aufgabenstellung}\par
@@ -130,7 +129,7 @@ Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j
 Anzahl Tabelleneinträge: $(m+1) \cdot (n+1)$\par
 Laufzeit: $\mathcal{O}(m \cdot n)$\smallskip
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Kürzeste Wege: DP Ansatz (Bellman)}\smallskip
 Induktion über Anzahl Kanten $d_{s}[i, v]$: Kürzeste Weglänge von $s$ nach $v$ über maximal $i$ Kanten.\par\vspace{-3px}

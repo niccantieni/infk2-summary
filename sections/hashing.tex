@@ -1,7 +1,7 @@
 % SECTION ====================================================================================
 \section{Hashing}
 % ============================================================================================
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Motivation und Idee}\smallskip
 Key/Value-Paare effizient abspeichern und finden z.B. für Implementation eines Dicts oder einer Datenbank.\par\smallskip
@@ -20,7 +20,7 @@ Direkter Zugriff (Array)\par\smallskip
 \end{enumerate}
 \end{greenbox}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Pre-Hashing: Lösung des ersten Problems}\smallskip
 Prehashing: Bilde Schlüssel ab auf positive Ganzzahlen mit einer Funktion $ph: \mathcal{K} \rightarrow \mathbb{N}$\par\smallskip
@@ -31,19 +31,19 @@ Zuordnung Name $s=s_{1} s_{2} \ldots s_{l_{s}}$ zu Schlüssel\par\smallskip
 \end{center}\par\smallskip
 $b$ so, dass verschiedene Namen möglichst verschiedene Schlüssel erhalten.
 $w$ Wortgrösse des Systems (z.B. 32 oder 64).\par\smallskip
-\textit{Implementation in Java}\par
-\begin{lstlisting}[language=Python]
-int prehash(String s){
-    int h = 0;
+\begin{lstlisting}[language=C++]
+unsigned prehash(std::string s) {
+    unsigned b = B;
+    unsigned h = 0;
     
-    for (int k = 0; k < s.length(); ++k){
-        h = h * b + s.charAt(k);
+    for (unsigned i = 0; i < s.size(); ++i){
+        h = h * b + s[i];
     }
     return h;
 }
 \end{lstlisting}\vspace{-6px}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Hashing: Lösung des zweiten Problems}\smallskip
 Reduziere des Schlüsseluniversum: Abbildung (Hash-Funktion) $h: \mathcal{K} \rightarrow\{0, \ldots, m-1\}(m \approx n=\text { Anzahl Einträge in der Tabelle })$\par\vspace{7px}
@@ -59,7 +59,7 @@ Meist $|\mathcal{K}| \gg m$, Es gibt also $k_{1}, k_{2} \in \mathcal{K}$ mit $h\
 Ideal: $m$ Primzahl, nicht zu nahe bei Potenzen von 2 oder 10\par
 Aber oft: $m=2^{k}-1(k \in \mathbb{N})$
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Konzept 1: Hashing mit Verkettung}\par\smallskip
 Direkte Verkettung der Überläufer.\par
@@ -81,7 +81,7 @@ Daraus ergibt sich (bei einfachem gleichmässigem Hashing) eine \textbf{erwartet
 \end{itemize}\smallskip
 
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Konzept 2: Hashing mit offener Addressierung}\par\smallskip
 \begin{itemize}
@@ -89,7 +89,9 @@ Daraus ergibt sich (bei einfachem gleichmässigem Hashing) eine \textbf{erwartet
     \item Tabellenposition des Schlüssels entlang der \textbf{Sondierungsfolge $S(k)$}
 \end{itemize}\par\smallskip
 Technisches Detail zu \textbf{delete(k)}: Suche $k$ in der Tabelle gemäss $S(k)$. Ersetze $k$ durch den \textbf{speziellen Schlüssel removed}.\par\vspace{7px}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Lineares Sondieren}\par\smallskip
 \begin{center}
     $s(k, j)=h(k)+j \Rightarrow$ \par $S(k)=(h(k), h(k)+1, \ldots, h(k)+m-1) \bmod m$
@@ -98,8 +100,10 @@ Technisches Detail zu \textbf{delete(k)}: Suche $k$ in der Tabelle gemäss $S(k)
 \textit{Beispiel}\par
 \begin{center}
     \includegraphics[width = 0.9\columnwidth]{../img/BspLinSond.png}
-\end{center}\vspace{7px}
-
+\end{center}
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Quadratisches Sondieren}\par\smallskip
 \begin{center}
     $s(k, j)=h(k)+\lceil j / 2\rceil^{2}(-1)^{j+1}$
@@ -109,13 +113,15 @@ Technisches Detail zu \textbf{delete(k)}: Suche $k$ in der Tabelle gemäss $S(k)
 \textit{Beispiel}\par
 \begin{center}
     \includegraphics[width = 0.9\columnwidth]{../img/BspQuadSond.png}
-\end{center}\vspace{7px}
-
+\end{center}
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Double Hashing}\par\smallskip
 Verwendung von zwei Hashfunktionen $h(k)$ und $h^{\prime}(k) \rightarrow$ Vermeidung primärer und sekundären Häufungen.
 \begin{center}
     $s(k, j)=h(k)+j \cdot h^{\prime}(k)$\par
-    $S(k)=(h(k), h(k)+h^{\prime}(k), h(k)+2 h^{\prime}(k), \ldots$ \par
+    $S(k)=(h(k), h(k)+h^{\prime}(k), h(k)+2 h^{\prime}(k)b, \ldots$ \par
     $, h(k)+(m-1) h^{\prime}(k)) \quad \bmod m$
 \end{center}\par\smallskip
 
@@ -125,8 +131,10 @@ $\rightarrow$ Füllgrad $\alpha=$ $\frac{n}{m}<1$, so hat die nächste Operation
 \textit{Beispiel}\par
 \begin{center}
     \includegraphics[width = 0.9\columnwidth]{../img/BespDoubHash.png}
-\end{center}\vspace{7px}
-
+\end{center}
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Beispiele}\par\smallskip
 \begin{itemize}
     \item $h'(k) = \lceil \ln (k+1) \rceil \bmod q$: This function is not suitable as a second hash function, because for the key $k = 0$ we have $h'(0) = \lceil \ln (1) \rceil = 0$.

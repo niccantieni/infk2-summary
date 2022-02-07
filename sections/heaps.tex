@@ -1,7 +1,7 @@
 % SECTION ====================================================================================
 \section{Heaps}
 % ============================================================================================
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{[Max-]Heap}\smallskip
 Datenstruktur optimiert zum schnellen Extrahieren von Minimum oder Maximum und Sortieren.\par\smallskip
@@ -25,7 +25,16 @@ Baum $\rightarrow$ Array:
 \textbf{Höhe eines Heaps}: $H(n)=\left\lceil\log _{2}(n+1)\right\rceil$\par\smallskip
 
 \end{sectionbox}
-
+\vspace{-4pt}
+\begin{sectionbox}
+\subsection{Heap bauen}\smallskip
+\begin{itemize}
+    \item Jedes Blatt eines Heaps ist für sich schon ein korrekter Heap. $\rightarrow$ Induktion von unten!
+    \item Aufrufe an Versickern: $n/2$. Also Anzahl Vergleiche und Bewegungen $v(n) \in \mathcal{O}(n \cdot \operatorname{log}(n))$.
+    \item Versickerpfade sind aber im Mittel viel kürzer: $\mathcal{O}(n)$
+\end{itemize}
+\end{sectionbox}
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Einfügen}\smallskip
 \begin{itemize}
@@ -36,7 +45,7 @@ Baum $\rightarrow$ Array:
 \textbf{Aufsteigen(A,m)}\par
 \includegraphics[width = \columnwidth]{../img/Aufsteigen.png}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Maximum entfernen}\smallskip
 \begin{itemize}
@@ -47,52 +56,11 @@ Baum $\rightarrow$ Array:
 \textbf{Versickern(A,i,m)}\par
 \includegraphics[width = \columnwidth]{../img/Versickern.png}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Heap sortieren}\smallskip
-\begin{itemize}
-    \item Extrahiere Maximum, stelle es hinten hin
-    \item Stelle Heap Eigenschaft wieder her
-    \item Wiederhole
-    \item Worst case: $\mathcal{O}(n \cdot \operatorname{log}(n))$
-\end{itemize}
+Worst case: $\mathcal{O}(n \cdot \operatorname{log}(n))$\\
+\textbf{HeapSort(A,n)}\par
+\includegraphics[width = 0.45 \columnwidth]{../img/HeapSort.png}
 \end{sectionbox}
 
-\begin{lstlisting}[language=Python]
-class HeapSort(object):
-
-    def swap(self, list_a, i, j):
-      list_a[i], list_a[j] = list_a[j], list_a[i]
-
-    def siftDown(self, list_a, index, size):
-      while(2 * index + 1 < size):
-          j = 2 * index + 1
-          if j + 1 < size and list_a[j] < list_a[j+1]:
-              j += 1
-          if list_a[index] < list_a[j]:
-              self.swap(list_a,index,j)
-              index = j
-          else:
-              return
-
-    def heapify(self, list_a):
-      n = len(list_a)
-      for i in range(n//2 - 1,-1,-1):
-        self.siftDown(list_a, i, n)
-
-    def sort(self, list_a):
-      n = len(list_a)
-      self.heapify(list_a)
-      for i in range(n-1,0,-1):
-        self.swap(list_a, 0, i)
-        self.siftDown(list_a, 0, i)
-\end{lstlisting}\vspace{-4px}
-
-\begin{sectionbox}
-\subsection{Heap bauen}\smallskip
-\begin{itemize}
-    \item Jedes Blatt eines Heaps ist für sich schon ein korrekter Heap. $\rightarrow$ Induktion von unten!
-    \item Aufrufe an Versickern: $n/2$. Also Anzahl Vergleiche und Bewegungen $v(n) \in \mathcal{O}(n \cdot \operatorname{log}(n))$.
-    \item Versickerpfade sind aber im Mittel viel kürzer: $\mathcal{O}(n)$
-\end{itemize}
-\end{sectionbox}

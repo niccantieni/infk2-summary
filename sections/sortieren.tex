@@ -1,14 +1,14 @@
 % SECTION ====================================================================================
 \section{Sortieren}
 % ============================================================================================
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Laufzeiten von Sortier-Algorithmen}\smallskip
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/LaufzeitenSort.png}
 \end{center}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Bubble-Sort}
 \begin{lstlisting}[language=C++]
@@ -22,7 +22,7 @@ void bubbleSort(std::vector<T> vec) {
 }}}
 \end{lstlisting}\vspace{-6px}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Sortieren durch Auswahl}\smallskip
 \begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
@@ -47,7 +47,7 @@ Anzahl Vergleiche im schlechtesten Fall: & $\Theta(n^{2})$ \\
 Anzahl Vertauschungen im schlechtesten Fall: & $n-1=\Theta(n)$\\
 \end{tabular*}
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Sortieren durch Einfügen}\smallskip
 \begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
@@ -71,6 +71,7 @@ Nachteil: Im schlechtesten Fall viele Elementverschiebungen. / Vorteil:  Der Suc
 \end{sectionbox}
 
 \subsection{Mergesort}\smallskip
+\vspace{-4pt}
 \begin{sectionbox}
 \subsubsection{Merge}\smallskip
 Minimum von A kann mit 2 Vergleichen ermittelt werden.\par
@@ -81,7 +82,7 @@ Minimum von A kann mit 2 Vergleichen ermittelt werden.\par
 \includegraphics[width = 0.75\columnwidth]{../img/MergeCode.png}
 \smallskip
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsubsection{Mergesort}
 \begin{center}
@@ -92,7 +93,7 @@ Minimum von A kann mit 2 Vergleichen ermittelt werden.\par
 \par\smallskip
 \textbf{Analyse}: Laufzeit  $\Theta(n \operatorname{log}(n))$
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Quicksort}\smallskip
 \textbf{Pivotieren}\par
@@ -120,4 +121,4 @@ Im Mittel benötigt randomisiertes Quicksort $\mathcal{O}(n \cdot \operatorname{
 \end{greenbox}
 \end{sectionbox}
 
-\vspace{36px}
+% \vspace{36px}

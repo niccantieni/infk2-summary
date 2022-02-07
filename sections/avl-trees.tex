@@ -1,7 +1,7 @@
 % SECTION ====================================================================================
 \section{AVL Bäume}
 % ============================================================================================
-
+\vspace{-4pt}
 \begin{sectionbox}
 \textbf{Ziel}: Verhinderung der Degenerierung $\rightarrow$ garantiere, dass ein Baum mit $n$ Knoten stets eine Höhe von $\mathcal{O}(\operatorname{log}(n))$.\par\smallskip
 \subsection{AVL Bedingung}\smallskip
@@ -27,7 +27,7 @@ AVL Bedingung: für \textit{jeden} Knoten $v$ eines Baumes gilt:\par\smallskip
 \end{center}
 
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Einfügen}\smallskip
 \begin{itemize}
@@ -37,7 +37,7 @@ AVL Bedingung: für \textit{jeden} Knoten $v$ eines Baumes gilt:\par\smallskip
     \item Problematischer Fall (rebalancieren!): $p$ ist linker Sohn von $pp$, wobei $\operatorname{bal}(pp)$ bereits vor dem Einfügen $-1$ ist (danach $-2$).
 \end{itemize}\par\smallskip
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Rebalancieren: Rotationen}\smallskip
 \textit{Fall 1: Rotation nach rechts}\par
@@ -50,7 +50,7 @@ AVL Bedingung: für \textit{jeden} Knoten $v$ eines Baumes gilt:\par\smallskip
     \includegraphics[width = \columnwidth]{../img/Doppelrotationen.jpg}
 \end{center}\smallskip
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Analyse}\smallskip
 AVL-Bäume haben asymptotische Laufzeit von $\mathcal{O}(\operatorname{log}(n))$ (schlechtester Fall) für das Suchen, Einfügen und Löschen von Schlüsseln. Einfügen und Löschen ist verhältnismässig aufwändig und für kleine Probleme relativ langsam.

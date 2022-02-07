@@ -1,7 +1,7 @@
 % SECTION ====================================================================================
 \section{Flüsse in Netzen}
 % ============================================================================================
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Terminologie und Eigenschaften}\medskip
 \textbf{Flussnetzwerk}\par
@@ -21,7 +21,9 @@
     \item \textbf{Flusserhaltung}: $u \in V \backslash\{s, t\}: \sum_{v \in V} f(u, v)=0$
     \item \textbf{Wert $w$ des Flusses}:$|f|=\sum_{v \in V} f(s, v)$
 \end{itemize}\par\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \begin{cookbox}{Eigenschaften}
 \item $|f|=f(s, V)$
 \item $f(U, U)=0$
@@ -31,7 +33,9 @@
 \par Wobei gilt:
 \par $f\left(U, U^{\prime}\right):=\sum\limits_{u \in U \atop u^{\prime} \in U^{\prime}} f\left(u, u^{\prime}\right)$, $f\left(u, U^{\prime}\right):=f\left(\{u\}U^{\prime}\right)$
 \end{cookbox}\medskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Restnetzwerk}\par
 Restnetzwerk $G_{f}$ gegeben durch alle Kanten mit Restkapazität. Restnetzwerke haben dieselben Eigenschaften wie Flussnetzwerke, ausser dass antiparallele Kapazitäten-Kantenzugelassen sind.\par\smallskip
 \begin{center}
@@ -45,7 +49,7 @@ Restnetzwerk $G_{f}$ gegeben durch alle Kanten mit Restkapazität. Restnetzwerke
 \end{itemize}
 
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Maximaler Fluss / Minimaler Schnitt}\smallskip
 \begin{emphbox}
@@ -66,7 +70,9 @@ Wenn $f$ ein Fluss in einem Flussnetzwerk $G=(V, E, c)$ mit Quelle $s$ und Senke
     \item Es gilt $|f|=c(S, T)$ für einen Schnitt $(S, T)$ von $G$
 \end{enumerate}
 \end{greenbox}\vspace{10px}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Die Ford-Fulkerson Methode}\smallskip
 \begin{itemize}
     \item Starte mit $f(u, v)=0$ für alle $u, v \in V$
@@ -85,20 +91,20 @@ In einer Implementation des Ford-Fulkerson Algorithmus müssen die negativen Flu
 
 \textbf{Analyse}\par
 Der Ford-Fulkerson Algorithmus muss für irrationale Kapazitäten nicht einmal terminieren! Sonst $\mathcal{O}\left(f_{\max }\cdot |E|\right)$.\vspace{10px}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Edmonds-Karp Algorithmus}\smallskip
 Wähle in der Ford-Fulkerson-Methode zum Finden eines Pfades in $G_{f}$ jeweils einen Erweiterungspfad kürzester Länge (z.B. durch Breitensuche).\par $\Rightarrow$ Gesamte asymptotische Laufzeit: $\mathcal{O}\left(|V| \cdot|E|^{2}\right)$
 
 \end{sectionbox}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Bipartites Matching}\smallskip
 Konstruiere zur einer Partition $L, R$ eines bipartiten Graphen ein korrespondierendes Flussnetzwerk mit Quelle $s$ und Senke $t,$ mit gerichteten Kanten von $s$ nach $L$, von $L$ nach $R$ und von $R$ nach $t$. Jede Kante bekommt Kapazität 1.\par
 \includegraphics[width = \columnwidth]{../img/biMa.png}\par\smallskip
 \end{sectionbox}
-
-\vspace{500px}
-
+\vspace{-4pt}
 \begin{sectionbox}
 \subsection{Anwendungen vom Maximalen Fluss}\medskip
 
