@@ -4,29 +4,38 @@
 
 % \begin{sectionbox}
 \subsection{Beispiel: Levenshtein-Algorithmus}
-\begin{lstlisting}[language=Python]
-def Levenshtein(x, y):
-  # D[n,m] = distance between x and y
-  # D[i,j] = distance between strings x[1..i] and y[1..j]
-  n = len(x)
-  m = len(y)
-  D = [[0 for i in range(m+1)] for j in range(n+1)]
-  for j in range(0,m+1):
-    D[0][j] = j
-  for i in range(1,n+1):
-    D[i][0] = i
-    for j in range(1,m+1):
-      # D[i,j] = min{ 
-      # D[i-1,j-1] + d(x[i],y[j]);
-      # D[i-1,j] + 1
-      # D[i,j-1] + 1 }
-      q = D[i-1][j-1] 
-      if x[i-1] != y[j-1]:
-        q += 1
-      q = min(q, D[i][j-1]+1)
-      q = min(q, D[i-1][j]+1)
-      D[i][j] = q
-  return D[n][m]
+\begin{lstlisting}[language=C++]
+#include <string>
+#include <vector>
+
+unsigned Levenshtein(const std::string& x, 
+                      const std::string& y){
+  // D[n,m] = distance between x and y
+  // D[i,j] = distance between strings x[1..i] and y[1..j]
+  unsigned n = x.size();
+  unsigned m = y.size();
+  std::vector<std::vector<unsigned>> D(
+      n+1,std::vector<unsigned>(m+1,0)
+    );
+  for (unsigned j = 0; j <=m; ++j){
+    D[0][j] = j;
+  }
+  for (unsigned i = 1; i <= n; ++i){
+    D[i][0] = i;
+    for (unsigned j = 1; j <=m; ++j){
+      // D[i,j] = min{ 
+      // D[i-1,j-1] + d(x[i],y[j]);
+      // D[i-1,j] + 1
+      // D[i,j-1] + 1 }
+      D[i][j] = std::min( {
+        D[i-1][j-1] + (x[i-1]!=y[j-1]), 
+        D[i][j-1] + 1, 
+        D[i-1][j] + 1
+      });
+    }
+  }
+  return D[n][m];
+}
 \end{lstlisting}
 % \end{sectionbox}
 
@@ -202,3 +211,29 @@ def main():
     again = len(word) > 0
 \end{lstlisting}\vspace{-6px}
 % \end{sectionbox}
+
+\subsection{Dictionary in C++}
+\begin{lstlisting}[language=C++]
+#include <unordered_map>
+
+// Create an unordered_map of strings that map to strings
+std::unordered_map<std::string, std::string> colours = {
+  {"RED", "#FF0000"}, {"GREEN", "#00FF00"}
+};
+colours["BLUE"] = "#0000FF"; //Add element
+std::cout << "hex of red: " << colours["RED"] << "\n";
+
+
+auto search = colours.find("BLUE"); //iterator to object
+if (search != colours.end()) {
+    std::cout << "Found " << search->first << " : " << search->second << '\n';
+} else {
+    std::cout << "Not found\n";
+}
+
+//iterate
+for (const auto& entry : colours) {
+  std::cout << entry.first << " : " << entry.second << ", ";
+  //BLUE : #0000FF, RED : #FF0000, GREEN : #00FF00,
+}
+\end{lstlisting}
