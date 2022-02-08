@@ -32,6 +32,7 @@ Zuordnung Name $s=s_{1} s_{2} \ldots s_{l_{s}}$ zu Schlüssel\par\smallskip
 $b$ so, dass verschiedene Namen möglichst verschiedene Schlüssel erhalten.
 $w$ Wortgrösse des Systems (z.B. 32 oder 64).\par\smallskip
 \begin{lstlisting}[language=C++]
+#include <string>
 unsigned prehash(std::string s) {
     unsigned b = B;
     unsigned h = 0;

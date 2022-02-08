@@ -67,7 +67,10 @@ Anzahl Vertauschungen im schlechtesten Fall: & $n-1=\Theta(n)$\\
 
 \textbf{Analyse}\par
 Nachteil: Im schlechtesten Fall viele Elementverschiebungen. / Vorteil:  Der Suchbereich (Einfügebereich) ist bereits sortiert $\rightarrow$ binäre Suche möglich.
-
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+    Anzahl Vergleiche im schlechtesten Fall: & $\Theta(n \log (n))$ \\
+    Anzahl Vertauschungen im schlechtesten Fall: & $\Theta(n^2)$\\
+    \end{tabular*}
 \end{sectionbox}
 
 \subsection{Mergesort}\smallskip
@@ -91,7 +94,7 @@ Minimum von A kann mit 2 Vergleichen ermittelt werden.\par
 \textbf{Mergesort(A,l,r) $\rightarrow$ rekursive Variante}\par
 \includegraphics[width = 0.75\columnwidth]{../img/MergesortCode.png}
 \par\smallskip
-\textbf{Analyse}: Laufzeit  $\Theta(n \operatorname{log}(n))$
+\textbf{Analyse}: Laufzeit  $\Theta(n \operatorname{log}(n))$; zusätzlicher Speicherbedarf: $\Theta(n)$
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
@@ -117,7 +120,7 @@ Best case (Pivot in der Mitte) $\omega(n)$.\par\smallskip
 \includegraphics[width = 0.8\columnwidth]{../img/QuicksortCode.png}
 \par\smallskip
 \begin{greenbox}
-Im Mittel benötigt randomisiertes Quicksort $\mathcal{O}(n \cdot \operatorname{log}(n))$ Vergleiche.
+Im Mittel benötigt randomisiertes Quicksort $\mathcal{O}(n \cdot \operatorname{log}(n))$ Vergleiche. Im schlechtesten Fall: $\Theta(n^2)$
 \end{greenbox}
 \end{sectionbox}
 
