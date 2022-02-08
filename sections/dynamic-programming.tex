@@ -70,19 +70,23 @@ Ein Kaninchen sitzt auf Platz (1,1) eines $n \times n$ Gitters. Es kann nur nach
 \begin{center}
     \includegraphics[width = 0.75\columnwidth]{../img/kan1.png}
 \end{center}\vspace{7px}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Rekursion}\par
 Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j)-\left(i^{\prime}, j^{\prime}\right)}$ Anzahl Rüben auf Kante von $(i, j)$ nach $\left(i^{\prime}, j^{\prime}\right)$ Rekursion (maximale Anzahl Rüben von $(i, j) \text { nach }(n, n))$\par\smallskip
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/kanRek.png}
 \end{center}\vspace{7px}
-
 \textbf{Teilabhängigkeitsgraph}\par
 \begin{itemize}
     \item Richtung der Abhängigkeiten: Links oben nach rechts unten
     \item Richtung der Berechung: Rechts unten nach links oben
 \end{itemize}\vspace{7px}
 
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Bottom-Up Beschreibung am Beispiel}\par
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/kanTable.png}
@@ -97,7 +101,9 @@ Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/ed1.png}
 \end{center}\vspace{7px}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Wie findet man den DP Algorithmus?}\par
 \begin{enumerate}
     \item Genaue Formulierung der gesuchten Lösung:
@@ -119,7 +125,9 @@ Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j
     \par Berechnung von links oben nach rechts unten. Zeilen- oder Spaltenweise.
     \item Lösung des Problems: Lösung steht in $E(n, m)$
 \end{enumerate}\vspace{7px}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Bottom-Up Beschreibung}\par
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/edTable.png}

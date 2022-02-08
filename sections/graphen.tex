@@ -5,19 +5,23 @@
 \begin{sectionbox}
 \subsection{Terminologie}\smallskip
 Ein Graph $G=(V,E)$ besteht aus der Menge von Kanten $V=\{v_{1},\ldots,v_{1^n}\}$ und der Menge von Kanten $E$.\par\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Gerichteter Graph}: $E \subseteq V \times V=\{(u, v): u \in V, v \in V\}$\par
 \begin{itemize}
     \item $w \in V$ heisst \textbf{adjazent} zu $v \in V$, falls $(v, w) \in E$
     \item Vorgänger eines Knotens $v$: $N^{-}(v):=\{u \in V |(u, v) \in E\}$
     \item Nachfolger eines Knotens $v$: $N^{+}(v):=\{u \in V |(v, u) \in E\}$
     \item Eingangsgrad: $\operatorname{deg}^{-}(v):=|N^{-}(v)|$
-    \item Ausngangsgrad: $\operatorname{deg}^{+}(v):=|N^{+}(v)|$
+    \item Ausgangsgrad: $\operatorname{deg}^{+}(v):=|N^{+}(v)|$
 \end{itemize}\par\smallskip
 \begin{center}
     \includegraphics[width=0.5\columnwidth]{../img/gerGraph.png}
 \end{center}\par\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Ungerichteter Graph}: $E \subseteq \{(u, v): v \in V, u \in V\}$\par
 \begin{itemize}
     \item $w \in V$ heisst \textbf{adjazent} zu $v \in V$, falls $\{v, w\} \in E$
@@ -34,7 +38,14 @@ Ein Graph $G=(V,E)$ besteht aus der Menge von Kanten $V=\{v_{1},\ldots,v_{1^n}\}
 %\begin{center}
 %   \includegraphics[width=0.25\columnwidth]{../img/biparGraph.png}
 %\end{center}\par\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
+\textbf{Handschlag-Lemma:}
+\begin{itemize}
+    \item $\sum_{v \in V}\limits \text{deg}^- (v) = \sum_{v \in V} \text{deg}^+ (v) = |E|$, falls $G$ gerichtet
+    \item $\sum_{v \in V}\limits \text{deg} (v) = 2 |E|$, falls $G$ ungerichtet
+\end{itemize}
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
@@ -244,7 +255,7 @@ DecreaseKey (Aufsteigen im MinHeap), Position im Heap: Speichern am Knoten, Hash
     \item $|V| \times$ ExtractMin: $\mathcal{O}(|V| \log |V|)$
     \item $|E| \times$ Insert oder DecreaseKey: $\mathcal{O}(|E| \log |V|)$
     \item $1 \times$ Init: $\mathcal{O}(|V|)$
-    \item \textbf{Insgesamt}: $\mathcal{O}(|E| \log |V|)$
+    \item \textbf{Insgesamt}: $\mathcal{O}((|E| + |V|)\log |V|)$
 \end{itemize}
 
 \end{sectionbox}
