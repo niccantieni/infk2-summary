@@ -21,3 +21,37 @@
 \end{equation*}\par\smallskip
 
 \end{sectionbox}
+
+\begin{sectionbox}
+\subsection{Asymptotische Laufzeiten C++}\medskip
+
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}llll@{}}
+        & Wahlfreier & Einfügen & Iteration  \\ 
+        & Zugriff & & nächstes\\ \cmrule
+    std::vector & $\Theta(1)$ & $\Theta(1)$ A & $\Theta(1)$  \\
+    std::list & $\Theta(n)$ & $\Theta(1)$ &  $\Theta(1)$  \\
+    std::set & - & $\Theta(\log(n))$  & $\Theta(\log(n))$ \\
+    std::unordered\_set & - & $\Theta(1)$ P & -  \\
+\end{tabular*}\par\smallskip
+
+\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}lll@{}}
+    &  Einf. nach & Suchen \\ 
+    &  Element & (x in S) \\ \cmrule
+std::vector & $\Theta(n)$ & $\Theta(n)$ \\
+std::list  &  $\Theta(1)$ &  $\Theta(n)$ \\
+std::set & - & $\Theta(\log(n))$\\
+std::unordered\_set & - & $\Theta(1)$ P \\
+\end{tabular*}\par\smallskip
+
+% \begin{tabular*}{\columnwidth}{@{\extracolsep\fill}llllll@{}}
+%     & Wahlfreier & Einfügen & Iteration & Einf. nach & Suchen \\ 
+%     & Zugriff & & nächstes& Element & (x in S) \\ \cmrule
+% std::vector & $\Theta(1)$ & $\Theta(1)$ A & $\Theta(1)$ & $\Theta(n)$ & $\Theta(n)$ \\
+% std::list & $\Theta(n)$ & $\Theta(1)$ &  $\Theta(1)$ &  $\Theta(1)$ &  $\Theta(n)$ \\
+% std::set & - & $\Theta(\log(n))$  & $\Theta(\log(n))$ & - & $\Theta(\log(n))$\\
+% std::unordered\_set & - & $\Theta(1)$ P & - & - & $\Theta(1)$ P \\
+% \end{tabular*}\par\smallskip
+A: Amortisiert\par
+P: Erwartet\par
+sonst: worst case
+\end{sectionbox}
