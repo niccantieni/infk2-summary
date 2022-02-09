@@ -30,7 +30,9 @@ Memoization (sic) Abspeichern von Zwischenergebnissen.
     \item Existiert ein gespeichertes Zwischenergebnis bereits, so wird dieses verwendet.
     \item Andernfalls wird der Algorithmus ausgeführt und das Ergebnis wird entsprechend gespeichert
 \end{itemize}\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textit{Beispiel Fibonacci}\par
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/memo.png}\par\smallskip
@@ -68,7 +70,7 @@ $\rightarrow$ Genau hingesehen lösen wir das Problem bottom-up
 \subsection{Beispiel Kaninchen}\smallskip
 Ein Kaninchen sitzt auf Platz (1,1) eines $n \times n$ Gitters. Es kann nur nach Osten oder nach Süden gehen. Auf jedem Wegstück liegt eine Anzahl Rüben. Wie viele Rüben sammelt das Kaninchen maximal ein?\par\smallskip
 \begin{center}
-    \includegraphics[width = 0.75\columnwidth]{../img/kan1.png}
+    \includegraphics[width = 0.65\columnwidth]{../img/kan1.png}
 \end{center}
 \end{sectionbox}
 \vspace{-4pt}
@@ -120,7 +122,7 @@ Gesucht: $T_{0,0}=$ Maximale Anzahl Rüben von (0,0) nach $(n, n)$ Sei $w_{(i, j
     \end{center}
     \item Memoisieren / Tabellieren. Bestimme die Abhängigkeiten der Teilprobleme:
     \par \begin{center}
-        \includegraphics[width=0.4\columnwidth]{../img/Lst_Abh.png}
+        \includegraphics[width=0.3\columnwidth]{../img/Lst_Abh.png}
     \end{center}
     \par Berechnung von links oben nach rechts unten. Zeilen- oder Spaltenweise.
     \item Lösung des Problems: Lösung steht in $E(n, m)$

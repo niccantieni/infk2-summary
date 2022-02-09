@@ -207,7 +207,9 @@ Gesucht: Kürzeste Wege von einem Startknoten $s$ aus.
     \end{itemize}
     \item Vorgänger eines Knotens: u Beginn $\pi_{s}[v]$ undefiniert für jeden Knoten $v \in V$
 \end{itemize}\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 
 \textbf{Algorithmus}\smallskip
 \begin{enumerate}
@@ -252,6 +254,9 @@ Menge $V$ aller Knoten wird unterteilt in
 \begin{sectionbox}
 \textbf{Dijkstra(G,s)}\par
 \includegraphics[width = \columnwidth]{../img/Dijkstra.png}\par
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 DecreaseKey (Aufsteigen im MinHeap), Position im Heap: Speichern am Knoten, Hashtabelle oder Lazy Deletion\par\smallskip
 \textbf{Laufzeit}\par
 \begin{itemize}
@@ -295,7 +300,9 @@ Abstand $d_s$ addiert: $f = \hat{h} + d_s$
     \item Mehrfaches Entnehmen \& Einfügen von $R$ beim A*-Algorithmus möglich $\Rightarrow$ Eventuell suboptimales Laufzeitverhalten
     \item Falls $\hat{h}$ zulässig $\left( \hat{h}(v) \leq h(v() \forall v \ in V)\right)$ und zusätzliche monoton $\left( \hat{h}(v) \leq h(v) + c(u',u) \forall (u',u) \in E \right)$ ist, entsprich A* dem Dijkstra-Algorithmus mit $\tilde{c} = c(u,v) + \hat{h}(u) - \hat{h}(v)$, dann wird das mehrfache einfügen in $R$ vermieden.
 \end{itemize}
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{A*-Algorithmus($G, s, t, \hat{h}$)}
 \begin{center}
     \includegraphics[width=\columnwidth]{img/AStar.png}
