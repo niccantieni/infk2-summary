@@ -189,3 +189,76 @@ $$
 
 (**): Even more swaps, exactly $n-1$ and with that the highest possible count, selectionSort uses for the sequence $n, 1, 2, 3, ..., n-1$.
 \end{sectionbox}
+
+\subsection{Beispiel: Find a Sub-Array (Rabin-Karp)}
+\begin{lstlisting}[language=C++]
+Iterator findOccurrence(const Iterator from, 
+                    const Iterator to, const Iterator begin, 
+                    const Iterator end) {
+
+const unsigned int M = 32768, C = 1021;
+unsigned int c_to_k = 1, hash_b = 0, hash_a = 0; 
+
+if(std::equal(from, to, begin, end)) return from; 
+
+Iterator window_end = from;
+for(Iterator current = begin; current != end; ++current,
+                ++window_end) {
+    hash_b = (C * hash_b % M + *current) % M; 
+    hash_a = (C * hash_a % M + *window_end) % M; 
+    c_to_k = c_to_k * C % M; 
+}
+for(Iterator window_begin = from; ; 
+                            ++window_begin, ++window_end) {
+    if(hash_a == hash_b) {
+        if(std::equal(window_begin, window_end, begin, end)) 
+        return window_begin; 
+    }
+    if(window_end == to) return to;
+
+    hash_a = (C * hash_a % M + *window_end + 
+                (M - c_to_k) * *window_begin % M) % M; 
+    
+    } 
+    return to;
+} 
+\end{lstlisting} 
+
+\subsection{Barrier}
+\begin{lstlisting}[language=C++]
+#include "semaphore.hpp"
+
+class Barrier {
+  unsigned int n;
+  unsigned int entered = 0;
+  semaphore lock{1};
+  semaphore release1{0};
+  semaphore release2{1};
+public:
+  Barrier(unsigned int N): n(N) {}
+  void arrive_and_wait(){
+
+    lock.acquire();
+    ++entered;
+    if (entered == n) {
+      release2.acquire();
+      release1.release();
+    }
+    lock.release();
+    
+    release1.acquire();
+    release1.release();
+
+    lock.acquire();
+    --entered;
+    if (entered == 0) {
+      release1.acquire();
+      release2.release();
+    }
+    lock.release();
+    
+    release2.acquire();
+    release2.release();
+  }  
+};
+\end{lstlisting}
