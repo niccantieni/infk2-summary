@@ -47,11 +47,11 @@ unsigned prehash(std::string s) {
 \vspace{-4pt}
 \begin{sectionbox}
 \subsection{Hashing: Lösung des zweiten Problems}\smallskip
-Reduziere des Schlüsseluniversum: Abbildung (Hash-Funktion) $h: \mathcal{K} \rightarrow\{0, \ldots, m-1\}(m \approx n=\text { Anzahl Einträge in der Tabelle })$\par\vspace{7px}
+Reduziere des Schlüsseluniversum: Abbildung (Hash-Funktion) $h: \mathcal{K} \rightarrow\{0, \ldots, m-1\}(m \approx n=\text { Anzahl Einträge in der Tabelle })$\par
 
 \subsubsection{Nomenklatur}\par\smallskip
 \textbf{Hashfunktion} $h$: Abbildung aus der Menge der Schlüssel $\mathcal{K}$ auf die Indexmenge $\{0,1, \ldots, m-1\}$ eines Arrays (\textbf{Hashtabelle})\par
-Meist $|\mathcal{K}| \gg m$, Es gibt also $k_{1}, k_{2} \in \mathcal{K}$ mit $h\left(k_{1}\right)=h\left(k_{2}\right)$ (\textbf{Kollision}). Eine Hashfunktion sollte die Menge der Schlüssel möglichst gleichmässig auf die Positionen der Hashtabelle verteilen.\par\vspace{7px}
+Meist $|\mathcal{K}| \gg m$, Es gibt also $k_{1}, k_{2} \in \mathcal{K}$ mit $h\left(k_{1}\right)=h\left(k_{2}\right)$ (\textbf{Kollision}). Eine Hashfunktion sollte die Menge der Schlüssel möglichst gleichmässig auf die Positionen der Hashtabelle verteilen.\par
 
 \subsubsection{Gebräuchliche Hashfunktion: Divisionsmethode}\par\smallskip
 \begin{center}
@@ -70,7 +70,9 @@ $\rightarrow$ Resultuiert im worst case in $\Theta(n^{2})$ pro Operation\par\sma
 \begin{center}
     \includegraphics[width = \columnwidth]{../img/hashVerkettung.png}
 \end{center}\smallskip
-
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
 \textbf{Einfaches gleichmässiges Hashing}\par
 Starke Annahmen: Jeder beliebige Schlüssel wird mit gleicher Wahrscheinlichkeit (\textbf{Uniformität}) und unabhängig von den anderen Schlüsseln (\textbf{Unabhängigkeit}) auf einen der $m$ verfügbaren Slots abgebildet.\par\smallskip
 Unter dieser Annahme ergibt sich die \textbf{erwartete Länge}:\par $\mathbb{E}(\text { Länge Kette } j)=\frac{n}{m}=\alpha$, $\alpha$ heisst der \textbf{Belegungsfaktor} oder \textbf{Füllgrad}.\par\smallskip
@@ -89,7 +91,7 @@ Daraus ergibt sich (bei einfachem gleichmässigem Hashing) eine \textbf{erwartet
     \item Speichere die Überläufer direkt in der Hashtabelle mit einer \textbf{Sondierungsfunktion $s(k,j)$}
     \item Tabellenposition des Schlüssels entlang der \textbf{Sondierungsfolge $S(k)$}
 \end{itemize}\par\smallskip
-Technisches Detail zu \textbf{delete(k)}: Suche $k$ in der Tabelle gemäss $S(k)$. Ersetze $k$ durch den \textbf{speziellen Schlüssel removed}.\par\vspace{7px}
+Technisches Detail zu \textbf{delete(k)}: Suche $k$ in der Tabelle gemäss $S(k)$. Ersetze $k$ durch den \textbf{speziellen Schlüssel removed}.\par
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}

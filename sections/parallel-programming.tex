@@ -140,6 +140,11 @@ Different locks exist:
     \item \lstinline{std::lock_guard}: basic lock for single mutex
     \item \lstinline{std::scoped_lock}: multiple mutexes, prevents deadlocks (if used exclusively)
     \item \lstinline{std::unique_lock}: single mutex, more control (e.g. when mutex is locked)
+\end{itemize}
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
+  \begin{itemize}
     \item \lstinline{std::shared_lock}: for reader-writer situations
     
     \begin{itemize}

@@ -76,7 +76,7 @@ Ein Graph $G=(V,E)$ besteht aus der Menge von Kanten $V=\{v_{1},\ldots,v_{1^n}\}
     \item \textbf{Einfacher Zyklus}: Zyklus, aber Knoten kommen nicht mehrfach vor (ausser $s$ und $t$)
     \item \textbf{Kreis}: Zyklus mit paarweise verschiedenen $v_{1}, \ldots, v_{k},$ welcher keine Kante mehrfach verwendet
     \item \textbf{Kreisfrei (azyklisch)}: Graph ohne jegliche Kreise.
-\end{itemize}\par\vspace{7px}
+\end{itemize}\par
 
 \end{sectionbox}
 \vspace{-4pt}
@@ -99,13 +99,16 @@ Ein Graph $G=(V,E)$ besteht aus der Menge von Kanten $V=\{v_{1},\ldots,v_{1^n}\}
 Graph $G=(V, E)$ mit Knotenmenge $v_{1}, \ldots, v_{n}$ gespeichert als Adjazenzmatrix $A_{G}=\left(a_{i j}\right)_{1 \leq i, j \leq n}$ mit Einträgen aus $\{0,1\}$. $a_{i j}=1$ genau dann wenn Kante von $v_{i}$ nach $v_{j}$. Speicherbedarf $\Theta\left(|V|^{2}\right)$. $A_{G}$ ist symmetrisch, wenn $G$ ungerichtet.\par\smallskip
 \begin{center}
     \includegraphics[width = 0.9\columnwidth]{../img/AdjMa.png}
-\end{center}\vspace{10px}
+\end{center}
+\end{sectionbox}
 
+\vspace{-4pt}
+\begin{sectionbox}
 \subsubsection{Adjazenzliste}\par\smallskip
 Viele Graphen $G=(V, E)$ mit Knotenmenge $v_{1}, \ldots, v_{n}$ haben deutlich weniger als $n^{2}$ Kanten. Repräsentation mit Adjazenzliste: Array $A[1], \ldots, A[n]$, $A_{i}$ enthält verkettete Liste aller Knoten in $N^{+}\left(v_{i}\right)$. Speicherbedarf $\Theta\left(|V|+|E|\right)$.\par\smallskip
 \begin{center}
     \includegraphics[width = 0.9\columnwidth]{../img/AdjList.png}
-\end{center}\vspace{10px}
+\end{center}
 
 \subsubsection{Laufzeiten einfacher Operationen}\par\smallskip
 \begin{center}
@@ -190,7 +193,7 @@ $\delta(u, v)=\left\{\begin{array}{ll}
     \textcolor{tanne}{\textbf{$\delta(s, v) \leq \delta(s, u)+\delta(u, v)$}}
     \item \textbf{Optimale Substruktur}: Teilpfade von kürzesten Pfaden sind kürzeste Pfade ( \textbf{\textcolor{tanne}{Kürzester Pfad $\Rightarrow$ kürzeste Subpfäde}} )
     \item Kürzeste Wege enthalten keine Zyklen
-\end{itemize}\par\vspace{10px}
+\end{itemize}\par
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
@@ -222,7 +225,7 @@ Gesucht: Kürzeste Wege von einem Startknoten $s$ aus.
     \end{array}$
     \end{greenbox}
     \item Wiederhole 3 bis nichts mehr relaxiert werden kann (bis $\left(d_{s}[v] \leq d_{s}[u]+c(u, v) \quad \forall(u, v) \in E\right)$)
-\end{enumerate}\vspace{10px}
+\end{enumerate}
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
@@ -307,7 +310,7 @@ Abstand $d_s$ addiert: $f = \hat{h} + d_s$
     \item Gegeben: Ungerichteter, zusammenhängender, gewichteter Graph $G=(V, E, c)$
     \item Gesucht: Minimaler Spannbaum $T=\left(V, E^{\prime}\right)$ : zusammenhängender, zyklenfreier Teilgraph $E^{\prime} \subset E,$ so dass $\sum_{e \in E^{\prime}} c(e)$ minimal.
 \end{itemize}
-Greedy (gierige) Verfahren berechnen eine Lösung schrittweise, indem lokal beste Lösungen gewählt werden.\par\vspace{10px}
+Greedy (gierige) Verfahren berechnen eine Lösung schrittweise, indem lokal beste Lösungen gewählt werden.\par
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
@@ -348,7 +351,7 @@ Idee: Baum für jede Teilmenge in der Partition, z.B. {{1, 2, 3, 9}, {7, 6, 4}, 
     \item Initialisieren der Union-Find Datenstruktur $\Theta(|V|)$
     \item $|E| \times \text { Union }(\text { Find }(x), \text { Find }(y)): \mathcal{O}(|E| \log |V|)$
     \item \textbf{Insgesamt}: $\Theta(|E| \log |V|)$
-\end{itemize}%\vspace{10px}
+\end{itemize}
 \end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
