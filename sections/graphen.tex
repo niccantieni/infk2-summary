@@ -1,8 +1,8 @@
 % SECTION ====================================================================================
-\section{Graphen}
-% ============================================================================================
 \vspace{-4pt}
 \begin{sectionbox}
+\section{Graphen}
+% ============================================================================================
 \subsection{Terminologie}\smallskip
 Ein Graph $G=(V,E)$ besteht aus der Menge von Kanten $V=\{v_{1},\ldots,v_{1^n}\}$ und der Menge von Kanten $E$.\par\smallskip
 \end{sectionbox}
@@ -265,6 +265,40 @@ DecreaseKey (Aufsteigen im MinHeap), Position im Heap: Speichern am Knoten, Hash
 \includegraphics[width = \columnwidth]{../img/DijkstraBsp.png}\par
 \end{sectionbox}
 
+\vspace{-4pt}
+\begin{sectionbox}
+\subsection{Floyd-Warshall-Algorithmus}
+\begin{center}
+    \includegraphics[width=\columnwidth]{img/FloydWarshall.png}
+\end{center}
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
+\subsection{A*-Algorithmus}
+\textbf{Idee}: Abstandsheuristik $\hat{h}$ lenkt Algorithmus in richtige Richtung. Diese Heuristik muss den echten Abstand zu $t$ unterschätzen und zum
+Abstand $d_s$ addiert: $f = \hat{h} + d_s$
+
+
+\textbf{Voraussetzungen}
+\begin{itemize}
+    \item Positiv gewichteter endlicher Graph $G = (V, E, c)$
+    \item $s \in V, t \in V$
+    \item Absstandschätzung: $\hat{h}_t(v) \leq h_t(v) := \delta(v,t) \quad \forall v \in V$
+    \item Gesucht: kürzester Pfad: $P \: : \: s \rightarrow t$
+\end{itemize}
+
+\textbf{Bemerkungen}
+\begin{itemize}
+    \item Mehrfaches Entnehmen \& Einfügen von $R$ beim A*-Algorithmus möglich $\Rightarrow$ Eventuell suboptimales Laufzeitverhalten
+    \item Falls $\hat{h}$ zulässig $\left( \hat{h}(v) \leq h(v() \forall v \ in V)\right)$ und zusätzliche monoton $\left( \hat{h}(v) \leq h(v) + c(u',u) \forall (u',u) \in E \right)$ ist, entsprich A* dem Dijkstra-Algorithmus mit $\tilde{c} = c(u,v) + \hat{h}(u) - \hat{h}(v)$, dann wird das mehrfache einfügen in $R$ vermieden.
+\end{itemize}
+
+\textbf{A*-Algorithmus($G, s, t, \hat{h}$)}
+\begin{center}
+    \includegraphics[width=\columnwidth]{img/AStar.png}
+\end{center}
+
+\end{sectionbox}
 \vspace{-4pt}
 \begin{sectionbox}
 \subsection{Minimale Spannbäume}\smallskip
