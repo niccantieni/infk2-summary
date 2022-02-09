@@ -53,7 +53,8 @@ std::cout << "hex of red: " << colours["RED"] << "\n";
 
 auto search = colours.find("BLUE"); //iterator to object
 if (search != colours.end()) {
-    std::cout << "Found " << search->first << " : " << search->second << '\n';
+    std::cout << "Found " << search->first << 
+    " : " << search->second << '\n';
 } else {
     std::cout << "Not found\n";
 }
@@ -64,3 +65,127 @@ for (const auto& entry : colours) {
   //BLUE : #0000FF, RED : #FF0000, GREEN : #00FF00,
 }
 \end{lstlisting}
+
+\subsection{Sortieralgorithmen}
+\begin{lstlisting}[language=C++]
+// Exchange the elements of A at positions i and j.
+void swap(std::vector<int>& a, 
+          unsigned int i, 
+          unsigned int j) {
+    std::swap(a[i], a[j]);
+}
+
+void bubbleSort(std::vector<int>& a, 
+                unsigned int l, 
+                unsigned int r) {
+    for (unsigned int i = l+1; i < r; i++) {
+        for (unsigned int j = 0; j < r-i-1; j++) {
+            if (a[j] > a[j+1])
+                swap(a, j, j+1);
+        }
+    }
+}
+void insertionSort(std::vector<int>& a, 
+                   unsigned int l, 
+                   unsigned int r) {
+    for (unsigned int i = l+1; i < r; i++) {
+        unsigned int j = i-1;
+        while (j >= 0 && a[j] > a[j+1]) {
+            swap(a, j, j+1);
+            j -= 1;
+        }
+    }
+}
+void selectionSort(std::vector<int>& a, 
+                   unsigned int l, 
+                   unsigned int r) {
+    for (unsigned int i = l; i < r; i++) {
+        unsigned int minJ = i;
+        for (unsigned int j = i+1; j < r; j++) {
+            if (a[j] < a[minJ])
+                minJ = j;
+        }
+        if (minJ != i)
+            swap(a, i, minJ);
+    }
+}
+void quickSort(std::vector<int>& a, 
+               unsigned int l, 
+               unsigned int r) {
+    if (l < r) {
+        // here the pivot is a[l]
+        unsigned int i = l+1;
+        unsigned int j = r;
+        
+        while (i < j) {
+            while (i < j && a[i] <= a[l])
+                i += 1;
+            while (i <= j && a[j] >= a[l])
+                j -= 1;
+            if (i < j)
+                swap(a, i, j);
+        }
+        
+        swap(a, l, j);
+        quickSort(a, l, j-1);
+        quickSort(a, j+1, r);
+    }
+}
+\end{lstlisting}
+
+\begin{sectionbox}
+  
+%\newcommand{\N}{\mathbb{N}}
+%\newcommand{\R}{\mathbb{R}}
+%
+
+$$
+  \begin{array}{l | c | c }
+    \textbf{Bubble Sort} & \text{lower bound} & \text{upper bound}\\ \hline
+    \text{Comparisons} & \bigO(n^2) & \bigO(n^2)\\
+    \text{Sequence} & \text{any} & \text{any} \\ \hline
+    \text{Swaps} & 0 & \bigO(n^2)\\
+    \text{Sequence} & 1,2,...,n & n,n-1,...,1  \\
+  \end{array}
+$$
+
+
+$$
+  \begin{array}{l | c | c }
+    \textbf{Insertion Sort} & \text{lower bound} & \text{upper bound}\\ \hline
+    \text{Comparisons} & \bigO(n) & \bigO(n^2)\\
+    \text{Sequence} & 1,2,...,n & n,n-1,...,1 \\ \hline
+    \text{Swaps} & 0 & \bigO(n^2)\\
+    \text{Sequence} & 1,2,...,n & n,n-1,...,1  \\
+  \end{array}
+$$
+\end{sectionbox}
+\vspace{-4pt}
+\begin{sectionbox}
+
+$$
+  \begin{array}{l | c | c }
+    \textbf{Selection Sort} & \text{lower bound} & \text{upper bound}\\ \hline
+    \text{Comparisons} & \bigO(n^2) & \bigO(n^2)\\
+    \text{Sequence} & \text{any} & \text{any} \\ \hline
+    \text{Swaps} & 0 & \bigO(n)\\
+    \text{Sequence} & 1,2,...,n & n,n-1,...,1 ~~(**) \\
+  \end{array}
+$$
+
+
+$$
+  \begin{array}{l | c | c }
+    \textbf{Quick Sort} & \text{lower bound} & \text{upper bound}\\ \hline
+    \text{Comparisons} & \bigO(n\log(n))& \bigO(n^2) \\
+    \text{Sequence} & (*) & 1,2,...,n \\ \hline
+    \text{Swaps} & \bigO(n) & \bigO(n \log(n))  \\
+    \text{Sequence} & 1,2,...,n & (*) \\
+  \end{array}
+$$
+
+
+(*): It is not easy to write down a compact form. The sequence must be constructed such that every pivot halves the sorting range. For instance for $n=7$ a sequence is: $4,5,7,6,2,1,3$.
+
+(**): Even more swaps, exactly $n-1$ and with that the highest possible count, selectionSort uses for the sequence $n, 1, 2, 3, ..., n-1$.
+\end{sectionbox}
